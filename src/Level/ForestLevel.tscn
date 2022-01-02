@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://src/Tile/AnimatedTileMap.gd" type="Script" id=1]
 [ext_resource path="res://src/Tile/ForestWater.tres" type="TileSet" id=2]
@@ -11,6 +11,18 @@
 [ext_resource path="res://assets/audio/Mid-Air Machine - A Whale On It's Side.mp3" type="AudioStream" id=9]
 [ext_resource path="res://src/Tile/ForestLand.tres" type="TileSet" id=10]
 [ext_resource path="res://src/Level/LevelNavigation.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Objects/Chest.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Objects/SmallStone.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Objects/BigStone.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Objects/Fireplace.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/Objects/Bump.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/Objects/Shroom.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/Objects/Grass.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/Objects/GraveStone.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/Objects/Nameplate.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Objects/Fountain.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Objects/Gates.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Objects/Steps.tscn" type="PackedScene" id=23]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 64, 32, 64, 64, 32, 64, 32, 32, 80, 16, 96, 16, 96, 96, 80, 80, 48, 96, 48, 80, 256, 32, 256, 16, 272, 16, 272, 48, 288, 48, 288, 64, 256, 64, 256, 48, 240, 32, 240, 48, 328, -48, 328, 200, 320, 176, 304, 80, 304, 32, 192, 144, 256, 144, 176, 176, 176, 160, 144, 0, 144, 144, 112, 112, 112, 0, 0, 144, 0, 112, 320, 192, -64, 200, 0, 192, -64, -48, 0, 16, 288, 32, 288, 0, 208, 0, 208, 32, 224, 32, 224, 64, 176, 48, 240, 64, 240, 80, 256, 80, 256, 96, 254, 97, 288, 96, 288, 80, 192, 96, 160, 160, 160, 64, 176, 64, 160, 48, 160, 0, 16, 0, 16, 16 )
@@ -54,6 +66,19 @@ position = Vector2( 328, 200 )
 [node name="Tree" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( -32, 32 )
 
+[node name="Chest" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( -28, 52 )
+
+[node name="SmallStone" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( -34, 76 )
+
+[node name="SmallStone2" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( -11, 76 )
+variant = 1
+
+[node name="BigStone" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( -40, -10 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 7 )]
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
@@ -61,6 +86,54 @@ remote_path = NodePath("../../../PlayerCamera")
 
 [node name="Slime" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 91, -22 )
+
+[node name="Fireplace" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( -52, 45 )
+
+[node name="Bump" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( -39, 124 )
+
+[node name="Bump2" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( -19, 124 )
+variant = 1
+
+[node name="Shroom" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -7, 31 )
+variant = 2
+
+[node name="Shroom2" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -47, 70 )
+variant = 4
+
+[node name="Shroom3" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -3, 53 )
+variant = 4
+
+[node name="Shroom4" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( -52, 19 )
+variant = 1
+
+[node name="Grass" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -35, 106 )
+
+[node name="Grass2" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -12, 102 )
+variant = 2
+
+[node name="GraveStone" parent="YSort" instance=ExtResource( 19 )]
+position = Vector2( -54, 104 )
+
+[node name="Nameplate" parent="YSort" instance=ExtResource( 20 )]
+position = Vector2( -25, 93 )
+
+[node name="Fountain" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 293, 113 )
+
+[node name="Gates" parent="YSort" instance=ExtResource( 22 )]
+position = Vector2( -34, -21 )
+
+[node name="Steps" parent="YSort" instance=ExtResource( 23 )]
+position = Vector2( 16, -38 )
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
