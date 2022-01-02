@@ -4,10 +4,6 @@ const DEFAULT = "default"
 const WANDER = "turn"
 const CHASE = "chase"
 
-onready var EnemyDefaultState = preload("res://src/Actor/EnemyDefaultState.gd")
-onready var EnemyWanderState = preload("res://src/Actor/EnemyWanderState.gd")
-onready var EnemyChaseState = preload("res://src/Actor/EnemyChaseState.gd")
-
 func _ready():
 	states_map = {
 		DEFAULT: $DefaultState,

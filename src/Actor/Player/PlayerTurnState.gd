@@ -1,4 +1,5 @@
 extends "res://src/State/State.gd"
+class_name PlayerTurnState
 
 func enter():
 	var player = get_parent().get_parent()

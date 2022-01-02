@@ -1,4 +1,5 @@
 extends "res://src/State/State.gd"
+class_name EnemyChaseState
 
 const acceleration = 300
 

@@ -5,11 +5,6 @@ const TURN = "turn"
 const HIT = "hit"
 const DEATH = "death"
 
-onready var PlayerDefaultState = preload("res://src/Actor/PlayerDefaultState.gd")
-onready var PlayerTurnState = preload("res://src/Actor/PlayerTurnState.gd")
-onready var PlayerHitState = preload("res://src/Actor/PlayerHitState.gd")
-onready var PlayerDeathState = preload("res://src/Actor/PlayerDeathState.gd")
-
 func _ready():
 	states_map = {
 		DEFAULT: $DefaultState,

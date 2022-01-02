@@ -3,7 +3,7 @@ extends Node2D
 func hit(dir):
 	var current = $AnimationPlayer.current_animation
 	
-	$AudioStreamPlayer.play()
+	$HitSound.play()
 	
 	$Sprite.visible = true
 

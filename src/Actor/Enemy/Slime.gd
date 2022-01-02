@@ -31,5 +31,5 @@ func _on_Hurtbox_area_entered(area):
 	$Hurtbox.start_invincibility(invincibility_duration)
 
 func _on_AnimatedSprite_animation_finished():
-	if $AnimatedSprite.animation.begins_with("death"):
+	if stats.health == 0:
 		queue_free()

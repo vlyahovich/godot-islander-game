@@ -7,17 +7,21 @@ var velocity: Vector2 = Vector2.ZERO
 var dir: Vector2 = Vector2.RIGHT
 var hit_dir: Vector2 = Vector2.ZERO
 var crosshair = null
+var weapon = null
 
-onready var weapon: Node2D = $Weapon
 onready var aPlayer: AnimationPlayer = $AnimationPlayer
 onready var aTree: AnimationTree = $AnimationTree
 onready var aTreeState: AnimationNodeStateMachinePlayback = aTree.get("parameters/playback")
 onready var Crosshair = preload("res://src/UserInterface/Crosshair.tscn")
+onready var Weapon = preload("res://src/Objects/Weapons/Sword.tscn")
 
 func _ready():
 	aTree.active = true
 	$StateMachine.set_active(true)
 	$PlayerStats.connect("health_depleted", self, "destroyed")
+
+	weapon = Weapon.instance()
+	add_child(weapon)
 	
 func follow_path(target_path):
 	path = target_path
@@ -62,7 +66,8 @@ func turn_animation_finished():
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_RIGHT and event.pressed:
-			$Weapon.hit(dir)
+			if weapon != null:
+				weapon.hit(dir)
 
 func _on_Hurtbox_area_entered(area):
 	if $Hurtbox.invincible == false:
@@ -72,7 +77,7 @@ func _on_Hurtbox_area_entered(area):
 		
 		$HitSound.play()
 
-	if $StateMachine.current_state is $StateMachine.PlayerDeathState:
+	if $StateMachine.current_state is PlayerDeathState:
 		return
 
 	$Hurtbox.start_invincibility(invincibility_duration)

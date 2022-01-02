@@ -1,14 +1,14 @@
 [gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://assets/art/enemy/slimeball_.png" type="Texture" id=1]
-[ext_resource path="res://src/Collision/Hurtbox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Actor/Slime.gd" type="Script" id=3]
-[ext_resource path="res://src/Actor/Stats.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/UserInterface/HealthBar.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Actor/EnemyStateMachine.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Collision/PlayerDetectionZone.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Collision/Hitbox.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/audio/SPLAT Short 03.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/UserInterface/HealthBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/audio/SPLAT Short 03.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Actor/Enemy/EnemyStateMachine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Collision/PlayerDetectionZone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Collision/Hitbox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Collision/Hurtbox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actor/Enemy/Slime.gd" type="Script" id=8]
+[ext_resource path="res://src/Actor/Stats.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 1 )
@@ -42,22 +42,6 @@ region = Rect2( 144, 120, 24, 24 )
 atlas = ExtResource( 1 )
 region = Rect2( 168, 120, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 72, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 1 )
-region = Rect2( 24, 72, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 1 )
-region = Rect2( 48, 72, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 1 )
-region = Rect2( 72, 72, 24, 24 )
-
 [sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 1 )
 region = Rect2( 96, 144, 24, 24 )
@@ -73,6 +57,22 @@ region = Rect2( 144, 144, 24, 24 )
 [sub_resource type="AtlasTexture" id=27]
 atlas = ExtResource( 1 )
 region = Rect2( 168, 144, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 72, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 1 )
+region = Rect2( 24, 72, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 72, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=33]
 atlas = ExtResource( 1 )
@@ -150,15 +150,15 @@ animations = [ {
 "name": "hit_l",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
-"loop": true,
-"name": "run_r",
-"speed": 10.0
-}, {
 "frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
 "name": "death_l",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
+"loop": true,
+"name": "run_r",
+"speed": 10.0
 }, {
 "frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
 "loop": true,
@@ -196,12 +196,12 @@ height = 4.0
 radius = 63.0079
 
 [node name="Slime" type="KinematicBody2D"]
-script = ExtResource( 3 )
+script = ExtResource( 8 )
 
-[node name="Stats" parent="." instance=ExtResource( 4 )]
+[node name="Stats" parent="." instance=ExtResource( 9 )]
 max_health = 3
 
-[node name="EnemyStateMachine" parent="." instance=ExtResource( 6 )]
+[node name="EnemyStateMachine" parent="." instance=ExtResource( 4 )]
 START_STATE = NodePath("DefaultState")
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -214,7 +214,7 @@ offset = Vector2( 0, -5 )
 rotation = 1.5708
 shape = SubResource( 6 )
 
-[node name="Hurtbox" parent="." instance=ExtResource( 2 )]
+[node name="Hurtbox" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, -1 )
 collision_layer = 8
 
@@ -222,26 +222,26 @@ collision_layer = 8
 position = Vector2( 0, -4 )
 shape = SubResource( 7 )
 
-[node name="Hitbox" parent="." instance=ExtResource( 8 )]
+[node name="Hitbox" parent="." instance=ExtResource( 6 )]
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2( 0, -3.5 )
 shape = SubResource( 37 )
 
-[node name="PlayerDetectionZone" parent="." instance=ExtResource( 7 )]
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 5 )]
 visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 position = Vector2( 1, 0 )
 shape = SubResource( 28 )
 
-[node name="HealthBar" parent="." instance=ExtResource( 5 )]
+[node name="HealthBar" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, -14 )
 stats_path = NodePath("../Stats")
 
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 3 )
 volume_db = -15.0
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

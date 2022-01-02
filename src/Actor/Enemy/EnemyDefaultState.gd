@@ -1,4 +1,5 @@
 extends "res://src/State/State.gd"
+class_name EnemyDefaultState
 
 func update(delta):
 	var enemy = owner.get_parent()

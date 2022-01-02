@@ -8,6 +8,52 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "EnemyChaseState",
+"language": "GDScript",
+"path": "res://src/Actor/Enemy/EnemyChaseState.gd"
+}, {
+"base": "Node",
+"class": "EnemyDefaultState",
+"language": "GDScript",
+"path": "res://src/Actor/Enemy/EnemyDefaultState.gd"
+}, {
+"base": "Node",
+"class": "EnemyWanderState",
+"language": "GDScript",
+"path": "res://src/Actor/Enemy/EnemyWanderState.gd"
+}, {
+"base": "Node",
+"class": "PlayerDeathState",
+"language": "GDScript",
+"path": "res://src/Actor/Player/PlayerDeathState.gd"
+}, {
+"base": "Node",
+"class": "PlayerDefaultState",
+"language": "GDScript",
+"path": "res://src/Actor/Player/PlayerDefaultState.gd"
+}, {
+"base": "Node",
+"class": "PlayerHitState",
+"language": "GDScript",
+"path": "res://src/Actor/Player/PlayerHitState.gd"
+}, {
+"base": "Node",
+"class": "PlayerTurnState",
+"language": "GDScript",
+"path": "res://src/Actor/Player/PlayerTurnState.gd"
+} ]
+_global_script_class_icons={
+"EnemyChaseState": "",
+"EnemyDefaultState": "",
+"EnemyWanderState": "",
+"PlayerDeathState": "",
+"PlayerDefaultState": "",
+"PlayerHitState": "",
+"PlayerTurnState": ""
+}
+
 [application]
 
 config/name="Islander"
@@ -16,7 +62,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PlayerStats="*res://src/Actor/PlayerStats.tscn"
+PlayerStats="*res://src/Actor/Player/PlayerStats.tscn"
 GameSettings="*res://GameSettings.gd"
 
 [debug]

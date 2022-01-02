@@ -1,4 +1,5 @@
 extends "res://src/State/State.gd"
+class_name PlayerDefaultState
 
 var min_velocity_length = 0.1
 
