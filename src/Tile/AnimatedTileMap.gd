@@ -6,6 +6,9 @@ export var frame_shift = 7
 export var frame_time = 0.25
 
 func _ready():
+	# we make a copy here because we do not want to affect other tilemaps
+	tile_set = tile_set.duplicate()
+
 	if get_node_or_null("AnimateTimer"):
 		$AnimateTimer.connect("timeout", self, "_next_frame")
 		$AnimateTimer.start()
