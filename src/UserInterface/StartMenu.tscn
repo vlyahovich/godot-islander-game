@@ -132,14 +132,13 @@ texture = ExtResource( 6 )
 position = Vector2( 151, 85 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 33 )
-frame = 2
+frame = 1
 speed_scale = 1.2
 playing = true
 
 [node name="Fire" type="AnimatedSprite" parent="Welcome"]
 position = Vector2( 176, 103 )
 frames = SubResource( 42 )
-frame = 1
 playing = true
 
 [node name="PlayButton" type="TextureButton" parent="Welcome"]
