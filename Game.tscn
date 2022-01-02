@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GameSettings.gd" type="Script" id=1]
+[ext_resource path="res://Game.gd" type="Script" id=2]
+[ext_resource path="res://src/UserInterface/StartMenu.tscn" type="PackedScene" id=8]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="StartMenu" parent="." instance=ExtResource( 8 )]
+
+[node name="GameSettings" type="Node" parent="."]
+script = ExtResource( 1 )

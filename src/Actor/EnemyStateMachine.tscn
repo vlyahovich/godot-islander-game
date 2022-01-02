@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Actor/EnemyStateMachine.gd" type="Script" id=1]
+[ext_resource path="res://src/Actor/EnemyDefaultState.gd" type="Script" id=2]
+[ext_resource path="res://src/Actor/EnemyChaseState.gd" type="Script" id=3]
+[ext_resource path="res://src/Actor/EnemyWanderState.gd" type="Script" id=4]
+
+[node name="EnemyStateMachine" type="Node"]
+script = ExtResource( 1 )
+
+[node name="DefaultState" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="WanderState" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="ChaseState" type="Node" parent="."]
+script = ExtResource( 3 )

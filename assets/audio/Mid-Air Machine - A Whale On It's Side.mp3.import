@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Mid-Air Machine - A Whale On It's Side.mp3-5c9d7a48532861ced885e5d807154400.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Mid-Air Machine - A Whale On It's Side.mp3"
+dest_files=[ "res://.import/Mid-Air Machine - A Whale On It's Side.mp3-5c9d7a48532861ced885e5d807154400.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

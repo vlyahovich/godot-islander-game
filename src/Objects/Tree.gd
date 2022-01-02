@@ -1,0 +1,24 @@
+tool
+extends StaticBody2D
+
+export var variant: int = 1 setget set_variant
+
+const topVariants: Array = [34, 35, 38]
+const bottomVariants: Array = [45, 46, 49]
+
+func _ready():
+	_apply_variant()
+	
+func set_variant(value):
+	variant = value
+
+	_apply_variant()
+	
+func _apply_variant():
+	var variant_clamped = clamp(variant, 0, topVariants.size() - 1)
+
+	if get_node_or_null("Top"):
+		$Top.frame = topVariants[variant_clamped]
+
+	if get_node_or_null("Bottom"):
+		$Bottom.frame = bottomVariants[variant_clamped]
