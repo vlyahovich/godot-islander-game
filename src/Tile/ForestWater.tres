@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/art/forest/forest_.png" type="Texture" id=1]
 
 [resource]
-0/name = "forest_.png 0"
+0/name = "water_auto"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )

@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/art/forest/forestDecoration_1.png" type="Texture" id=1]
+[ext_resource path="res://src/Objects/Sign.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 0.0
+height = 0.0
+
+[node name="Sign" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="SignLeft" type="Node2D" parent="."]
+position = Vector2( -33, -20 )
+
+[node name="Sprite" type="Sprite" parent="SignLeft"]
+position = Vector2( 24, -5 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 98
+
+[node name="Sprite2" type="Sprite" parent="SignLeft"]
+position = Vector2( 40, -5 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 99
+
+[node name="Sprite3" type="Sprite" parent="SignLeft"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 113
+
+[node name="Sprite4" type="Sprite" parent="SignLeft"]
+position = Vector2( 40, 3 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 114
+
+[node name="Sprite5" type="Sprite" parent="SignLeft"]
+position = Vector2( 24, 11 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 128
+
+[node name="Sprite6" type="Sprite" parent="SignLeft"]
+position = Vector2( 40, 11 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 129
+
+[node name="Sprite7" type="Sprite" parent="SignLeft"]
+position = Vector2( 40, 16 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 82
+
+[node name="SignRight" type="Node2D" parent="."]
+visible = false
+position = Vector2( -7, -20 )
+
+[node name="Sprite" type="Sprite" parent="SignRight"]
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 53
+
+[node name="Sprite2" type="Sprite" parent="SignRight"]
+position = Vector2( 16, 0 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 54
+
+[node name="Sprite3" type="Sprite" parent="SignRight"]
+position = Vector2( 0, 8 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 68
+
+[node name="Sprite4" type="Sprite" parent="SignRight"]
+position = Vector2( 16, 8 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 69
+
+[node name="Sprite5" type="Sprite" parent="SignRight"]
+position = Vector2( 0, 16 )
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 20
+frame = 82
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+disabled = true

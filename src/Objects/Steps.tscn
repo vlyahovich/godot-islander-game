@@ -103,10 +103,10 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 2, 0, 65536, 3, 0, 65537, 4, 0, 65538, 5, 0 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="LeftCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( 4, 13 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="RightCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( 36, 13 )
 shape = SubResource( 3 )

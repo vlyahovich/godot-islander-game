@@ -1,17 +1,19 @@
 tool
 extends StaticBody2D
 
+export var speed_scale = 2
+
 func _ready():
-	$AnimatedSprite3.frame = 0
-	$AnimatedSprite4.frame = 0
-	$AnimatedSprite8.frame = 0
-	$AnimatedSprite9.frame = 0
-	$AnimatedSprite10.frame = 0
-	$AnimatedSprite11.frame = 0
-	
-	$AnimatedSprite3.play()
-	$AnimatedSprite4.play()
-	$AnimatedSprite8.play()
-	$AnimatedSprite9.play()
-	$AnimatedSprite10.play()
-	$AnimatedSprite11.play()
+	var animated_sprites = [
+		$AnimatedSprite3,
+		$AnimatedSprite4,
+		$AnimatedSprite8,
+		$AnimatedSprite9,
+		$AnimatedSprite10,
+		$AnimatedSprite11
+	]
+
+	for sprite in animated_sprites:
+		sprite.frame = 0
+		sprite.speed_scale = speed_scale
+		sprite.play()
