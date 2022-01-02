@@ -7,7 +7,7 @@
 [ext_resource path="res://src/Collision/PlayerDetectionZone.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Collision/Hitbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Collision/Hurtbox.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Actor/Enemy/Slime.gd" type="Script" id=8]
+[ext_resource path="res://src/Actor/Enemy/Enemy.gd" type="Script" id=8]
 [ext_resource path="res://src/Actor/Stats.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AtlasTexture" id=16]
