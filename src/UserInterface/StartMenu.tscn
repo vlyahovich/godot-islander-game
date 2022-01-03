@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://src/UserInterface/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/ui/Menu_icons_16x16.png" type="Texture" id=2]
 [ext_resource path="res://assets/art/logo.png" type="Texture" id=6]
 [ext_resource path="res://assets/art/player/mHero_ [elf].png" type="Texture" id=7]
 [ext_resource path="res://assets/art/forest/forestDecoration_0.png" type="Texture" id=8]
@@ -106,7 +107,13 @@ margin_bottom = 177.0
 width = 25
 height = 25
 variant = 7
-text = "S"
+
+[node name="Icon" type="Sprite" parent="SoundButtonOff"]
+position = Vector2( 15, 10 )
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 10
+frame = 23
 
 [node name="SoundButtonOn" parent="." instance=ExtResource( 1 )]
 visible = false
@@ -117,7 +124,13 @@ margin_bottom = 177.0
 width = 25
 height = 25
 variant = 7
-text = "SX"
+
+[node name="Icon" type="Sprite" parent="SoundButtonOn"]
+position = Vector2( 15, 10 )
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 10
+frame = 23
 
 [node name="Logo" type="Sprite" parent="."]
 position = Vector2( 160.173, 57.25 )
@@ -130,7 +143,7 @@ texture = ExtResource( 6 )
 position = Vector2( 151, 85 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 33 )
-frame = 2
+frame = 1
 speed_scale = 1.2
 playing = true
 
@@ -148,7 +161,13 @@ margin_bottom = 177.0
 width = 25
 height = 25
 variant = 7
-text = "I"
+
+[node name="Icon" type="Sprite" parent="Welcome/CreditsButton"]
+position = Vector2( 16, 10 )
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 10
+frame = 3
 
 [node name="PlayButton" parent="Welcome" instance=ExtResource( 1 )]
 margin_left = 124.0
@@ -195,7 +214,13 @@ margin_bottom = 177.0
 width = 25
 height = 25
 variant = 7
-text = "B"
+
+[node name="Icon" type="Sprite" parent="Credits/BackButton"]
+position = Vector2( 14, 10 )
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 10
+frame = 27
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
