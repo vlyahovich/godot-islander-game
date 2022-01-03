@@ -10,7 +10,7 @@ func hit(dir):
 	if current == "hit_right" or current == "hit_left":
 		$AnimationPlayer.stop()
 	
-	if dir == Vector2.RIGHT:
+	if dir.x >= 0:
 		position.x = -2
 		position.y = -2
 		

@@ -16,15 +16,15 @@ func update(delta):
 
 		var target_velocity = player.position.direction_to(player.path[0]) * player.speed
 
+		player.aTree.set("parameters/Idle/blend_position", target_velocity.x)
+		player.aTree.set("parameters/Run/blend_position", target_velocity.x)
+
 		player.velocity = lerp(player.velocity, target_velocity, delta * player.acceleration)
 		
 		if player.velocity.x >= 0:
 			player.dir = Vector2.RIGHT
 		else:
 			player.dir = Vector2.LEFT
-
-		player.aTree.set("parameters/Idle/blend_position", player.velocity.x)
-		player.aTree.set("parameters/Run/blend_position", player.velocity.x)
 
 		player.aTreeState.travel("Run")
 

@@ -63,15 +63,11 @@ func turn(target_dir):
 func destroyed():
 	$Hurtbox.active = false
 	$StateMachine.set_state($StateMachine/DeathState)
-	
-func turn_animation_finished():
-	$StateMachine.set_state($StateMachine/DefaultState)
-	
-func _unhandled_input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_RIGHT and event.pressed:
-			if weapon != null:
-				weapon.hit(dir)
+
+func _input(event):
+	if Input.is_action_just_pressed("ui_click_right"):
+		if weapon != null:
+			weapon.hit(dir)
 
 func _on_Hurtbox_area_entered(area):
 	if $Hurtbox.invincible == false:
