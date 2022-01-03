@@ -14,7 +14,9 @@ func update(delta):
 			player.follow_path_pop()
 			return
 
-		player.velocity = player.position.direction_to(player.path[0]) * player.speed
+		var target_velocity = player.position.direction_to(player.path[0]) * player.speed
+
+		player.velocity = lerp(player.velocity, target_velocity, delta * player.acceleration)
 		
 		if player.velocity.x >= 0:
 			player.dir = Vector2.RIGHT
@@ -40,5 +42,6 @@ func update(delta):
 			player.follow_path_pop()
 	else:
 		player.aTreeState.travel("Idle")
+		player.velocity = Vector2.ZERO
 
 		player.hide_crosshair()

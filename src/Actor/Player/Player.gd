@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export var speed: int = 80
+export var acceleration: int = 10
 export var invincibility_duration: float = 1
 var path: PoolVector2Array = PoolVector2Array()
 var velocity: Vector2 = Vector2.ZERO
@@ -16,6 +17,9 @@ onready var Crosshair = preload("res://src/UserInterface/Crosshair.tscn")
 onready var Weapon = preload("res://src/Objects/Weapons/Sword.tscn")
 
 func _ready():
+	DebugOverlay.add_stat("Player position", self, "position", false)
+	DebugOverlay.add_stat("Player velocity", self, "velocity", false)
+
 	aTree.active = true
 	$StateMachine.set_active(true)
 	$PlayerStats.connect("health_depleted", self, "destroyed")

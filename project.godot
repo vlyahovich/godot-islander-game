@@ -64,6 +64,7 @@ config/icon="res://icon.png"
 
 PlayerStats="*res://src/Actor/Player/PlayerStats.tscn"
 GameSettings="*res://GameSettings.gd"
+DebugOverlay="*res://src/UserInterface/DebugOverlay.tscn"
 
 [debug]
 
