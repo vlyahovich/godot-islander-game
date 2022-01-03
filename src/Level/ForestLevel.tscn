@@ -66,6 +66,7 @@ position = Vector2( 328, 200 )
 
 [node name="Tree" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( -32, 32 )
+variant = 1
 
 [node name="Chest" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( -28, 52 )
@@ -75,7 +76,6 @@ position = Vector2( -34, 76 )
 
 [node name="SmallStone2" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( -11, 76 )
-variant = 1
 
 [node name="BigStone" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( -40, -10 )
@@ -96,30 +96,24 @@ position = Vector2( -39, 124 )
 
 [node name="Bump2" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( -19, 124 )
-variant = 1
 
 [node name="Shroom" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -7, 31 )
-variant = 2
 
 [node name="Shroom2" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -47, 70 )
-variant = 4
 
 [node name="Shroom3" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -3, 53 )
-variant = 4
 
 [node name="Shroom4" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( -52, 19 )
-variant = 1
 
 [node name="Grass" parent="YSort" instance=ExtResource( 18 )]
 position = Vector2( -35, 106 )
 
 [node name="Grass2" parent="YSort" instance=ExtResource( 18 )]
 position = Vector2( -12, 102 )
-variant = 2
 
 [node name="GraveStone" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( -54, 104 )

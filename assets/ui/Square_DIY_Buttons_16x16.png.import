@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Buttons-183.png-8fd334f7f57c48e913d2f3cbd8df0c4a.stex"
+path="res://.import/Square_DIY_Buttons_16x16.png-3966ef5af04240d51c65900bcf765f04.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/buttons/Buttons-183.png"
-dest_files=[ "res://.import/Buttons-183.png-8fd334f7f57c48e913d2f3cbd8df0c4a.stex" ]
+source_file="res://assets/ui/Square_DIY_Buttons_16x16.png"
+dest_files=[ "res://.import/Square_DIY_Buttons_16x16.png-3966ef5af04240d51c65900bcf765f04.stex" ]
 
 [params]
 

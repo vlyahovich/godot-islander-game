@@ -1,27 +1,18 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://assets/ui/buttons/Buttons-179.png" type="Texture" id=1]
-[ext_resource path="res://assets/ui/buttons/Buttons-158.png" type="Texture" id=2]
-[ext_resource path="res://assets/ui/buttons/Buttons-159.png" type="Texture" id=3]
-[ext_resource path="res://assets/ui/buttons/Buttons-160.png" type="Texture" id=4]
-[ext_resource path="res://assets/ui/buttons/Buttons-161.png" type="Texture" id=5]
+[ext_resource path="res://src/UserInterface/Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/art/logo.png" type="Texture" id=6]
 [ext_resource path="res://assets/art/player/mHero_ [elf].png" type="Texture" id=7]
 [ext_resource path="res://assets/art/forest/forestDecoration_0.png" type="Texture" id=8]
-[ext_resource path="res://assets/ui/buttons/Buttons-139.png" type="Texture" id=9]
-[ext_resource path="res://assets/ui/buttons/Buttons-138.png" type="Texture" id=10]
 [ext_resource path="res://assets/audio/confirm_style_2_001.ogg" type="AudioStream" id=11]
-[ext_resource path="res://assets/ui/buttons/Buttons-147.png" type="Texture" id=12]
-[ext_resource path="res://assets/ui/buttons/Buttons-146.png" type="Texture" id=13]
 [ext_resource path="res://src/UserInterface/StartMenu.gd" type="Script" id=14]
-[ext_resource path="res://assets/ui/buttons/Buttons-155.png" type="Texture" id=15]
-[ext_resource path="res://assets/ui/buttons/Buttons-154.png" type="Texture" id=16]
 [ext_resource path="res://src/Tile/AnimatedTileMap.gd" type="Script" id=17]
 [ext_resource path="res://src/Tile/ForestWater.tres" type="TileSet" id=18]
 [ext_resource path="res://assets/audio/Mid-Air Machine - Breathing Out.mp3" type="AudioStream" id=19]
 [ext_resource path="res://assets/ui/monogram-extended-60.tres" type="DynamicFont" id=20]
 [ext_resource path="res://assets/audio/confirm_style_2_echo_001.ogg" type="AudioStream" id=21]
 [ext_resource path="res://src/Tile/ForestLand.tres" type="TileSet" id=22]
+[ext_resource path="res://assets/ui/Square_DIY_Buttons_16x16.png" type="Texture" id=23]
 
 [sub_resource type="AtlasTexture" id=34]
 atlas = ExtResource( 7 )
@@ -90,36 +81,43 @@ format = 1
 tile_data = PoolIntArray( 1, 0, 0, 2, 0, 1, 3, 0, 1, 4, 0, 131080, 5, 0, 196609, 6, 0, 12, 9, 0, 3, 13, 0, 0, 14, 0, 1, 15, 0, 131080, 16, 0, 196609, 17, 0, 12, 65536, 0, 0, 65537, 0, 6, 65538, 0, 131073, 65539, 0, 131073, 65540, 0, 9, 65542, 0, 262147, 65545, 0, 262146, 65549, 0, 131072, 65550, 0, 131077, 65551, 0, 131074, 65553, 0, 262148, 131072, 0, 65536, 131073, 0, 262145, 131076, 0, 262147, 131078, 0, 65539, 131081, 0, 262146, 131086, 0, 262147, 131089, 0, 327687, 131090, 0, 12, 196608, 0, 262144, 196609, 0, 262145, 196612, 0, 65539, 196614, 0, 65539, 196617, 0, 262151, 196618, 0, 196610, 196622, 0, 131082, 196623, 0, 12, 196626, 0, 65539, 262144, 0, 262144, 262145, 0, 65540, 262146, 0, 131080, 262147, 0, 196609, 262148, 0, 327688, 262150, 0, 262146, 262153, 0, 65539, 262159, 0, 327687, 262160, 0, 131081, 262161, 0, 131080, 262162, 0, 327688, 327680, 0, 65536, 327681, 0, 65537, 327682, 0, 65538, 327686, 0, 262146, 327689, 0, 262147, 327696, 0, 327680, 327697, 0, 131074, 393216, 0, 327680, 393217, 0, 131073, 393218, 0, 196616, 393219, 0, 196609, 393220, 0, 196609, 393221, 0, 196609, 393222, 0, 131084, 393225, 0, 262147, 393228, 0, 0, 393229, 0, 1, 393230, 0, 1, 393231, 0, 2, 458761, 0, 262148, 458764, 0, 65536, 458765, 0, 65537, 458766, 0, 65537, 458767, 0, 262145, 524291, 0, 3, 524297, 0, 65539, 524300, 0, 327680, 524301, 0, 131073, 524302, 0, 131073, 524303, 0, 327681, 589824, 0, 0, 589825, 0, 1, 589826, 0, 1, 589827, 0, 196613, 589828, 0, 1, 589829, 0, 1, 589830, 0, 1, 589831, 0, 1, 589832, 0, 1, 589833, 0, 327686, 655360, 0, 262144, 655361, 0, 65537, 655362, 0, 65537, 655363, 0, 65537, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65540, 655370, 0, 2, 720896, 0, 327680, 720897, 0, 131073, 720898, 0, 131073, 720899, 0, 131073, 720900, 0, 131073, 720901, 0, 131073, 720902, 0, 131073, 720903, 0, 131073, 720904, 0, 131073, 720905, 0, 131073, 720906, 0, 196616, 720907, 0, 196609, 720908, 0, 196609, 720909, 0, 196609, 720910, 0, 196609, 720911, 0, 196609, 720912, 0, 196609, 720913, 0, 196609, 720914, 0, 196609, 720915, 0, 196610 )
 script = ExtResource( 17 )
 
-[node name="Frame" type="Sprite" parent="."]
-position = Vector2( 160, 96 )
-scale = Vector2( 0.19347, 0.187919 )
-texture = ExtResource( 1 )
-
-[node name="SoundButtonOff" type="TextureButton" parent="."]
-margin_left = 288.0
-margin_top = 152.0
-margin_right = 312.0
-margin_bottom = 176.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-expand = true
-stretch_mode = 4
+[node name="Frame" type="NinePatchRect" parent="."]
+margin_left = 80.0
+margin_top = 40.0
+margin_right = 240.0
+margin_bottom = 152.0
+texture = ExtResource( 23 )
+region_rect = Rect2( 0, 0, 48, 48 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SoundButtonOn" type="TextureButton" parent="."]
+[node name="SoundButtonOff" parent="." instance=ExtResource( 1 )]
+margin_left = 288.0
+margin_top = 152.0
+margin_right = 313.0
+margin_bottom = 177.0
+width = 25
+height = 25
+variant = 7
+text = "S"
+
+[node name="SoundButtonOn" parent="." instance=ExtResource( 1 )]
 visible = false
 margin_left = 288.0
 margin_top = 152.0
-margin_right = 312.0
-margin_bottom = 176.0
-texture_normal = ExtResource( 16 )
-texture_pressed = ExtResource( 15 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_right = 313.0
+margin_bottom = 177.0
+width = 25
+height = 25
+variant = 7
+text = "SX"
 
 [node name="Logo" type="Sprite" parent="."]
 position = Vector2( 160.173, 57.25 )
@@ -132,54 +130,39 @@ texture = ExtResource( 6 )
 position = Vector2( 151, 85 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 33 )
+frame = 2
 speed_scale = 1.2
 playing = true
 
 [node name="Fire" type="AnimatedSprite" parent="Welcome"]
 position = Vector2( 176, 103 )
 frames = SubResource( 42 )
-frame = 3
+frame = 1
 playing = true
 
-[node name="PlayButton" type="TextureButton" parent="Welcome"]
-margin_left = 128.0
-margin_top = 112.0
-margin_right = 192.0
-margin_bottom = 136.0
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 5 )
-expand = true
-stretch_mode = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CreditsButton" type="TextureButton" parent="Welcome"]
+[node name="CreditsButton" parent="Welcome" instance=ExtResource( 1 )]
 margin_left = 8.0
 margin_top = 152.0
-margin_right = 32.0
-margin_bottom = 176.0
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 9 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_right = 33.0
+margin_bottom = 177.0
+width = 25
+height = 25
+variant = 7
+text = "I"
+
+[node name="PlayButton" parent="Welcome" instance=ExtResource( 1 )]
+margin_left = 124.0
+margin_top = 123.0
+margin_right = 197.0
+margin_bottom = 141.0
+width = 73
+height = 18
+variant = 4
+text = "- PLAY -"
+color = Color( 1, 1, 1, 1 )
 
 [node name="Credits" type="Node2D" parent="."]
 visible = false
-
-[node name="BackButton" type="TextureButton" parent="Credits"]
-margin_left = 8.0
-margin_top = 152.0
-margin_right = 32.0
-margin_bottom = 176.0
-texture_normal = ExtResource( 13 )
-texture_pressed = ExtResource( 12 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Node2D" type="Node2D" parent="Credits"]
 position = Vector2( 440, 360 )
@@ -204,6 +187,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="BackButton" parent="Credits" instance=ExtResource( 1 )]
+margin_left = 8.0
+margin_top = 152.0
+margin_right = 33.0
+margin_bottom = 177.0
+width = 25
+height = 25
+variant = 7
+text = "B"
+
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
 volume_db = -15.0
@@ -221,6 +214,6 @@ one_shot = true
 
 [connection signal="pressed" from="SoundButtonOff" to="." method="_on_SoundButtonOff_pressed"]
 [connection signal="pressed" from="SoundButtonOn" to="." method="_on_SoundButtonOn_pressed"]
-[connection signal="pressed" from="Welcome/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Welcome/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="Welcome/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Credits/BackButton" to="." method="_on_BackButton_pressed"]

@@ -4,11 +4,17 @@ extends StaticBody2D
 export var variant: int = 0 setget set_variant
 
 var variants_map = [17, 18, 19, 20, 28, 29, 30, 31]
+var ready = false
 
 func _ready():
+	ready = true
+
 	_apply_variant()
 	
 func set_variant(value):
+	if !ready:
+		return
+
 	variant = value
 
 	_apply_variant()

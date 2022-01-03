@@ -5,11 +5,17 @@ export var variant: int = 0 setget set_variant
 
 var variant1 = [53, 54, 68, 69, 82, 0]
 var variant2 = [98, 99, 113, 114, 28]
+var ready = false
 
 func _ready():
+	ready = true
+
 	_apply_variant()
 	
 func set_variant(value):
+	if !ready:
+		return
+
 	variant = value
 
 	_apply_variant()
