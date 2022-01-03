@@ -13,6 +13,7 @@ var weapon = null
 onready var aPlayer: AnimationPlayer = $AnimationPlayer
 onready var aTree: AnimationTree = $AnimationTree
 onready var aTreeState: AnimationNodeStateMachinePlayback = aTree.get("parameters/playback")
+onready var dustEmitter: Node = $DustEmitter
 onready var Crosshair = preload("res://src/UserInterface/Crosshair.tscn")
 onready var Weapon = preload("res://src/Objects/Weapons/Sword.tscn")
 

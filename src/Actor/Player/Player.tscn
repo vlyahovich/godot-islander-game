@@ -1,7 +1,8 @@
-[gd_scene load_steps=105 format=2]
+[gd_scene load_steps=106 format=2]
 
 [ext_resource path="res://assets/art/player/mHero_ [elf].png" type="Texture" id=1]
 [ext_resource path="res://src/Actor/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/DustEmitter.gd" type="Script" id=3]
 [ext_resource path="res://src/Actor/Player/PlayerStateMachine.gd" type="Script" id=4]
 [ext_resource path="res://src/Actor/Player/PlayerDefaultState.gd" type="Script" id=5]
 [ext_resource path="res://src/Actor/Player/PlayerTurnState.gd" type="Script" id=6]
@@ -868,11 +869,15 @@ script = ExtResource( 11 )
 [node name="DeathState" type="Node" parent="StateMachine"]
 script = ExtResource( 12 )
 
+[node name="DustEmitter" type="Node" parent="."]
+script = ExtResource( 3 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 80 )
 position = Vector2( 0, -4 )
 frames = SubResource( 1 )
 animation = "idle_r"
+frame = 1
 offset = Vector2( 0, -5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
