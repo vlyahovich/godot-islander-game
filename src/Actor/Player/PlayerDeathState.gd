@@ -6,7 +6,7 @@ func enter():
 
 	player.aTree.set("parameters/Death/blend_position", player.dir.x)
 
-func update(delta):
+func update(_delta):
 	var player = get_parent().get_parent()
 
 	player.aTreeState.travel("Death")

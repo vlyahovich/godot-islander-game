@@ -1,20 +1,20 @@
 extends CanvasLayer
 
 func _ready():
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://src/Level/ForestLevel.tscn")
 	var master_sound = AudioServer.get_bus_index("Master")
 	AudioServer.set_bus_mute(master_sound, true)
-	return
 
-	$Welcome.visible = true
-	$Credits.visible = false
-	$SoundButtonOff.visible = true
-	$SoundButtonOn.visible = false
-
-	if GameSettings.mute_sound == true:
-		_on_SoundButtonOff_pressed()
-
-	$MenuMusic.play()
+#	$Welcome.visible = true
+#	$Credits.visible = false
+#	$SoundButtonOff.visible = true
+#	$SoundButtonOn.visible = false
+#
+#	if GameSettings.mute_sound == true:
+#		_on_SoundButtonOff_pressed()
+#
+#	$MenuMusic.play()
 
 
 func _on_PlayButton_pressed():
@@ -25,6 +25,7 @@ func _on_PlayButton_pressed():
 	
 	yield($Timer, "timeout")
 
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://src/Level/ForestLevel.tscn")
 
 

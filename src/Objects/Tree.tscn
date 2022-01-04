@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/art/forest/forestDecoration_0.png" type="Texture" id=1]
 [ext_resource path="res://src/Objects/Tree.gd" type="Script" id=2]
 [ext_resource path="res://src/Collision/Interactable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actor/Stats.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.5, 4 )
@@ -145,6 +146,9 @@ anims/grow = SubResource( 5 )
 [node name="GrowTimer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
+
+[node name="Stats" parent="." instance=ExtResource( 4 )]
+max_health = 3
 
 [connection signal="interacted" from="Interactable" to="." method="_on_Interactable_interacted"]
 [connection signal="interacted_coursor" from="Interactable" to="." method="_on_Interactable_interacted_coursor"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://src/Tile/AnimatedTileMap.gd" type="Script" id=1]
 [ext_resource path="res://src/Tile/ForestWater.tres" type="TileSet" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://src/Objects/HBridge.tscn" type="PackedScene" id=25]
 [ext_resource path="res://src/Objects/Sign.tscn" type="PackedScene" id=26]
 [ext_resource path="res://src/UserInterface/Crosshair.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/Objects/ResourceEmitter.tscn" type="PackedScene" id=28]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -20, 64, -6.00001, 66.4798, -21, 67, -37, 64, 311, 54, 311, 28, 336, -56, 321, 108, 321, 166, 336, 208, 323, 189, 321, 171, 306, 84, 235, 154, 242, 160, 218, 157, -23, 36, -23, 31, -6, 12, -21, 47, 259, 32, 264, 17, 268, 29, 276, 51, 285, 57, 272, 61, 260, 49, 270, 97, 264, 109, 258, 105, 258, 138, 264, 166, 251, 156, 247, 43, 244, 34, 236, 78, 217, 79, 235, 78, 204, 36, 222, 38, 218, 61, 204, 80, 189, 94, 180, 70, 179, 43, 294, 22, 290, 4, 289, -2, 127, -55, 205, -3, 164, -5, 316, 194, -72, 208, -5, 194, -72, -55, 190, 148, 178, 155, 165, 155, 164, 70, 114, 118, 113, 0, 127, 0, 141, 140, 61, -56, 61, -3, 13, -3, 13, 12, -21, 84, -6, 84, -6, 118, 180, 172, 90, 140, 90, 132, 255, 67, 262, 75, 227, 68, 205, 156, -41, 31, 204, 93, 164, 42, 203, 147, -37, 47, -41, 36, 140, -5, 85, 118, -6, 132 )
@@ -146,6 +147,8 @@ position = Vector2( -4, -26 )
 position = Vector2( 10, -27 )
 
 [node name="Crosshair" parent="." instance=ExtResource( 27 )]
+
+[node name="ResourceEmitter" parent="." instance=ExtResource( 28 )]
 
 [node name="LevelNavigation" parent="." instance=ExtResource( 11 )]
 player_path = NodePath("../YSort/Player")

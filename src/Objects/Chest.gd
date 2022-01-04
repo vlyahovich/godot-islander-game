@@ -16,8 +16,8 @@ func set_open(value):
 		$Top.frame = closed_frames[0]
 		$Bottom.frame = closed_frames[1]
 
-func _on_Interactable_interacted(area):
+func _on_Interactable_interacted(_area):
 	self.open = !open
 
-func _on_Interactable_interacted_coursor(area):
+func _on_Interactable_interacted_coursor(_area):
 	self.open = !open

@@ -11,15 +11,11 @@ func set_active(value):
 	active = value
 	
 	if active:
-		#$Area2D.set_deferred("monitorable", true)
-		#$Area2D.set_deferred("monitoring", true)
 		$Area2D/CollisionShape2D.set_deferred("disabled", false)
 	else:
 		$Area2D/CollisionShape2D.set_deferred("disabled", true)
 
 func _on_Area2D_area_entered(area):
-	print(area)
-	#print(area, "/", is_player_inside)
 	var groups = area.get_groups()
 
 	if "Crosshair" in groups:

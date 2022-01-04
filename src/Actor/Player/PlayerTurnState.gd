@@ -15,7 +15,7 @@ func enter():
 func get_player():
 	return get_parent().get_parent()
 
-func update(delta):
+func update(_delta):
 	var player = get_player()
 
 	player.aTreeState.travel("Turn")

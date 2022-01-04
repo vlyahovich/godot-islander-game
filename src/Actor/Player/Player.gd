@@ -19,8 +19,11 @@ func _ready():
 	DebugOverlay.add_stat("Player position", self, "position", false)
 	DebugOverlay.add_stat("Player velocity", self, "velocity", false)
 
+	_get_resource_emitter().set_target(self)
+
 	aTree.active = true
 	$StateMachine.set_active(true)
+	# warning-ignore:return_value_discarded
 	$PlayerStats.connect("health_depleted", self, "destroyed")
 
 	weapon = Weapon.instance()
@@ -58,8 +61,11 @@ func destroyed():
 	
 func _get_crosshair():
 	return get_tree().current_scene.get_node_or_null("Crosshair")
+	
+func _get_resource_emitter():
+	return get_tree().current_scene.get_node_or_null("ResourceEmitter")
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("ui_click_right"):
 		if weapon != null:
 			weapon.hit(dir)

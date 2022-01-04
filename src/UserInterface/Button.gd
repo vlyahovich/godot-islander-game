@@ -43,9 +43,7 @@ func _apply_style():
 	$Label.add_color_override("font_color", color)
 	$Label.text = text
 	
-	$TextureRect.texture
-	
-func _input(event):
+func _input(_event):
 	if !is_visible_in_tree():
 		return
 

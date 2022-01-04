@@ -10,6 +10,7 @@ func _ready():
 	tile_set = tile_set.duplicate()
 
 	if get_node_or_null("AnimateTimer"):
+		# warning-ignore:return_value_discarded
 		$AnimateTimer.connect("timeout", self, "_next_frame")
 		$AnimateTimer.start()
 	else:

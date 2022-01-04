@@ -34,16 +34,31 @@ func _apply_variant():
 func _get_crosshair():
 	return get_tree().current_scene.get_node_or_null("Crosshair")
 
+func _get_resource_emitter():
+	return get_tree().current_scene.get_node_or_null("ResourceEmitter")
+
 func _on_Interactable_interacted(area):
 	if $Interactable.active:
-		$Interactable.active = false
-		$AnimationPlayer.play("break")
-		$GrowTimer.start()
+		$Stats.health -= 1
 		
-		yield($AnimationPlayer, "animation_finished")
-		
-		$Sprite.scale = Vector2(1, 1)
-		$Sprite.modulate = Color(1, 1, 1, 0.2)
+		if $Stats.health <= 0:
+			$Stats.health = 3
+			$Interactable.active = false
+			$AnimationPlayer.play("break")
+			$GrowTimer.start()
+
+			_get_resource_emitter().emit_count(self, 3)
+			
+			yield($AnimationPlayer, "animation_finished")
+			
+			$Sprite.scale = Vector2(1, 1)
+			$Sprite.modulate = Color(1, 1, 1, 0.2)
+		else:
+			$AnimationPlayer.play("break")
+
+			yield($AnimationPlayer, "animation_finished")
+			
+			$AnimationPlayer.play("RESET")
 
 func _on_Interactable_interacted_coursor(area):
 	_on_Interactable_interacted(area)
