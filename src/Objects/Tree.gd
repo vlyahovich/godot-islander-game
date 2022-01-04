@@ -7,7 +7,6 @@ const topVariants: Array = [34, 35, 38]
 const bottomVariants: Array = [45, 46, 49]
 
 var ready = false
-var interactable = true
 
 func _ready():
 	ready = true
@@ -31,9 +30,6 @@ func _apply_variant():
 	if get_node_or_null("Bottom"):
 		$Bottom.frame = bottomVariants[variant_clamped]
 
-func _get_resource_emitter():
-	return get_tree().current_scene.get_node_or_null("ResourceEmitter")
-
 func _on_Interactable_interacted(_area):
 	if $Interactable.active:
 		$Stats.health -= 1
@@ -49,10 +45,10 @@ func _on_Stats_health_depleted():
 		$AnimationPlayer.play("break")
 		$GrowTimer.start()
 
-		_get_resource_emitter().emit_count(self, 3)
-		
+		Finder.get_resource_emitter().emit_count(self, 3, ResourceMap.WOOD)
+
 		yield($AnimationPlayer, "animation_finished")
-		
+
 		$Sprite.scale = Vector2(1, 1)
 		$Sprite.modulate = Color(1, 1, 1, 0.2)
 

@@ -19,7 +19,10 @@ func _ready():
 	DebugOverlay.add_stat("Player position", self, "position", false)
 	DebugOverlay.add_stat("Player velocity", self, "velocity", false)
 
-	_get_resource_emitter().set_target(self)
+	var resource_emitter = Finder.get_resource_emitter()
+
+	if resource_emitter:
+		resource_emitter.set_target(self)
 
 	aTree.active = true
 	$StateMachine.set_active(true)
@@ -33,9 +36,12 @@ func follow_path(target_path):
 	path = target_path
 	
 	if path.size() > 1:
-		if position.x - path[1].x > 0:
+		var turn_dir = position.x - path[path.size() - 1].x
+
+		if turn_dir > 0:
 			turn(Vector2.LEFT)
-		else:
+
+		if turn_dir < 0:
 			turn(Vector2.RIGHT)
 
 func follow_path_pop():

@@ -56,7 +56,7 @@ func _on_Interaction_area_entered(area):
 			-height * multi + crosshair_height / 2
 		)
 		$Container/TopR.position = Vector2(
-			radius * multi - crosshair_width / 2,
+			radius * multi - crosshair_width / 2 - 1,
 			-height * multi + crosshair_height / 2
 		)
 		$Container/BottomL.position = Vector2(
@@ -64,7 +64,7 @@ func _on_Interaction_area_entered(area):
 			height * multi - crosshair_height / 2
 		)
 		$Container/BottomR.position = Vector2(
-			radius * multi - crosshair_width / 2,
+			radius * multi - crosshair_width / 2 - 1,
 			height * multi - crosshair_height / 2
 		)
 

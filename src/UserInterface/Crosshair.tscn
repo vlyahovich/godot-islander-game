@@ -156,10 +156,8 @@ script = ExtResource( 2 )
 
 [node name="Container" type="Node2D" parent="."]
 position = Vector2( -15, -15 )
-scale = Vector2( 1, 1 )
 
 [node name="TopL" type="Node2D" parent="Container"]
-scale = Vector2( 1, 1 )
 
 [node name="TopLeft" type="Sprite" parent="Container/TopL"]
 position = Vector2( 8, 0 )
@@ -168,7 +166,6 @@ hframes = 2
 vframes = 2
 
 [node name="TopR" type="Node2D" parent="Container"]
-scale = Vector2( 1, 1 )
 
 [node name="TopRight" type="Sprite" parent="Container/TopR"]
 position = Vector2( 24, 0 )
@@ -178,7 +175,6 @@ vframes = 2
 frame = 1
 
 [node name="BottomL" type="Node2D" parent="Container"]
-scale = Vector2( 1, 1 )
 
 [node name="BottomLeft" type="Sprite" parent="Container/BottomL"]
 position = Vector2( 8, 32 )
@@ -188,7 +184,6 @@ vframes = 2
 frame = 2
 
 [node name="BottomR" type="Node2D" parent="Container"]
-scale = Vector2( 1, 1 )
 
 [node name="BottomRight" type="Sprite" parent="Container/BottomR"]
 position = Vector2( 24, 32 )
@@ -199,7 +194,6 @@ frame = 3
 
 [node name="Interaction" type="Area2D" parent="Container" groups=["Crosshair"]]
 position = Vector2( 15, 15 )
-scale = Vector2( 1, 1 )
 collision_layer = 32
 collision_mask = 64
 

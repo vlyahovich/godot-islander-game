@@ -20,7 +20,7 @@ func update(delta):
 		player.aTree.set("parameters/Run/blend_position", target_velocity.x)
 
 		player.velocity = lerp(player.velocity, target_velocity, delta * player.acceleration)
-		
+
 		if player.velocity.x >= 0:
 			player.dir = Vector2.RIGHT
 		else:

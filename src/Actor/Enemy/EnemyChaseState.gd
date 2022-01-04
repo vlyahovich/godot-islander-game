@@ -19,7 +19,8 @@ func update(delta):
 
 		if distance.x > 0:
 			enemy.dir = Vector2.RIGHT
-		else:
+
+		if distance.x < 0:
 			enemy.dir = Vector2.LEFT
 			
 		if enemy.knockback == Vector2.ZERO:
