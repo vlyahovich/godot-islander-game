@@ -1,7 +1,7 @@
 extends "res://src/State/State.gd"
 class_name PlayerDefaultState
 
-var min_velocity_length = 0.1
+var min_velocity_length = 2
 
 func update(delta):
 	var player = get_parent().get_parent()

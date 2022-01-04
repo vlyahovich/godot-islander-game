@@ -62,7 +62,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PlayerStats="*res://src/Actor/Player/PlayerStats.tscn"
 GameSettings="*res://GameSettings.gd"
 DebugOverlay="*res://src/UserInterface/DebugOverlay.tscn"
 
@@ -156,6 +155,8 @@ ui_click_right={
 2d_physics/layer_3="PlayerHurtbox"
 2d_physics/layer_4="EnemyHurtbox"
 2d_physics/layer_5="Enemy"
+2d_physics/layer_6="Interaction"
+2d_physics/layer_7="Interactable"
 
 [physics]
 

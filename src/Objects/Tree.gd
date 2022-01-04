@@ -29,3 +29,9 @@ func _apply_variant():
 
 	if get_node_or_null("Bottom"):
 		$Bottom.frame = bottomVariants[variant_clamped]
+
+func _get_crosshair():
+	return get_tree().current_scene.get_node_or_null("Crosshair")
+
+func _on_Interactable_interacted(area):
+	print("break the tree")
