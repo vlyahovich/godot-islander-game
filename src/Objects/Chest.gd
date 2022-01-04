@@ -18,6 +18,3 @@ func set_open(value):
 
 func _on_Interactable_interacted(_area):
 	self.open = !open
-
-func _on_Interactable_interacted_coursor(_area):
-	self.open = !open

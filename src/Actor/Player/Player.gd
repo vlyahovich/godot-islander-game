@@ -33,8 +33,6 @@ func follow_path(target_path):
 	path = target_path
 	
 	if path.size() > 1:
-		show_crosshair()
-
 		if position.x - path[1].x > 0:
 			turn(Vector2.LEFT)
 		else:
@@ -42,12 +40,6 @@ func follow_path(target_path):
 
 func follow_path_pop():
 	path.remove(0)
-	
-func show_crosshair():
-	_get_crosshair().queue_show(get_global_mouse_position())
-	
-func hide_crosshair():
-	_get_crosshair().queue_hide()
 
 func turn(target_dir):
 	if dir != target_dir:
@@ -58,10 +50,7 @@ func turn(target_dir):
 func destroyed():
 	$Hurtbox.active = false
 	$StateMachine.set_state($StateMachine/DeathState)
-	
-func _get_crosshair():
-	return get_tree().current_scene.get_node_or_null("Crosshair")
-	
+
 func _get_resource_emitter():
 	return get_tree().current_scene.get_node_or_null("ResourceEmitter")
 

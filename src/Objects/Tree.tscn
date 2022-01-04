@@ -91,7 +91,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 0.25, 3.73213, 2.2974, 2.14355, 2 ),
+"transitions": PoolRealArray( 1, 1.86607, 3.03143, 0.287175, 1.7411, 3.4822 ),
 "update": 0,
 "values": [ Vector2( 0.2, 0.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
 }
@@ -151,7 +151,8 @@ one_shot = true
 max_health = 3
 
 [connection signal="interacted" from="Interactable" to="." method="_on_Interactable_interacted"]
-[connection signal="interacted_coursor" from="Interactable" to="." method="_on_Interactable_interacted_coursor"]
 [connection signal="timeout" from="GrowTimer" to="." method="_on_GrowTimer_timeout"]
+[connection signal="health_chaged" from="Stats" to="." method="_on_Stats_health_chaged"]
+[connection signal="health_depleted" from="Stats" to="." method="_on_Stats_health_depleted"]
 
 [editable path="Interactable"]

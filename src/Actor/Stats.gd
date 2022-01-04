@@ -14,3 +14,6 @@ func set_health(value):
 	
 	if health <= 0:
 		emit_signal("health_depleted")
+		
+func reset_health():
+	health = max_health

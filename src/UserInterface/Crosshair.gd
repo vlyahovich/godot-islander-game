@@ -1,70 +1,47 @@
 extends Node2D
 
-const crosshair_width = 32
-const crosshair_height = 32
-
-var active = false
-var showDelayTimer = null
+const crosshair_width = 30.0
+const crosshair_height = 30.0
 
 func _ready():
 	_reset_position()
+	
+func _input(_event):
+	if Input.is_action_just_pressed("ui_click_left"):
+		queue_show(get_global_mouse_position())
 
 func queue_show(position):
-	showDelayTimer = Timer.new()
+	$VisibilityTimer.start()
 
-	add_child(showDelayTimer)
-
-	showDelayTimer.wait_time = 0.1
-	showDelayTimer.start()
-	
 	global_position = position
-	active = true
-	visible = false
 
-	$Interaction/CollisionShape2D.disabled = false
-	
-	yield(showDelayTimer, "timeout")
+	# visibility trick needed to avoid jumping while changing shape
+	$Container.modulate = Color(1, 1, 1, 0)
 
-	showDelayTimer.queue_free()
-	showDelayTimer = null
-
-	visible = true
+	$Container/Interaction/CollisionShape2D.disabled = true
+	$Container/Interaction/CollisionShape2D.disabled = false
 
 	$AnimationPlayer.play("animate")
 	
-	$TopL.position = Vector2.ZERO
-	$TopR.position = Vector2.ZERO
-	$BottomL.position = Vector2.ZERO
-	$BottomR.position = Vector2.ZERO
+	$Container/TopL.position = Vector2.ZERO
+	$Container/TopR.position = Vector2.ZERO
+	$Container/BottomL.position = Vector2.ZERO
+	$Container/BottomR.position = Vector2.ZERO
 
 func queue_hide():
-	if active:
-		active = false
+	$DebounceHideTimer.start()
 
-		$AnimationPlayer.play("hide")
-		
-		yield($AnimationPlayer, "animation_finished")
-		
 func _reset_position():
 	global_position = Vector2(-10000, -10000)
 
-	$Interaction/CollisionShape2D.disabled = true
-
-	active = false
-	
-func _on_hide_animation_finished():
-	_reset_position()
-
-	$AnimationPlayer.play("RESET")
+	$Container/Interaction/CollisionShape2D.disabled = true
 
 func _on_Interaction_area_entered(area):
-	if showDelayTimer:
-		visible = true
-
-		showDelayTimer.queue_free()
-		showDelayTimer = null
-
-		$AnimationPlayer.play("animate")
+	var groups = area.get_groups()
+	
+	if "Player" in groups:
+		queue_hide()
+		return
 
 	var collision_area = area.find_node("CollisionShape2D")
 	var collsion_shape = collision_area.shape
@@ -74,9 +51,33 @@ func _on_Interaction_area_entered(area):
 		var height = collsion_shape.height
 		var radius = collsion_shape.radius
 
-		$TopL.position = Vector2(-radius * multi, -height * multi)
-		$TopR.position = Vector2(radius * multi - crosshair_width, -height * multi)
-		$BottomL.position = Vector2(-radius * multi, height * multi - crosshair_height)
-		$BottomR.position = Vector2(radius * multi - crosshair_width, height * multi - crosshair_height)
+		$Container/TopL.position = Vector2(
+			-radius * multi + crosshair_width / 2,
+			-height * multi + crosshair_height / 2
+		)
+		$Container/TopR.position = Vector2(
+			radius * multi - crosshair_width / 2,
+			-height * multi + crosshair_height / 2
+		)
+		$Container/BottomL.position = Vector2(
+			-radius * multi + crosshair_width / 2,
+			height * multi - crosshair_height / 2
+		)
+		$Container/BottomR.position = Vector2(
+			radius * multi - crosshair_width / 2,
+			height * multi - crosshair_height / 2
+		)
 
 	global_position = collision_area.global_position
+
+func _on_VisibilityTimer_timeout():
+	$Container.modulate = Color(1, 1, 1, 1)
+
+func _on_DebounceHideTimer_timeout():
+	$AnimationPlayer.play("hide")
+	
+	yield($AnimationPlayer, "animation_finished")
+	
+	_reset_position()
+
+	$AnimationPlayer.play("RESET")

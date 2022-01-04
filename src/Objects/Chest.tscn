@@ -40,6 +40,5 @@ position = Vector2( 0, 3 )
 shape = SubResource( 2 )
 
 [connection signal="interacted" from="Interactable" to="." method="_on_Interactable_interacted"]
-[connection signal="interacted_coursor" from="Interactable" to="." method="_on_Interactable_interacted_coursor"]
 
 [editable path="Interactable"]

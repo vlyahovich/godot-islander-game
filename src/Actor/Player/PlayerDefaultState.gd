@@ -43,5 +43,3 @@ func update(delta):
 	else:
 		player.aTreeState.travel("Idle")
 		player.velocity = Vector2.ZERO
-
-		player.hide_crosshair()
