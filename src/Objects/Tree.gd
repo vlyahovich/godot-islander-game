@@ -35,3 +35,7 @@ func _get_crosshair():
 
 func _on_Interactable_interacted(area):
 	print("break the tree")
+
+func _on_Interactable_interacted_coursor(area):
+	if $Interactable.is_player_inside:
+		print("knock the tree")

@@ -15,3 +15,9 @@ func set_open(value):
 	else:
 		$Top.frame = closed_frames[0]
 		$Bottom.frame = closed_frames[1]
+
+func _on_Interactable_interacted(area):
+	print("open the chest")
+
+func _on_Interactable_interacted_coursor(area):
+	print("knock the chest")

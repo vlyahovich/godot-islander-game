@@ -215,7 +215,7 @@ anims/RESET = SubResource( 2 )
 anims/animate = SubResource( 1 )
 anims/hide = SubResource( 3 )
 
-[node name="Interaction" type="Area2D" parent="."]
+[node name="Interaction" type="Area2D" parent="." groups=["Crosshair"]]
 position = Vector2( 15, 15 )
 collision_layer = 32
 collision_mask = 64

@@ -41,7 +41,7 @@ func follow_path_pop():
 	path.remove(0)
 	
 func show_crosshair():
-	_get_crosshair().queue_show(path[path.size() - 1])
+	_get_crosshair().queue_show(get_global_mouse_position())
 	
 func hide_crosshair():
 	_get_crosshair().queue_hide()
