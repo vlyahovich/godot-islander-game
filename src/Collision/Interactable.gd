@@ -2,11 +2,24 @@ extends Node2D
 
 var crosshair_active = false
 var is_player_inside = false
+var active = true setget set_active
 
 signal interacted(area)
 signal interacted_coursor(area)
 
+func set_active(value):
+	active = value
+	
+	if active:
+		#$Area2D.set_deferred("monitorable", true)
+		#$Area2D.set_deferred("monitoring", true)
+		$Area2D/CollisionShape2D.set_deferred("disabled", false)
+	else:
+		$Area2D/CollisionShape2D.set_deferred("disabled", true)
+
 func _on_Area2D_area_entered(area):
+	print(area)
+	#print(area, "/", is_player_inside)
 	var groups = area.get_groups()
 
 	if "Crosshair" in groups:
@@ -15,15 +28,20 @@ func _on_Area2D_area_entered(area):
 
 		crosshair_active = true
 	
-	if crosshair_active and "Player" in groups:
-		emit_signal("interacted", area)
+	if "Player" in groups:
+		if crosshair_active:
+			emit_signal("interacted", area)
+
+			crosshair_active = false
 		
 		is_player_inside = true
-		crosshair_active = false
 
 
 func _on_Area2D_area_exited(area):
 	var groups = area.get_groups()
+	
+	if "Crosshair" in groups:
+		crosshair_active = false
 	
 	if "Player" in groups:
 		is_player_inside = false

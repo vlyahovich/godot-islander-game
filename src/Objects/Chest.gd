@@ -17,7 +17,7 @@ func set_open(value):
 		$Bottom.frame = closed_frames[1]
 
 func _on_Interactable_interacted(area):
-	print("open the chest")
+	self.open = !open
 
 func _on_Interactable_interacted_coursor(area):
-	print("knock the chest")
+	self.open = !open

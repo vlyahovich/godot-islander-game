@@ -1,6 +1,11 @@
 extends CanvasLayer
 
 func _ready():
+	get_tree().change_scene("res://src/Level/ForestLevel.tscn")
+	var master_sound = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(master_sound, true)
+	return
+
 	$Welcome.visible = true
 	$Credits.visible = false
 	$SoundButtonOff.visible = true

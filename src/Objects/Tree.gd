@@ -7,6 +7,7 @@ const topVariants: Array = [34, 35, 38]
 const bottomVariants: Array = [45, 46, 49]
 
 var ready = false
+var interactable = true
 
 func _ready():
 	ready = true
@@ -34,8 +35,19 @@ func _get_crosshair():
 	return get_tree().current_scene.get_node_or_null("Crosshair")
 
 func _on_Interactable_interacted(area):
-	print("break the tree")
+	if $Interactable.active:
+		$Interactable.active = false
+		$AnimationPlayer.play("break")
+		$GrowTimer.start()
+		
+		yield($AnimationPlayer, "animation_finished")
+		
+		$Sprite.scale = Vector2(1, 1)
+		$Sprite.modulate = Color(1, 1, 1, 0.2)
 
 func _on_Interactable_interacted_coursor(area):
-	if $Interactable.is_player_inside:
-		print("knock the tree")
+	_on_Interactable_interacted(area)
+
+func _on_GrowTimer_timeout():
+	$Interactable.active = true
+	$AnimationPlayer.play("grow")

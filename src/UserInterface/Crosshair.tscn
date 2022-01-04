@@ -162,49 +162,42 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5, 5 )
 
 [node name="Crosshair" type="Node2D"]
 scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 2 )
 
 [node name="TopL" type="Node2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="TopLeft" type="Sprite" parent="TopL"]
 position = Vector2( 8, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 hframes = 2
 vframes = 2
 
 [node name="TopR" type="Node2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="TopRight" type="Sprite" parent="TopR"]
 position = Vector2( 24, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 hframes = 2
 vframes = 2
 frame = 1
 
 [node name="BottomL" type="Node2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="BottomLeft" type="Sprite" parent="BottomL"]
 position = Vector2( 8, 32 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 hframes = 2
 vframes = 2
 frame = 2
 
 [node name="BottomR" type="Node2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="BottomRight" type="Sprite" parent="BottomR"]
 position = Vector2( 24, 32 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 hframes = 2
 vframes = 2
@@ -221,7 +214,6 @@ collision_layer = 32
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [connection signal="area_entered" from="Interaction" to="." method="_on_Interaction_area_entered"]
