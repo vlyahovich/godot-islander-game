@@ -6,6 +6,8 @@ export var open: bool = false setget set_open
 var open_frames = [69, 80]
 var closed_frames = [68, 79]
 
+var empty = false
+
 func set_open(value):
 	open = value
 	
@@ -18,3 +20,11 @@ func set_open(value):
 
 func _on_Interactable_interacted(_area):
 	self.open = !open
+	
+	if open:
+		$OpenSound.play()
+
+		Finder.get_resource_emitter().emit_count(self, 100, ResourceMap.WOOD)
+		Finder.get_resource_emitter().emit_count(self, 100, ResourceMap.STONE)
+
+		empty = true

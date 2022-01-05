@@ -1,4 +1,6 @@
 extends Node2D
 
 func _ready():
-	$LevelMusic.play()
+	PlayerInventory.connect_emitter($ResourceEmitter)
+
+	#$LevelMusic.play()

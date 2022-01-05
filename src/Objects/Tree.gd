@@ -36,12 +36,14 @@ func _on_Interactable_interacted(_area):
 
 func _on_GrowTimer_timeout():
 	$Interactable.active = true
+	$GrowSound.play()
 	$AnimationPlayer.play("grow")
 
 func _on_Stats_health_depleted():
 	if $Interactable.active:
 		$Stats.reset_health()
 		$Interactable.active = false
+		$BreakSound.play()
 		$AnimationPlayer.play("break")
 		$GrowTimer.start()
 
@@ -54,6 +56,7 @@ func _on_Stats_health_depleted():
 
 func _on_Stats_health_chaged(value):
 	if value > 0:
+		$HitSound.play()
 		$AnimationPlayer.play("break")
 
 		yield($AnimationPlayer, "animation_finished")

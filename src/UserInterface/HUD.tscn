@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/ui/theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/UserInterface/InventoryUI.tscn" type="PackedScene" id=2]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -13,3 +14,17 @@ text = "HUD"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -62.0
+margin_top = -32.0
+margin_right = 66.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryUI" parent="Control" instance=ExtResource( 2 )]

@@ -4,16 +4,16 @@ func _on_Interactable_interacted(area):
 	if $Interactable.active:
 		$Stats.health -= 1
 
-
 func _on_RepairTimer_timeout():
 	$Interactable.active = true
+	$GrowSound.play()
 	$AnimationPlayer.play("repair")
-
 
 func _on_Stats_health_depleted():
 	if $Interactable.active:
 		$Stats.reset_health()
 		$Interactable.active = false
+		$BreakSound.play()
 		$AnimationPlayer.play("break")
 		$RepairTimer.start()
 
@@ -24,9 +24,9 @@ func _on_Stats_health_depleted():
 		$Sprite.scale = Vector2(1, 1)
 		$Sprite.modulate = Color(1, 1, 1, 0.2)
 
-
 func _on_Stats_health_chaged(value):
 	if value > 0:
+		$HitSound.play()
 		$AnimationPlayer.play("break")
 
 		yield($AnimationPlayer, "animation_finished")

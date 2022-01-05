@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WoodHit1.mp3-0b24258c6751097cfb3696cd707caae3.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/wood/WoodHit1.mp3"
+dest_files=[ "res://.import/WoodHit1.mp3-0b24258c6751097cfb3696cd707caae3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

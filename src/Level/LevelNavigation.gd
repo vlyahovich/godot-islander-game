@@ -1,7 +1,7 @@
 extends Navigation2D
 
 var pressed = false
-var queued_path = null
+var queued_path = 0
 var queued_path_read = 0
 
 export(NodePath) var player_path = null
@@ -13,12 +13,13 @@ func _physics_process(delta):
 	if queued_path:
 		if queued_path_read >= 1:
 			var player = get_node(player_path)
+			var path = get_simple_path(player.position, get_local_mouse_position())
 
-			$Line2D.points = queued_path
+			$Line2D.points = path
 
-			player.follow_path(queued_path)
+			player.follow_path(path)
 
-			queued_path = null
+			queued_path = 0
 			queued_path_read = 0
 		queued_path_read += 1
 
@@ -35,7 +36,7 @@ func _navigate_to_mouse():
 			
 			# queue path for next tick so we can check collisions first
 			queued_path_read = 0
-			queued_path = get_simple_path(player.position, get_local_mouse_position())
+			queued_path = 1
 			
 func _input(event):
 	if Input.is_action_just_pressed("ui_click_left"):
@@ -45,7 +46,7 @@ func _on_InteractableChecker_area_entered(area):
 	var radius = area.owner.get("radius")
 	var interactable_distance = radius if radius else 10
 
-	queued_path = null
+	queued_path = 0
 	queued_path_read = 0
 
 	var player = get_node(player_path)

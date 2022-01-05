@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Squeek.mp3-4149faa01725e1035e66909189b44cf1.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Squeek/Squeek.mp3"
+dest_files=[ "res://.import/Squeek.mp3-4149faa01725e1035e66909189b44cf1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

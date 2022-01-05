@@ -1,0 +1,170 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/UserInterface/InventoryUI.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/Frames_GrayBG_32x32export.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/resources/resources_basic.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/theme.tres" type="Theme" id=4]
+[ext_resource path="res://assets/ui/monogram-extended-8.tres" type="DynamicFont" id=5]
+
+[node name="InventoryUI" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Slot1" type="Node2D" parent="."]
+
+[node name="ContainerSprite" type="Sprite" parent="Slot1"]
+position = Vector2( 16, 16 )
+texture = ExtResource( 2 )
+hframes = 12
+vframes = 5
+frame = 24
+
+[node name="ResourceSprite" type="Sprite" parent="Slot1"]
+visible = false
+position = Vector2( 16, 16 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 11
+vframes = 11
+
+[node name="Count" type="Label" parent="Slot1"]
+visible = false
+margin_left = 9.0
+margin_top = 19.0
+margin_right = 23.0
+margin_bottom = 24.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )
+text = "99"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="Node2D" parent="."]
+
+[node name="ContainerSprite" type="Sprite" parent="Slot2"]
+position = Vector2( 40, 16 )
+texture = ExtResource( 2 )
+hframes = 12
+vframes = 5
+frame = 24
+
+[node name="ResourceSprite" type="Sprite" parent="Slot2"]
+visible = false
+position = Vector2( 40, 16 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 11
+vframes = 11
+
+[node name="Count" type="Label" parent="Slot2"]
+visible = false
+margin_left = 33.0
+margin_top = 19.0
+margin_right = 47.0
+margin_bottom = 24.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )
+text = "99"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot3" type="Node2D" parent="."]
+
+[node name="ContainerSprite" type="Sprite" parent="Slot3"]
+position = Vector2( 64, 16 )
+texture = ExtResource( 2 )
+hframes = 12
+vframes = 5
+frame = 24
+
+[node name="ResourceSprite" type="Sprite" parent="Slot3"]
+visible = false
+position = Vector2( 64, 16 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 11
+vframes = 11
+
+[node name="Count" type="Label" parent="Slot3"]
+visible = false
+margin_left = 57.0
+margin_top = 19.0
+margin_right = 71.0
+margin_bottom = 24.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )
+text = "99"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot4" type="Node2D" parent="."]
+
+[node name="ContainerSprite" type="Sprite" parent="Slot4"]
+position = Vector2( 88, 16 )
+texture = ExtResource( 2 )
+hframes = 12
+vframes = 5
+frame = 24
+
+[node name="ResourceSprite" type="Sprite" parent="Slot4"]
+visible = false
+position = Vector2( 88, 16 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 11
+vframes = 11
+
+[node name="Count" type="Label" parent="Slot4"]
+visible = false
+margin_left = 81.0
+margin_top = 19.0
+margin_right = 95.0
+margin_bottom = 24.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )
+text = "99"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot5" type="Node2D" parent="."]
+
+[node name="ContainerSprite" type="Sprite" parent="Slot5"]
+position = Vector2( 112, 16 )
+texture = ExtResource( 2 )
+hframes = 12
+vframes = 5
+frame = 24
+
+[node name="ResourceSprite" type="Sprite" parent="Slot5"]
+visible = false
+position = Vector2( 112, 16 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+hframes = 11
+vframes = 11
+
+[node name="Count" type="Label" parent="Slot5"]
+visible = false
+margin_left = 105.0
+margin_top = 19.0
+margin_right = 119.0
+margin_bottom = 24.0
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )
+text = "99"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

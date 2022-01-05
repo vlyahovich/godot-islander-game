@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DESTRUCTION Break Impact Wood 04.wav-c60814fda745a53cd2cbd128ad9d78d3.sample"
+
+[deps]
+
+source_file="res://assets/audio/DESTRUCTION Break Impact Wood 04.wav"
+dest_files=[ "res://.import/DESTRUCTION Break Impact Wood 04.wav-c60814fda745a53cd2cbd128ad9d78d3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

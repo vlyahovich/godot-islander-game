@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/StoneHit3.mp3-f06a2d234f9a1a2ae6b8bcd29187e4f1.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/stone/StoneHit3.mp3"
+dest_files=[ "res://.import/StoneHit3.mp3-f06a2d234f9a1a2ae6b8bcd29187e4f1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

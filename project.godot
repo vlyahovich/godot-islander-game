@@ -72,6 +72,7 @@ GameSettings="*res://GameSettings.gd"
 DebugOverlay="*res://src/UserInterface/DebugOverlay.tscn"
 Finder="*res://Finder.gd"
 ResourceMap="*res://src/Objects/ResourceMap.gd"
+PlayerInventory="*res://src/Actor/Player/Inventory.tscn"
 
 [debug]
 

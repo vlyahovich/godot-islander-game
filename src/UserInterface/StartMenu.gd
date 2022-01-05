@@ -3,8 +3,8 @@ extends CanvasLayer
 func _ready():
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://src/Level/ForestLevel.tscn")
-	var master_sound = AudioServer.get_bus_index("Master")
-	AudioServer.set_bus_mute(master_sound, true)
+	#var master_sound = AudioServer.get_bus_index("Master")
+	#AudioServer.set_bus_mute(master_sound, true)
 
 #	$Welcome.visible = true
 #	$Credits.visible = false
