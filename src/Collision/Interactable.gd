@@ -1,5 +1,7 @@
 extends Node2D
 
+export(int) var radius = 10
+
 var crosshair_active = false
 var player_area = null
 var active = true setget set_active

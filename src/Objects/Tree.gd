@@ -45,7 +45,7 @@ func _on_Stats_health_depleted():
 		$AnimationPlayer.play("break")
 		$GrowTimer.start()
 
-		Finder.get_resource_emitter().emit_count(self, 3, ResourceMap.WOOD)
+		Finder.get_resource_emitter().emit_count(self, 1, ResourceMap.WOOD)
 
 		yield($AnimationPlayer, "animation_finished")
 

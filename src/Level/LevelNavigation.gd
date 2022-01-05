@@ -1,7 +1,6 @@
 extends Navigation2D
 
 var pressed = false
-var interactable_distance = 10
 var queued_path = null
 var queued_path_read = 0
 
@@ -43,6 +42,9 @@ func _input(event):
 		_navigate_to_mouse()
 
 func _on_InteractableChecker_area_entered(area):
+	var radius = area.owner.get("radius")
+	var interactable_distance = radius if radius else 10
+
 	queued_path = null
 	queued_path_read = 0
 

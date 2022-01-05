@@ -1,34 +1,138 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/art/forest/forestDecoration_0.png" type="Texture" id=1]
+[ext_resource path="res://src/Objects/BigStone.gd" type="Script" id=2]
+[ext_resource path="res://src/Collision/Interactable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actor/Stats.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 7.5 )
 
-[node name="BigStone" type="StaticBody2D"]
+[sub_resource type="CapsuleShape2D" id=2]
+height = 10.0
 
-[node name="TopLeft" type="Sprite" parent="."]
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "break"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 0 ), Vector2( 0, 0 ), Vector2( -1, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "repair"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1.86607, 3.03143, 0.287175, 1.7411, 3.4822 ),
+"update": 0,
+"values": [ Vector2( 0.2, 0.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="BigStone" type="StaticBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Node2D" parent="."]
+
+[node name="TopLeft" type="Sprite" parent="Sprite"]
 position = Vector2( -8, -3 )
 texture = ExtResource( 1 )
 hframes = 11
 vframes = 11
 frame = 59
 
-[node name="TopRight" type="Sprite" parent="."]
+[node name="TopRight" type="Sprite" parent="Sprite"]
 position = Vector2( 8, -3 )
 texture = ExtResource( 1 )
 hframes = 11
 vframes = 11
 frame = 60
 
-[node name="BottomLeft" type="Sprite" parent="."]
+[node name="BottomLeft" type="Sprite" parent="Sprite"]
 position = Vector2( -8, 13 )
 texture = ExtResource( 1 )
 hframes = 11
 vframes = 11
 frame = 70
 
-[node name="BottomRight" type="Sprite" parent="."]
+[node name="BottomRight" type="Sprite" parent="Sprite"]
 position = Vector2( 8, 13 )
 texture = ExtResource( 1 )
 hframes = 11
@@ -38,3 +142,29 @@ frame = 71
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 7.5 )
 shape = SubResource( 1 )
+
+[node name="Interactable" parent="." instance=ExtResource( 3 )]
+radius = 15
+
+[node name="CollisionShape2D" parent="Interactable/Area2D" index="0"]
+position = Vector2( 0, 4 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 5 )
+anims/break = SubResource( 3 )
+anims/repair = SubResource( 4 )
+
+[node name="RepairTimer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[node name="Stats" parent="." instance=ExtResource( 4 )]
+max_health = 10
+
+[connection signal="interacted" from="Interactable" to="." method="_on_Interactable_interacted"]
+[connection signal="timeout" from="RepairTimer" to="." method="_on_RepairTimer_timeout"]
+[connection signal="health_chaged" from="Stats" to="." method="_on_Stats_health_chaged"]
+[connection signal="health_depleted" from="Stats" to="." method="_on_Stats_health_depleted"]
+
+[editable path="Interactable"]

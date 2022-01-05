@@ -133,6 +133,7 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Interactable" parent="." instance=ExtResource( 3 )]
+radius = 15
 
 [node name="CollisionShape2D" parent="Interactable/Area2D" index="0"]
 position = Vector2( 0, -7 )

@@ -46,7 +46,7 @@ func _on_Stats_health_depleted():
 		$AnimationPlayer.play("break")
 		$RepairTimer.start()
 
-		Finder.get_resource_emitter().emit_count(self, 3, ResourceMap.STONE)
+		Finder.get_resource_emitter().emit_count(self, 1, ResourceMap.STONE)
 
 		yield($AnimationPlayer, "animation_finished")
 
