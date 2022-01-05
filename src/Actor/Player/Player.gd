@@ -64,6 +64,14 @@ func _input(_event):
 	if Input.is_action_just_pressed("ui_click_right"):
 		if weapon != null:
 			weapon.hit(dir)
+			
+			var turn_dir = position.x - get_global_mouse_position().x
+
+			if turn_dir > 0:
+				turn(Vector2.LEFT)
+
+			if turn_dir < 0:
+				turn(Vector2.RIGHT)
 
 func _on_Hurtbox_area_entered(area):
 	if $Hurtbox.invincible == false:
