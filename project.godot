@@ -166,6 +166,7 @@ ui_click_right={
 2d_physics/layer_5="Enemy"
 2d_physics/layer_6="Interaction"
 2d_physics/layer_7="Interactable"
+2d_physics/layer_8="Bridges"
 
 [physics]
 

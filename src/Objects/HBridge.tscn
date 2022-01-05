@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/art/forest/forestDecoration_2.png" type="Texture" id=1]
+[ext_resource path="res://src/Objects/HBridge.gd" type="Script" id=2]
 
 [sub_resource type="TileSet" id=1]
 0/name = "forestDecoration_2.png 0"
@@ -332,7 +333,12 @@ extents = Vector2( 43, 5 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 43, 5 )
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 43, 11 )
+
 [node name="HBridge" type="StaticBody2D"]
+collision_layer = 129
+script = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -347,3 +353,14 @@ shape = SubResource( 2 )
 [node name="BottomCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2( 48, 37 )
 shape = SubResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 129
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+modulate = Color( 1, 0.352941, 0.47451, 0.917647 )
+position = Vector2( 48, 21 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

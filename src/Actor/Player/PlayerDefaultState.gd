@@ -39,7 +39,6 @@ func update(delta):
 
 			player.follow_path_pop()
 		elif player.velocity.length() < min_velocity_length:
-			print(1)
 			# player is stuck in collision so we stop
 			player.aTreeState.travel("Idle")
 			player.follow_path_pop()
