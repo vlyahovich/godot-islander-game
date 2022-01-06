@@ -9,7 +9,7 @@ export(NodePath) var player_path = null
 func _ready():
 	assert(player_path != null, "you must provide player_path")
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if queued_path:
 		if queued_path_read >= 1:
 			var player = get_node(player_path)
@@ -38,7 +38,7 @@ func _navigate_to_mouse():
 			queued_path_read = 0
 			queued_path = 1
 			
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("ui_click_left"):
 		_navigate_to_mouse()
 

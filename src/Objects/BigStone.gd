@@ -2,16 +2,18 @@ extends StaticBody2D
 
 func _on_Interactable_interacted(area):
 	if $Interactable.active:
+		area.notify_interaction_finished(0.5)
+
 		$Stats.health -= 1
 
 func _on_RepairTimer_timeout():
+	$Stats.reset_health()
 	$Interactable.active = true
 	$GrowSound.play()
 	$AnimationPlayer.play("repair")
 
 func _on_Stats_health_depleted():
 	if $Interactable.active:
-		$Stats.reset_health()
 		$Interactable.active = false
 		$BreakSound.play()
 		$AnimationPlayer.play("break")

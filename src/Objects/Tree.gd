@@ -30,18 +30,20 @@ func _apply_variant():
 	if get_node_or_null("Bottom"):
 		$Bottom.frame = bottomVariants[variant_clamped]
 
-func _on_Interactable_interacted(_area):
+func _on_Interactable_interacted(area):
 	if $Interactable.active:
+		area.notify_interaction_finished(0.2)
+
 		$Stats.health -= 1
 
 func _on_GrowTimer_timeout():
+	$Stats.reset_health()
 	$Interactable.active = true
 	$GrowSound.play()
 	$AnimationPlayer.play("grow")
 
 func _on_Stats_health_depleted():
 	if $Interactable.active:
-		$Stats.reset_health()
 		$Interactable.active = false
 		$BreakSound.play()
 		$AnimationPlayer.play("break")

@@ -6,49 +6,33 @@
 [ext_resource path="res://src/Actor/Player/PlayerStateMachine.gd" type="Script" id=4]
 [ext_resource path="res://src/Actor/Player/PlayerDefaultState.gd" type="Script" id=5]
 [ext_resource path="res://src/Actor/Player/PlayerTurnState.gd" type="Script" id=6]
-[ext_resource path="res://src/UserInterface/HealthBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Actor/Player/PlayerStats.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Collision/Hurtbox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Shaders/WhiteColor.tres" type="Shader" id=10]
 [ext_resource path="res://src/Actor/Player/PlayerHitState.gd" type="Script" id=11]
 [ext_resource path="res://src/Actor/Player/PlayerDeathState.gd" type="Script" id=12]
 [ext_resource path="res://assets/audio/VOCAL EVIL Impact Hit OOOF 03.wav" type="AudioStream" id=13]
+[ext_resource path="res://src/Actor/Player/InteractionZone.gd" type="Script" id=14]
 
 [sub_resource type="ShaderMaterial" id=80]
 shader = ExtResource( 10 )
 shader_param/active = false
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=38]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 48, 24, 24 )
+region = Rect2( 96, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=39]
 atlas = ExtResource( 1 )
-region = Rect2( 24, 48, 24, 24 )
+region = Rect2( 120, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=40]
 atlas = ExtResource( 1 )
-region = Rect2( 48, 48, 24, 24 )
+region = Rect2( 144, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=29]
+[sub_resource type="AtlasTexture" id=41]
 atlas = ExtResource( 1 )
-region = Rect2( 72, 48, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 1 )
-region = Rect2( 96, 120, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 1 )
-region = Rect2( 120, 120, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 1 )
-region = Rect2( 144, 120, 24, 24 )
-
-[sub_resource type="AtlasTexture" id=45]
-atlas = ExtResource( 1 )
-region = Rect2( 168, 120, 24, 24 )
+region = Rect2( 168, 48, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 1 )
@@ -82,6 +66,22 @@ region = Rect2( 48, 96, 24, 24 )
 atlas = ExtResource( 1 )
 region = Rect2( 72, 96, 24, 24 )
 
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 120, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 1 )
+region = Rect2( 120, 120, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 120, 24, 24 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 1 )
+region = Rect2( 168, 120, 24, 24 )
+
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 24, 24 )
@@ -114,21 +114,21 @@ region = Rect2( 144, 96, 24, 24 )
 atlas = ExtResource( 1 )
 region = Rect2( 168, 96, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=26]
 atlas = ExtResource( 1 )
-region = Rect2( 96, 48, 24, 24 )
+region = Rect2( 0, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=39]
+[sub_resource type="AtlasTexture" id=27]
 atlas = ExtResource( 1 )
-region = Rect2( 120, 48, 24, 24 )
+region = Rect2( 24, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=40]
+[sub_resource type="AtlasTexture" id=28]
 atlas = ExtResource( 1 )
-region = Rect2( 144, 48, 24, 24 )
+region = Rect2( 48, 48, 24, 24 )
 
-[sub_resource type="AtlasTexture" id=41]
+[sub_resource type="AtlasTexture" id=29]
 atlas = ExtResource( 1 )
-region = Rect2( 168, 48, 24, 24 )
+region = Rect2( 72, 48, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=46]
 atlas = ExtResource( 1 )
@@ -212,14 +212,9 @@ region = Rect2( 72, 72, 24, 24 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
+"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
 "loop": true,
-"name": "run_r",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
-"loop": true,
-"name": "death_l",
+"name": "run_l",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
@@ -232,6 +227,11 @@ animations = [ {
 "name": "hit_r",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
+"loop": true,
+"name": "death_l",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "idle_r",
@@ -242,9 +242,9 @@ animations = [ {
 "name": "hit_l",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
+"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
 "loop": true,
-"name": "run_l",
+"name": "run_r",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ) ],
@@ -851,6 +851,7 @@ collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="PlayerStats" parent="." instance=ExtResource( 8 )]
+max_stamina = 5.0
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 4 )
@@ -927,24 +928,26 @@ shape = SubResource( 77 )
 [node name="InteractionZone" type="Area2D" parent="." groups=["Player"]]
 position = Vector2( 0, -3 )
 collision_layer = 2
-collision_mask = 96
+collision_mask = 352
+script = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionZone"]
-modulate = Color( 1, 1, 0, 0.505882 )
+modulate = Color( 0.815686, 0.937255, 0.105882, 1 )
 position = Vector2( 0, -5 )
 shape = SubResource( 96 )
-
-[node name="HealthBar" parent="." instance=ExtResource( 7 )]
-position = Vector2( 0, -19 )
-stats_path = NodePath("../PlayerStats")
 
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 volume_db = -15.0
 
+[connection signal="health_depleted" from="PlayerStats" to="." method="_on_PlayerStats_health_depleted"]
+[connection signal="stamina_changed" from="PlayerStats" to="." method="_on_PlayerStats_stamina_changed"]
+[connection signal="stamina_depleted" from="PlayerStats" to="." method="_on_PlayerStats_stamina_depleted"]
 [connection signal="timeout" from="StateMachine/TurnState/TurnTime" to="StateMachine/TurnState" method="_on_TurnTime_timeout"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
 [connection signal="invincibility_started" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_started"]
+[connection signal="interaction_finished" from="InteractionZone" to="." method="_on_InteractionZone_interaction_finished"]
+[connection signal="rested" from="InteractionZone" to="." method="_on_InteractionZone_rested"]
 
 [editable path="Hurtbox"]

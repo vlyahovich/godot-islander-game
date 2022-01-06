@@ -1,0 +1,489 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/UserInterface/PlayerStatsUI.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/Squared_LBs_4x8.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Stamina:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "no_stamina"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Stamina:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 0.5, 3.24901, 0.435275, 3.24901, 0.307786, 2.2974 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ), Vector2( -3, 10 ), Vector2( -2, 10 ), Vector2( 0, 10 ), Vector2( 3, 10 ), Vector2( 2, 10 ), Vector2( 0, 10 ) ]
+}
+
+[node name="PlayerStatsUI" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Health" type="Node2D" parent="."]
+
+[node name="Empty" type="Node2D" parent="Health"]
+
+[node name="Cell1" type="Sprite" parent="Health/Empty"]
+position = Vector2( 2, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 4
+
+[node name="Cell2" type="Sprite" parent="Health/Empty"]
+position = Vector2( 6, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell3" type="Sprite" parent="Health/Empty"]
+position = Vector2( 9, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell4" type="Sprite" parent="Health/Empty"]
+position = Vector2( 12, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell5" type="Sprite" parent="Health/Empty"]
+position = Vector2( 15, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell6" type="Sprite" parent="Health/Empty"]
+position = Vector2( 18, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell7" type="Sprite" parent="Health/Empty"]
+position = Vector2( 21, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell8" type="Sprite" parent="Health/Empty"]
+position = Vector2( 24, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell9" type="Sprite" parent="Health/Empty"]
+position = Vector2( 27, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell10" type="Sprite" parent="Health/Empty"]
+position = Vector2( 30, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell11" type="Sprite" parent="Health/Empty"]
+position = Vector2( 33, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell12" type="Sprite" parent="Health/Empty"]
+position = Vector2( 36, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell13" type="Sprite" parent="Health/Empty"]
+position = Vector2( 39, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell14" type="Sprite" parent="Health/Empty"]
+position = Vector2( 42, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 5
+
+[node name="Cell15" type="Sprite" parent="Health/Empty"]
+position = Vector2( 46, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 6
+
+[node name="Fill" type="Node2D" parent="Health"]
+
+[node name="Cell0" type="Sprite" parent="Health/Fill"]
+position = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 2
+
+[node name="Cell1" type="Sprite" parent="Health/Fill"]
+position = Vector2( 2, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+
+[node name="Cell2" type="Sprite" parent="Health/Fill"]
+position = Vector2( 6, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell3" type="Sprite" parent="Health/Fill"]
+position = Vector2( 9, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell4" type="Sprite" parent="Health/Fill"]
+position = Vector2( 12, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell5" type="Sprite" parent="Health/Fill"]
+position = Vector2( 15, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell6" type="Sprite" parent="Health/Fill"]
+position = Vector2( 18, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell7" type="Sprite" parent="Health/Fill"]
+position = Vector2( 21, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell8" type="Sprite" parent="Health/Fill"]
+position = Vector2( 24, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell9" type="Sprite" parent="Health/Fill"]
+position = Vector2( 27, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell10" type="Sprite" parent="Health/Fill"]
+position = Vector2( 30, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell11" type="Sprite" parent="Health/Fill"]
+position = Vector2( 33, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell12" type="Sprite" parent="Health/Fill"]
+position = Vector2( 36, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell13" type="Sprite" parent="Health/Fill"]
+position = Vector2( 39, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell14" type="Sprite" parent="Health/Fill"]
+position = Vector2( 42, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 1
+
+[node name="Cell15" type="Sprite" parent="Health/Fill"]
+position = Vector2( 46, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 2
+
+[node name="Stamina" type="Node2D" parent="."]
+position = Vector2( 0, 10 )
+
+[node name="Empty" type="Node2D" parent="Stamina"]
+
+[node name="Cell1" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 2, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 11
+
+[node name="Cell2" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 6, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell3" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 9, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell4" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 12, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell5" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 15, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell6" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 18, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell7" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 21, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell8" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 24, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell9" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 27, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell10" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 30, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell11" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 33, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell12" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 36, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell13" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 39, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell14" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 42, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 12
+
+[node name="Cell15" type="Sprite" parent="Stamina/Empty"]
+position = Vector2( 46, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 13
+
+[node name="Fill" type="Node2D" parent="Stamina"]
+
+[node name="Cell0" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 9
+
+[node name="Cell1" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 2, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 7
+
+[node name="Cell2" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 6, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell3" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 9, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell4" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 12, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell5" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 15, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell6" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 18, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell7" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 21, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell8" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 24, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell9" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 27, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell10" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 30, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell11" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 33, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell12" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 36, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell13" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 39, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell14" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 42, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 8
+
+[node name="Cell15" type="Sprite" parent="Stamina/Fill"]
+position = Vector2( 46, 4 )
+texture = ExtResource( 2 )
+hframes = 7
+vframes = 36
+frame = 9
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/no_stamina = SubResource( 2 )

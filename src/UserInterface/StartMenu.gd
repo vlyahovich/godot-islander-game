@@ -30,7 +30,6 @@ func _on_PlayButton_pressed():
 
 	yield($FadeLayer/ScreenFader, "animation_finished")
 
-	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://src/Level/ForestLevel.tscn")
 
 func _on_CreditsButton_pressed():

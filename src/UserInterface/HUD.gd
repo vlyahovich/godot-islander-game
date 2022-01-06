@@ -1,3 +1,4 @@
 extends CanvasLayer
 
-export(NodePath) var player_path
+func init(player: Player, crosshair: Crosshair):
+	$PlayerStatsUI.init(player, crosshair)

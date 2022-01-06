@@ -1,8 +1,12 @@
 extends KinematicBody2D
+class_name Player
 
 export var speed: int = 80
 export var acceleration: int = 10
 export var invincibility_duration: float = 1
+
+const RESOURCES_BIT = 8
+
 var path: PoolVector2Array = PoolVector2Array()
 var velocity: Vector2 = Vector2.ZERO
 var dir: Vector2 = Vector2.RIGHT
@@ -13,6 +17,7 @@ onready var aPlayer: AnimationPlayer = $AnimationPlayer
 onready var aTree: AnimationTree = $AnimationTree
 onready var aTreeState: AnimationNodeStateMachinePlayback = aTree.get("parameters/playback")
 onready var dustEmitter: Node = $DustEmitter
+onready var stats: Stats = $PlayerStats
 onready var Weapon = preload("res://src/Objects/Weapons/Sword.tscn")
 
 func _ready():
@@ -26,8 +31,6 @@ func _ready():
 
 	aTree.active = true
 	$StateMachine.set_active(true)
-	# warning-ignore:return_value_discarded
-	$PlayerStats.connect("health_depleted", self, "destroyed")
 
 	weapon = Weapon.instance()
 	add_child(weapon)
@@ -52,10 +55,6 @@ func turn(target_dir):
 		dir = target_dir
 
 		$StateMachine.set_state($StateMachine/TurnState)
-
-func destroyed():
-	$Hurtbox.active = false
-	$StateMachine.set_state($StateMachine/DeathState)
 
 func _get_resource_emitter():
 	return get_tree().current_scene.get_node_or_null("ResourceEmitter")
@@ -92,3 +91,21 @@ func _on_Hurtbox_invincibility_started():
 
 func _on_Hurtbox_invincibility_ended():
 	$BlinkAnimationPlayer.play("RESET")
+
+func _on_InteractionZone_interaction_finished(strength):
+	stats.stamina -= float(strength)
+
+func _on_PlayerStats_health_depleted():
+	$Hurtbox.active = false
+	$StateMachine.set_state($StateMachine/DeathState)
+
+func _on_PlayerStats_stamina_depleted():
+	$InteractionZone.set_collision_mask_bit(RESOURCES_BIT, false)
+
+func _on_PlayerStats_stamina_changed(value):
+	if value > 0 and !$InteractionZone.get_collision_mask_bit(RESOURCES_BIT):
+		$InteractionZone.set_collision_mask_bit(RESOURCES_BIT, true)
+
+func _on_InteractionZone_rested():
+	stats.reset_health()
+	stats.reset_stamina()

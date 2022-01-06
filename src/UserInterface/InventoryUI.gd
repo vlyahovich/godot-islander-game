@@ -1,7 +1,6 @@
 extends Node2D
 
 func _ready():
-	# warning-ignore:return_value_discarded
 	PlayerInventory.connect("resources_updated", self, "_resources_updated")
 
 	_update_ui()

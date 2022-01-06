@@ -1,16 +1,25 @@
 extends Node2D
+class_name Crosshair
 
 const crosshair_width = 30.0
 const crosshair_height = 30.0
 
+var default_extents = Vector2.ZERO
+var interaction_area = null
+
+signal interaction_reached(area)
+
 func _ready():
 	_reset_position()
+
+	default_extents = $Container/Interaction/CollisionShape2D.shape.extents
 	
 func _input(_event):
 	if Input.is_action_just_pressed("ui_click_left"):
 		queue_show(get_global_mouse_position())
 
 func queue_show(position):
+	$Container/Interaction/CollisionShape2D.shape.extents = default_extents
 	$VisibilityTimer.start()
 
 	global_position = position
@@ -40,7 +49,10 @@ func _on_Interaction_area_entered(area):
 	var groups = area.get_groups()
 	
 	if "Player" in groups:
+		$Container/Interaction/CollisionShape2D.shape.extents = default_extents
+		emit_signal("interaction_reached", interaction_area)
 		queue_hide()
+		interaction_area = null
 		return
 
 	var collision_area = area.find_node("CollisionShape2D")
@@ -66,6 +78,13 @@ func _on_Interaction_area_entered(area):
 		$Container/BottomR.position = Vector2(
 			radius * multi - crosshair_width / 2 - 1,
 			height * multi - crosshair_height / 2
+		)
+
+		interaction_area = area
+
+		$Container/Interaction/CollisionShape2D.shape.extents = Vector2(
+			$Container/TopL.position.distance_to($Container/TopR.position) / 2,
+			$Container/TopL.position.distance_to($Container/BottomL.position) / 2
 		)
 
 	global_position = collision_area.global_position

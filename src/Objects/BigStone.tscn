@@ -146,8 +146,11 @@ frame = 71
 position = Vector2( 0, 7.5 )
 shape = SubResource( 1 )
 
-[node name="Interactable" parent="." instance=ExtResource( 3 )]
+[node name="Interactable" parent="." groups=["Resource"] instance=ExtResource( 3 )]
 radius = 18
+
+[node name="Area2D" parent="Interactable" index="0" groups=["Resource"]]
+collision_layer = 256
 
 [node name="CollisionShape2D" parent="Interactable/Area2D" index="0"]
 position = Vector2( 0, 4 )
@@ -163,7 +166,7 @@ wait_time = 20.0
 one_shot = true
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
-max_health = 10
+max_health = 10.0
 
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

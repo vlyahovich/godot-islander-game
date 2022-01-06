@@ -33,7 +33,7 @@ func fade_in() -> void:
 
 
 # Animate from the current modulate color until the node is fully black.
-func fade_out(is_delayed: bool = false) -> void:
+func fade_out() -> void:
 	tween.interpolate_property(
 		self,
 		"modulate",

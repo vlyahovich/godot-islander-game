@@ -111,7 +111,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Tree" type="StaticBody2D"]
+[node name="Tree" type="StaticBody2D" groups=["Interactable", "Resource"]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Node2D" parent="."]
@@ -135,8 +135,11 @@ position = Vector2( 1.81e-06, 2.5 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
-[node name="Interactable" parent="." instance=ExtResource( 3 )]
+[node name="Interactable" parent="." groups=["Resource"] instance=ExtResource( 3 )]
 radius = 16
+
+[node name="Area2D" parent="Interactable" index="0" groups=["Resource"]]
+collision_layer = 256
 
 [node name="CollisionShape2D" parent="Interactable/Area2D" index="0"]
 position = Vector2( 0, -7 )
@@ -152,7 +155,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
-max_health = 3
+max_health = 3.0
 
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

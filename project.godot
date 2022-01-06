@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Crosshair",
+"language": "GDScript",
+"path": "res://src/UserInterface/Crosshair.gd"
+}, {
 "base": "Node",
 "class": "EnemyChaseState",
 "language": "GDScript",
@@ -23,6 +28,11 @@ _global_script_classes=[ {
 "class": "EnemyWanderState",
 "language": "GDScript",
 "path": "res://src/Actor/Enemy/EnemyWanderState.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://src/Actor/Player/Player.gd"
 }, {
 "base": "Node",
 "class": "PlayerDeathState",
@@ -48,16 +58,24 @@ _global_script_classes=[ {
 "class": "ResourceEmitter",
 "language": "GDScript",
 "path": "res://src/Objects/ResourceEmitter.gd"
+}, {
+"base": "Node",
+"class": "Stats",
+"language": "GDScript",
+"path": "res://src/Actor/Stats.gd"
 } ]
 _global_script_class_icons={
+"Crosshair": "",
 "EnemyChaseState": "",
 "EnemyDefaultState": "",
 "EnemyWanderState": "",
+"Player": "",
 "PlayerDeathState": "",
 "PlayerDefaultState": "",
 "PlayerHitState": "",
 "PlayerTurnState": "",
-"ResourceEmitter": ""
+"ResourceEmitter": "",
+"Stats": ""
 }
 
 [application]
@@ -77,6 +95,8 @@ PlayerInventory="*res://src/Actor/Player/Inventory.tscn"
 [debug]
 
 settings/fps/force_fps=60
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
 
 [display]
 
@@ -167,6 +187,7 @@ ui_click_right={
 2d_physics/layer_6="Interaction"
 2d_physics/layer_7="Interactable"
 2d_physics/layer_8="Bridges"
+2d_physics/layer_9="Resources"
 
 [physics]
 
