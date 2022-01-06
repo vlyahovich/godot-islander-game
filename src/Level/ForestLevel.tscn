@@ -43,6 +43,7 @@ color = Color( 0.333333, 0.490196, 0.333333, 1 )
 polygon = PoolVector2Array( -72, -56, 336, -56, 336, 208, -72, 208 )
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]
+player_path = NodePath("../YSort/Player")
 
 [node name="FadeLayer" type="CanvasLayer" parent="."]
 layer = 3

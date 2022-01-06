@@ -62,7 +62,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Islander"
+config/name="Harvestborne"
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 

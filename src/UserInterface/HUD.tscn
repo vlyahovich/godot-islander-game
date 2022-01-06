@@ -1,19 +1,10 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/ui/theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/UserInterface/InventoryUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UserInterface/HUD.gd" type="Script" id=3]
 
 [node name="HUD" type="CanvasLayer"]
-
-[node name="Label" type="Label" parent="."]
-margin_left = 2.0
-margin_right = 20.0
-margin_bottom = 11.0
-theme = ExtResource( 1 )
-text = "HUD"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
 anchor_left = 0.5
