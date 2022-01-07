@@ -154,6 +154,12 @@ position = Vector2( 10, -27 )
 [node name="Slime3" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 188, 82 )
 
+[node name="Slime" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 126, 119 )
+
+[node name="Slime2" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 97, -21 )
+
 [node name="Crosshair" parent="." instance=ExtResource( 27 )]
 
 [node name="ResourceEmitter" parent="." instance=ExtResource( 28 )]
