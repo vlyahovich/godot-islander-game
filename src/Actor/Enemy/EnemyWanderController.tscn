@@ -13,6 +13,7 @@ one_shot = true
 autostart = true
 
 [node name="Line2D" type="Line2D" parent="."]
+visible = false
 width = 2.0
 width_curve = SubResource( 1 )
 default_color = Color( 1, 0.894118, 0.4, 1 )
