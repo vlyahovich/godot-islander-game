@@ -1,7 +1,8 @@
 extends "res://src/State/StateMachine.gd"
+class_name EnemyStateMachine
 
 const DEFAULT = "default"
-const WANDER = "turn"
+const WANDER = "wander"
 const CHASE = "chase"
 
 func _ready():
@@ -10,14 +11,6 @@ func _ready():
 		WANDER: $WanderState,
 		CHASE: $ChaseState
 	}
-
-func set_state(state):
-	if state is EnemyWanderState:
-		._change_state(WANDER)
-	if state is EnemyChaseState:
-		._change_state(CHASE)
-	else:
-		._change_state(DEFAULT)
 
 func previous_state():
 	._change_state("previous")

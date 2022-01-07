@@ -54,7 +54,7 @@ func turn(target_dir):
 	if dir != target_dir:
 		dir = target_dir
 
-		$StateMachine.set_state($StateMachine/TurnState)
+		$StateMachine.change_state($StateMachine.TURN)
 
 func _get_resource_emitter():
 	return get_tree().current_scene.get_node_or_null("ResourceEmitter")
@@ -84,7 +84,7 @@ func _on_Hurtbox_area_entered(area):
 		return
 
 	$Hurtbox.start_invincibility(invincibility_duration)
-	$StateMachine.set_state($StateMachine/HitState)
+	$StateMachine.change_state($StateMachine.HIT)
 
 func _on_Hurtbox_invincibility_started():
 	$BlinkAnimationPlayer.play("start")
@@ -97,7 +97,7 @@ func _on_InteractionZone_interaction_finished(strength):
 
 func _on_PlayerStats_health_depleted():
 	$Hurtbox.active = false
-	$StateMachine.set_state($StateMachine/DeathState)
+	$StateMachine.change_state($StateMachine.DEATH)
 
 func _on_PlayerStats_stamina_depleted():
 	$InteractionZone.set_collision_mask_bit(RESOURCES_BIT, false)

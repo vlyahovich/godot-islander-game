@@ -1,3 +1,3 @@
 extends Node
 
-export var mute_sound: bool = true
+export var mute_sound: bool = false

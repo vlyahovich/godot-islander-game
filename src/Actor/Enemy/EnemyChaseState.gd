@@ -14,7 +14,7 @@ func update(delta):
 		emit_signal("finished", "default")
 	
 	if player != null and enemy.stats.health != 0:
-		var distance = player.global_position - enemy.global_position
+		var distance = enemy.global_position.direction_to(player.global_position)
 		var direction = distance.normalized()
 
 		if distance.x > 0:

@@ -12,16 +12,3 @@ func _ready():
 		HIT: $HitState,
 		DEATH: $DeathState
 	}
-
-func set_state(state):
-	if state is PlayerTurnState:
-		._change_state(TURN)
-	elif state is PlayerHitState:
-		._change_state(HIT)
-	elif state is PlayerDeathState:
-		._change_state(DEATH)
-	else:
-		._change_state(DEFAULT)
-
-func previous_state():
-	._change_state("previous")

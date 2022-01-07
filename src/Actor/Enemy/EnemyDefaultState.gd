@@ -2,7 +2,7 @@ extends "res://src/State/State.gd"
 class_name EnemyDefaultState
 
 func update(delta):
-	var enemy = owner.get_parent()
+	var enemy: Enemy = owner.get_parent()
 	
 	basic_movement(delta)
 	
@@ -13,9 +13,12 @@ func update(delta):
 			enemy.animatedSprite.play("idle_l")
 
 	enemy.seek_player()
+	
+	if enemy.wanderController.get_time_left() == 0:
+		enemy.next_state()
 
 func basic_movement(delta):
-	var enemy = owner.get_parent()
+	var enemy: Enemy = owner.get_parent()
 	
 	enemy.knockback = enemy.knockback.move_toward(Vector2.ZERO, enemy.knockback_speed * delta)
 	enemy.knockback = enemy.move_and_slide(enemy.knockback)
