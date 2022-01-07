@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/EXPLOSION Bang Blast 04.ogg-577642419b40d106f9a1c63b984e80f0.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/EXPLOSIONS - DESTRUCTION - (80)/EXPLOSION Bang Blast 04.ogg"
+dest_files=[ "res://.import/EXPLOSION Bang Blast 04.ogg-577642419b40d106f9a1c63b984e80f0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

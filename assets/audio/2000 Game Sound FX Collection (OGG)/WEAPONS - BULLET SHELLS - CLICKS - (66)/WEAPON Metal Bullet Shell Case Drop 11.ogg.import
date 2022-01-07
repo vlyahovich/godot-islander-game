@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/WEAPON Metal Bullet Shell Case Drop 11.ogg-c92f9d76fb6c463d5cd64f420ae41883.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/WEAPONS - BULLET SHELLS - CLICKS - (66)/WEAPON Metal Bullet Shell Case Drop 11.ogg"
+dest_files=[ "res://.import/WEAPON Metal Bullet Shell Case Drop 11.ogg-c92f9d76fb6c463d5cd64f420ae41883.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

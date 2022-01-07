@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RETRO Arcade Vocal Muncher Short 07.ogg-a60b3e9d88580720c014f94c523e7a5e.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/RETRO - ARCADE - (203)/RETRO Arcade Vocal Muncher Short 07.ogg"
+dest_files=[ "res://.import/RETRO Arcade Vocal Muncher Short 07.ogg-a60b3e9d88580720c014f94c523e7a5e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

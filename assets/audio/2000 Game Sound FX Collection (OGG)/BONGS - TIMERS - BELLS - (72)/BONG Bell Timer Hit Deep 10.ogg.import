@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BONG Bell Timer Hit Deep 10.ogg-7a7570e1daf557fcee1a1725ffd5a41b.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/BONGS - TIMERS - BELLS - (72)/BONG Bell Timer Hit Deep 10.ogg"
+dest_files=[ "res://.import/BONG Bell Timer Hit Deep 10.ogg-7a7570e1daf557fcee1a1725ffd5a41b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

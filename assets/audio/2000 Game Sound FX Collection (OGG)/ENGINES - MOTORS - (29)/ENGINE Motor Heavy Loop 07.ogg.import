@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ENGINE Motor Heavy Loop 07.ogg-1b2fb5eca3bbbf0b821a7f68d90fb628.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/ENGINES - MOTORS - (29)/ENGINE Motor Heavy Loop 07.ogg"
+dest_files=[ "res://.import/ENGINE Motor Heavy Loop 07.ogg-1b2fb5eca3bbbf0b821a7f68d90fb628.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

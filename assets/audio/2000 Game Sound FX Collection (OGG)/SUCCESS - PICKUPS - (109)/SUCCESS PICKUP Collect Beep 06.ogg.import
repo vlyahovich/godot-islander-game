@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS PICKUP Collect Beep 06.ogg-d74ee9a5f10c4b7a06c40d3d50c7d70b.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - PICKUPS - (109)/SUCCESS PICKUP Collect Beep 06.ogg"
+dest_files=[ "res://.import/SUCCESS PICKUP Collect Beep 06.ogg-d74ee9a5f10c4b7a06c40d3d50c7d70b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

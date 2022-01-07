@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH INTERFACE Wacky Machine Beeps Short 06.ogg-18da9707bbb6941b0a4ca1bd465abc51.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH INTERFACE - COMPUTERS - (121)/TECH INTERFACE Wacky Machine Beeps Short 06.ogg"
+dest_files=[ "res://.import/TECH INTERFACE Wacky Machine Beeps Short 06.ogg-18da9707bbb6941b0a4ca1bd465abc51.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

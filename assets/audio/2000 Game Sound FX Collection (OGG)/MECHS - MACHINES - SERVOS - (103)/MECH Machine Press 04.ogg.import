@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MECH Machine Press 04.ogg-bbd4c29774f2a50a398f7d4ee801ca76.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/MECHS - MACHINES - SERVOS - (103)/MECH Machine Press 04.ogg"
+dest_files=[ "res://.import/MECH Machine Press 04.ogg-bbd4c29774f2a50a398f7d4ee801ca76.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

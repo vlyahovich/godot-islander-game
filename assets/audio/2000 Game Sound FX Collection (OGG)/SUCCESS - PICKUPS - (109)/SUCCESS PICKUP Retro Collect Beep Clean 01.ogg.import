@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS PICKUP Retro Collect Beep Clean 01.ogg-e793d9012343ee7c4ae34d6502edba8d.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - PICKUPS - (109)/SUCCESS PICKUP Retro Collect Beep Clean 01.ogg"
+dest_files=[ "res://.import/SUCCESS PICKUP Retro Collect Beep Clean 01.ogg-e793d9012343ee7c4ae34d6502edba8d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

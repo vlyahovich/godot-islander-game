@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS CHIME Bells Sparkle Tune 04.ogg-7e12c87efa29cceca413c452f59741f1.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - CHIMES - (55)/SUCCESS CHIME Bells Sparkle Tune 04.ogg"
+dest_files=[ "res://.import/SUCCESS CHIME Bells Sparkle Tune 04.ogg-7e12c87efa29cceca413c452f59741f1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

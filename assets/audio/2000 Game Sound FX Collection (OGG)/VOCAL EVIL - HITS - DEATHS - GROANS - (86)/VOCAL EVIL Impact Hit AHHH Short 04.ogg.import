@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL EVIL Impact Hit AHHH Short 04.ogg-2a80be48c59d11060e08608cf8c29f0e.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL EVIL - HITS - DEATHS - GROANS - (86)/VOCAL EVIL Impact Hit AHHH Short 04.ogg"
+dest_files=[ "res://.import/VOCAL EVIL Impact Hit AHHH Short 04.ogg-2a80be48c59d11060e08608cf8c29f0e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

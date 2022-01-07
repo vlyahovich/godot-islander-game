@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS BEEPS Multi Echo 01.ogg-eda8d15529b42933177852011e1292c2.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - BEEPS - (81)/SUCCESS BEEPS Multi Echo 01.ogg"
+dest_files=[ "res://.import/SUCCESS BEEPS Multi Echo 01.ogg-eda8d15529b42933177852011e1292c2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

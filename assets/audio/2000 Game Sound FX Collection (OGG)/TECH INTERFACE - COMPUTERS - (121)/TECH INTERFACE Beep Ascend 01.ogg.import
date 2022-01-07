@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH INTERFACE Beep Ascend 01.ogg-88e3d5e202a212b04c5cf67b3705fa41.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH INTERFACE - COMPUTERS - (121)/TECH INTERFACE Beep Ascend 01.ogg"
+dest_files=[ "res://.import/TECH INTERFACE Beep Ascend 01.ogg-88e3d5e202a212b04c5cf67b3705fa41.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

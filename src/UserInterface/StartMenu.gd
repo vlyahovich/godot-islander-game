@@ -6,7 +6,7 @@ func _ready():
 	if skip_menu:
 		get_tree().change_scene("res://src/Level/ForestLevel.tscn")
 		var master_sound = AudioServer.get_bus_index("Master")
-		AudioServer.set_bus_mute(master_sound, true)
+		#AudioServer.set_bus_mute(master_sound, true)
 	else:
 		$FadeLayer/ScreenFader.fade_in()
 

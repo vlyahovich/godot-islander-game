@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/IMPACT Metal Hit Short 05.ogg-92e9068e58a13bc4c0f73cf8b55b5929.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/IMPACTS - HITS - (50)/IMPACT Metal Hit Short 05.ogg"
+dest_files=[ "res://.import/IMPACT Metal Hit Short 05.ogg-92e9068e58a13bc4c0f73cf8b55b5929.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

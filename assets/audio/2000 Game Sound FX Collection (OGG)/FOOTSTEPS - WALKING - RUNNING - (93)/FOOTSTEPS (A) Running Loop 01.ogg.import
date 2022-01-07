@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FOOTSTEPS (A) Running Loop 01.ogg-8df6e500fb894fb0366de9d16ae19fa2.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/FOOTSTEPS - WALKING - RUNNING - (93)/FOOTSTEPS (A) Running Loop 01.ogg"
+dest_files=[ "res://.import/FOOTSTEPS (A) Running Loop 01.ogg-8df6e500fb894fb0366de9d16ae19fa2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

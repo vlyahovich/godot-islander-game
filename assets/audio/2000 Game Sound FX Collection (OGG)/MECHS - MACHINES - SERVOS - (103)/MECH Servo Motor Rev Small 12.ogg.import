@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MECH Servo Motor Rev Small 12.ogg-7c1c5a891579b3c1be98253f405ab1f9.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/MECHS - MACHINES - SERVOS - (103)/MECH Servo Motor Rev Small 12.ogg"
+dest_files=[ "res://.import/MECH Servo Motor Rev Small 12.ogg-7c1c5a891579b3c1be98253f405ab1f9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

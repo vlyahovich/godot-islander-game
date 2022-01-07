@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS TUNE Win Complete 12.ogg-0ab4db96c42141ac639b57bbc6e14a91.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - TUNES - CHEERS - (64)/SUCCESS TUNE Win Complete 12.ogg"
+dest_files=[ "res://.import/SUCCESS TUNE Win Complete 12.ogg-0ab4db96c42141ac639b57bbc6e14a91.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

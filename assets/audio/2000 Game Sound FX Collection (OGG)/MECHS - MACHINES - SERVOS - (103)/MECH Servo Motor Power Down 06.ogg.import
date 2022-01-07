@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MECH Servo Motor Power Down 06.ogg-1cb75d03a30b9068065b23ed100450ef.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/MECHS - MACHINES - SERVOS - (103)/MECH Servo Motor Power Down 06.ogg"
+dest_files=[ "res://.import/MECH Servo Motor Power Down 06.ogg-1cb75d03a30b9068065b23ed100450ef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

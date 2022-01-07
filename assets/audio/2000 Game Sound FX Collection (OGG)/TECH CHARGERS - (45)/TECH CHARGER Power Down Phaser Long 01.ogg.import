@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH CHARGER Power Down Phaser Long 01.ogg-5af581fa25850a0d278254640b4daf9c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH CHARGERS - (45)/TECH CHARGER Power Down Phaser Long 01.ogg"
+dest_files=[ "res://.import/TECH CHARGER Power Down Phaser Long 01.ogg-5af581fa25850a0d278254640b4daf9c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

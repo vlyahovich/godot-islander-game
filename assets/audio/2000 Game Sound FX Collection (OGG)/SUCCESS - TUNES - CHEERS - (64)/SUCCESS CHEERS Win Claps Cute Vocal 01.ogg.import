@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS CHEERS Win Claps Cute Vocal 01.ogg-317d373530d7b85ee034bff0c73a4578.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - TUNES - CHEERS - (64)/SUCCESS CHEERS Win Claps Cute Vocal 01.ogg"
+dest_files=[ "res://.import/SUCCESS CHEERS Win Claps Cute Vocal 01.ogg-317d373530d7b85ee034bff0c73a4578.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

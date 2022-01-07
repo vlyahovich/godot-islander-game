@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ELECTRIC ForceField Arc 02.ogg-ab4e86dca61cb7c46b1ed6e66ce93d8a.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/ELECTRIC - ZAPS - SHOCKS - (21)/ELECTRIC ForceField Arc 02.ogg"
+dest_files=[ "res://.import/ELECTRIC ForceField Arc 02.ogg-ab4e86dca61cb7c46b1ed6e66ce93d8a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

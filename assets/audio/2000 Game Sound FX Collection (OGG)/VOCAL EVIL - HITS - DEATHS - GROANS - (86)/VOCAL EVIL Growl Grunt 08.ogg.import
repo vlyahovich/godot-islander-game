@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL EVIL Growl Grunt 08.ogg-b4c1e00fe594d551911a25e0a80cadf6.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL EVIL - HITS - DEATHS - GROANS - (86)/VOCAL EVIL Growl Grunt 08.ogg"
+dest_files=[ "res://.import/VOCAL EVIL Growl Grunt 08.ogg-b4c1e00fe594d551911a25e0a80cadf6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

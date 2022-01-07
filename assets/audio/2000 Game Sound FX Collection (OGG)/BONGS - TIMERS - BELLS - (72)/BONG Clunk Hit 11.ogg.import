@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BONG Clunk Hit 11.ogg-b02db9526dd8493093cc3ff9cdd7181c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/BONGS - TIMERS - BELLS - (72)/BONG Clunk Hit 11.ogg"
+dest_files=[ "res://.import/BONG Clunk Hit 11.ogg-b02db9526dd8493093cc3ff9cdd7181c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

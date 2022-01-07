@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MECH Machine Movement Metal 04.ogg-082a65856c4dc7bb0e0aae1109ccebc7.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/MECHS - MACHINES - SERVOS - (103)/MECH Machine Movement Metal 04.ogg"
+dest_files=[ "res://.import/MECH Machine Movement Metal 04.ogg-082a65856c4dc7bb0e0aae1109ccebc7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

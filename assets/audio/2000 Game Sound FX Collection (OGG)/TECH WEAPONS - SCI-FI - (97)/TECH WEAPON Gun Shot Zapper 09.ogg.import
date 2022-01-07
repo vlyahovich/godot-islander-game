@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH WEAPON Gun Shot Zapper 09.ogg-a38149c1f51a2b0c48ea9c4d1fd4c705.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH WEAPONS - SCI-FI - (97)/TECH WEAPON Gun Shot Zapper 09.ogg"
+dest_files=[ "res://.import/TECH WEAPON Gun Shot Zapper 09.ogg-a38149c1f51a2b0c48ea9c4d1fd4c705.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

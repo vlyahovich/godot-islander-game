@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MECH Servo Motor Movement Stomp Long 02.ogg-1f01b7145ad0d4b06cbe58c951da1d29.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/MECHS - MACHINES - SERVOS - (103)/MECH Servo Motor Movement Stomp Long 02.ogg"
+dest_files=[ "res://.import/MECH Servo Motor Movement Stomp Long 02.ogg-1f01b7145ad0d4b06cbe58c951da1d29.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

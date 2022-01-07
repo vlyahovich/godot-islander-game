@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS PICKUP Collect Chime 01.ogg-d28eead6183819b946e54096ce0856ec.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - PICKUPS - (109)/SUCCESS PICKUP Collect Chime 01.ogg"
+dest_files=[ "res://.import/SUCCESS PICKUP Collect Chime 01.ogg-d28eead6183819b946e54096ce0856ec.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

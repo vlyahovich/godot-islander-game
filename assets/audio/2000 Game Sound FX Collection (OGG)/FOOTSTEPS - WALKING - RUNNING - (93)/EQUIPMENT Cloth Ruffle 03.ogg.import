@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/EQUIPMENT Cloth Ruffle 03.ogg-10ce1e94c543ad73130b3501c3f4bb51.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/FOOTSTEPS - WALKING - RUNNING - (93)/EQUIPMENT Cloth Ruffle 03.ogg"
+dest_files=[ "res://.import/EQUIPMENT Cloth Ruffle 03.ogg-10ce1e94c543ad73130b3501c3f4bb51.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

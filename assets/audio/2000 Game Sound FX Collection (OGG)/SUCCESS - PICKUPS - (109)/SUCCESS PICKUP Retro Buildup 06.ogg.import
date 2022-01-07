@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS PICKUP Retro Buildup 06.ogg-b9970efe8fe30f9bc0bbe75304341bca.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - PICKUPS - (109)/SUCCESS PICKUP Retro Buildup 06.ogg"
+dest_files=[ "res://.import/SUCCESS PICKUP Retro Buildup 06.ogg-b9970efe8fe30f9bc0bbe75304341bca.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

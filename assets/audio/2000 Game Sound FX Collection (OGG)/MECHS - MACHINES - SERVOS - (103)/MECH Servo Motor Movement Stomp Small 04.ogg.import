@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MECH Servo Motor Movement Stomp Small 04.ogg-36568e271134440351290b76cc33f01d.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/MECHS - MACHINES - SERVOS - (103)/MECH Servo Motor Movement Stomp Small 04.ogg"
+dest_files=[ "res://.import/MECH Servo Motor Movement Stomp Small 04.ogg-36568e271134440351290b76cc33f01d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

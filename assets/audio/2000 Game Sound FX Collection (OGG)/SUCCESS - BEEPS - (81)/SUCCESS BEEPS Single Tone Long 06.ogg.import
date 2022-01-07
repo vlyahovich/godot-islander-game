@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS BEEPS Single Tone Long 06.ogg-042a1d082e6c0b07fe205fca5afe87ef.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - BEEPS - (81)/SUCCESS BEEPS Single Tone Long 06.ogg"
+dest_files=[ "res://.import/SUCCESS BEEPS Single Tone Long 06.ogg-042a1d082e6c0b07fe205fca5afe87ef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

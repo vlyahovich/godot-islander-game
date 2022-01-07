@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/handleCoins.ogg-c25a7047009a762c6a15d262ad7c036a.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/kenney_rpgaudio/Audio/handleCoins.ogg"
+dest_files=[ "res://.import/handleCoins.ogg-c25a7047009a762c6a15d262ad7c036a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

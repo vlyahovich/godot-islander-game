@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/UserInterface/PlayerStatsUI.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/Squared_LBs_4x8.png" type="Texture" id=2]
+[ext_resource path="res://assets/audio/select_006.ogg" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -489,3 +490,7 @@ anims/RESET = SubResource( 1 )
 anims/no_stamina = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="FailSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0

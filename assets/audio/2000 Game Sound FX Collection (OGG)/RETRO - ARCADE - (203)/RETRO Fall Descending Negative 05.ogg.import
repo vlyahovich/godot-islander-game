@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RETRO Fall Descending Negative 05.ogg-5b4444252d1c2e364bdbbfac99edc27a.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/RETRO - ARCADE - (203)/RETRO Fall Descending Negative 05.ogg"
+dest_files=[ "res://.import/RETRO Fall Descending Negative 05.ogg-5b4444252d1c2e364bdbbfac99edc27a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

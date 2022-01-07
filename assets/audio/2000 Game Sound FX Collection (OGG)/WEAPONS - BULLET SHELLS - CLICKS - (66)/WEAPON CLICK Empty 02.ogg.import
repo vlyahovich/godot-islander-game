@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/WEAPON CLICK Empty 02.ogg-09f53a78818fa95e14e7b5b4c433830d.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/WEAPONS - BULLET SHELLS - CLICKS - (66)/WEAPON CLICK Empty 02.ogg"
+dest_files=[ "res://.import/WEAPON CLICK Empty 02.ogg-09f53a78818fa95e14e7b5b4c433830d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

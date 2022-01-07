@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SHAKER Pieces Drop Roll 02.ogg-33a13a70fa41ffe64d50ce42f665244f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SHAKERS - SHUFFLES - ROLLS - (24)/SHAKER Pieces Drop Roll 02.ogg"
+dest_files=[ "res://.import/SHAKER Pieces Drop Roll 02.ogg-33a13a70fa41ffe64d50ce42f665244f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

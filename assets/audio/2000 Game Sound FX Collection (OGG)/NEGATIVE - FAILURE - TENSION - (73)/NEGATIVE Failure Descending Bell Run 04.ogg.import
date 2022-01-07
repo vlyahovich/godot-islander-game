@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/NEGATIVE Failure Descending Bell Run 04.ogg-c2e17880569fe5928d496822da4ebdf2.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/NEGATIVE - FAILURE - TENSION - (73)/NEGATIVE Failure Descending Bell Run 04.ogg"
+dest_files=[ "res://.import/NEGATIVE Failure Descending Bell Run 04.ogg-c2e17880569fe5928d496822da4ebdf2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

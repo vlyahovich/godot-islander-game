@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SHUFFLE Cards 01.ogg-722201b53aafa4a576313ba958f374b5.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SHAKERS - SHUFFLES - ROLLS - (24)/SHUFFLE Cards 01.ogg"
+dest_files=[ "res://.import/SHUFFLE Cards 01.ogg-722201b53aafa4a576313ba958f374b5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

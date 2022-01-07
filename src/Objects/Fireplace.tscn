@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/art/forest/forestDecoration_0.png" type="Texture" id=1]
 [ext_resource path="res://src/Objects/Fireplace.gd" type="Script" id=2]
 [ext_resource path="res://src/Collision/Interactable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/audio/SUCCESS BEEPS Multi Echo Short 03.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -65,12 +66,13 @@ script = ExtResource( 2 )
 [node name="Top" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -14 )
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Bottom" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 2 )
 frames = SubResource( 10 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -82,6 +84,10 @@ radius = 8
 
 [node name="CollisionShape2D" parent="Interactable/Area2D" index="0"]
 shape = SubResource( 12 )
+
+[node name="RestoreSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
 
 [connection signal="interacted" from="Interactable" to="." method="_on_Interactable_interacted"]
 

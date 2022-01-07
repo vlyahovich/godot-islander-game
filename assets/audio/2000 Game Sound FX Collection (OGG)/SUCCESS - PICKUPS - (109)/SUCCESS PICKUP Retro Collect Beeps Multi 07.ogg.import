@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS PICKUP Retro Collect Beeps Multi 07.ogg-6a8e03e1ee0fe84981c5267b04d329dc.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - PICKUPS - (109)/SUCCESS PICKUP Retro Collect Beeps Multi 07.ogg"
+dest_files=[ "res://.import/SUCCESS PICKUP Retro Collect Beeps Multi 07.ogg-6a8e03e1ee0fe84981c5267b04d329dc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

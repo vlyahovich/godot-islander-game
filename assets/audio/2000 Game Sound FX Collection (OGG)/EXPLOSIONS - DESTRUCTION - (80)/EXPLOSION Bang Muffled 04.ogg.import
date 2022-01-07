@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/EXPLOSION Bang Muffled 04.ogg-686804e11942c75139f9ac52527630d9.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/EXPLOSIONS - DESTRUCTION - (80)/EXPLOSION Bang Muffled 04.ogg"
+dest_files=[ "res://.import/EXPLOSION Bang Muffled 04.ogg-686804e11942c75139f9ac52527630d9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

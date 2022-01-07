@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH CHARGER Power Down 03.ogg-1c99a4041bd3f096921f902620379114.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH CHARGERS - (45)/TECH CHARGER Power Down 03.ogg"
+dest_files=[ "res://.import/TECH CHARGER Power Down 03.ogg-1c99a4041bd3f096921f902620379114.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

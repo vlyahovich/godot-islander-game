@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BONG Bell Timer Hit 01.ogg-c88eb6321ab9035fd8e8dff09bbafd3f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/BONGS - TIMERS - BELLS - (72)/BONG Bell Timer Hit 01.ogg"
+dest_files=[ "res://.import/BONG Bell Timer Hit 01.ogg-c88eb6321ab9035fd8e8dff09bbafd3f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

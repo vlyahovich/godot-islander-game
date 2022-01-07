@@ -30,3 +30,5 @@ func _on_Interactable_interacted(area):
 		Finder.get_resource_emitter().emit_count(self, 100, ResourceMap.STONE)
 
 		empty = true
+	else:
+		$CloseSound.play()

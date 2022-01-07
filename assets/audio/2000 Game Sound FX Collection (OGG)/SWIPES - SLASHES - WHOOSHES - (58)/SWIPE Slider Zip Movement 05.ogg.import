@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SWIPE Slider Zip Movement 05.ogg-7d2cbae75f4c9e6ea79fbd9f8f94f097.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SWIPES - SLASHES - WHOOSHES - (58)/SWIPE Slider Zip Movement 05.ogg"
+dest_files=[ "res://.import/SWIPE Slider Zip Movement 05.ogg-7d2cbae75f4c9e6ea79fbd9f8f94f097.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

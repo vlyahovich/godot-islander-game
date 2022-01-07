@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL CUTE Distress Pain Call 02.ogg-5c61ea33e345f66975f392337d58bb7e.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL CUTE - CHARACTERS - (113)/VOCAL CUTE Distress Pain Call 02.ogg"
+dest_files=[ "res://.import/VOCAL CUTE Distress Pain Call 02.ogg-5c61ea33e345f66975f392337d58bb7e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BOUNCE Twang Spring Silly Voice 01.ogg-ced74a5dd2d2e808e41469812c3b2282.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/BOUNCES - SPRINGS - TWANGS - (47)/BOUNCE Twang Spring Silly Voice 01.ogg"
+dest_files=[ "res://.import/BOUNCE Twang Spring Silly Voice 01.ogg-ced74a5dd2d2e808e41469812c3b2282.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

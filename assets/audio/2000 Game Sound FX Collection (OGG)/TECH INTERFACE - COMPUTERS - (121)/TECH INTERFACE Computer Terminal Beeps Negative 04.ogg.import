@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH INTERFACE Computer Terminal Beeps Negative 04.ogg-6398d119de5cd57382dcca6ced4d828a.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH INTERFACE - COMPUTERS - (121)/TECH INTERFACE Computer Terminal Beeps Negative 04.ogg"
+dest_files=[ "res://.import/TECH INTERFACE Computer Terminal Beeps Negative 04.ogg-6398d119de5cd57382dcca6ced4d828a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

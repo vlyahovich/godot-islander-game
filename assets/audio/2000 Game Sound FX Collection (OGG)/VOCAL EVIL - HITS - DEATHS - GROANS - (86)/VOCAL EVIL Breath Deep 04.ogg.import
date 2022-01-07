@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL EVIL Breath Deep 04.ogg-00c983ea05a8ea89b028f7a19114b873.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL EVIL - HITS - DEATHS - GROANS - (86)/VOCAL EVIL Breath Deep 04.ogg"
+dest_files=[ "res://.import/VOCAL EVIL Breath Deep 04.ogg-00c983ea05a8ea89b028f7a19114b873.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

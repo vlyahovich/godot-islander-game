@@ -21,6 +21,7 @@ func init(player: Player, crosshair: Crosshair):
 
 func _interaction_reached(area):
 	if area and "Resource" in area.get_groups() and stats.stamina == 0:
+		$FailSound.play()
 		$AnimationPlayer.play("no_stamina")
 	
 func _health_changed(health):

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DESTRUCTION Rumbling Debris 06.ogg-84cbf0b8a3a5a2eaaffae682f493ca6c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/EXPLOSIONS - DESTRUCTION - (80)/DESTRUCTION Rumbling Debris 06.ogg"
+dest_files=[ "res://.import/DESTRUCTION Rumbling Debris 06.ogg-84cbf0b8a3a5a2eaaffae682f493ca6c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

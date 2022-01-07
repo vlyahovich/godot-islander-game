@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SPLAT Crush 04.ogg-7ddc5cc1c82d2a3cc5a32a9dffac9a49.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SPLATS - SQUELCHES - (36)/SPLAT Crush 04.ogg"
+dest_files=[ "res://.import/SPLAT Crush 04.ogg-7ddc5cc1c82d2a3cc5a32a9dffac9a49.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

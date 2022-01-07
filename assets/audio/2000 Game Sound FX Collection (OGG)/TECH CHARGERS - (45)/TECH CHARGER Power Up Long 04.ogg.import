@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH CHARGER Power Up Long 04.ogg-bc750f7346a9745de3dbe5b4835b1b56.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH CHARGERS - (45)/TECH CHARGER Power Up Long 04.ogg"
+dest_files=[ "res://.import/TECH CHARGER Power Up Long 04.ogg-bc750f7346a9745de3dbe5b4835b1b56.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ENGINE Motor Small Loop 04.ogg-54e82b7f1edf1ab872d36c3a887c411f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/ENGINES - MOTORS - (29)/ENGINE Motor Small Loop 04.ogg"
+dest_files=[ "res://.import/ENGINE Motor Small Loop 04.ogg-54e82b7f1edf1ab872d36c3a887c411f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

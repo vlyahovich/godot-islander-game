@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DESTRUCTION Break Impact Smash Short 05.ogg-02b4561cece92e33b630d1eca28f8991.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/EXPLOSIONS - DESTRUCTION - (80)/DESTRUCTION Break Impact Smash Short 05.ogg"
+dest_files=[ "res://.import/DESTRUCTION Break Impact Smash Short 05.ogg-02b4561cece92e33b630d1eca28f8991.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

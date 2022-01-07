@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RETRO Bump Hit Beep Short 18.ogg-915e484ad05574e4ce41de10613a618a.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/RETRO - ARCADE - (203)/RETRO Bump Hit Beep Short 18.ogg"
+dest_files=[ "res://.import/RETRO Bump Hit Beep Short 18.ogg-915e484ad05574e4ce41de10613a618a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

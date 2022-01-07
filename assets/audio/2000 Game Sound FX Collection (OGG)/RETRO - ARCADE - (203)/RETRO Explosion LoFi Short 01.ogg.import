@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RETRO Explosion LoFi Short 01.ogg-52da655f12ffca890dac37242a1aee8f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/RETRO - ARCADE - (203)/RETRO Explosion LoFi Short 01.ogg"
+dest_files=[ "res://.import/RETRO Explosion LoFi Short 01.ogg-52da655f12ffca890dac37242a1aee8f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

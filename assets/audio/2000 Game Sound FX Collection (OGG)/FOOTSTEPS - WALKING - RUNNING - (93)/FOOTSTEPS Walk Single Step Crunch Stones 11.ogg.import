@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FOOTSTEPS Walk Single Step Crunch Stones 11.ogg-b61a6b5afe57cbb35a0e639a0d2477df.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/FOOTSTEPS - WALKING - RUNNING - (93)/FOOTSTEPS Walk Single Step Crunch Stones 11.ogg"
+dest_files=[ "res://.import/FOOTSTEPS Walk Single Step Crunch Stones 11.ogg-b61a6b5afe57cbb35a0e639a0d2477df.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

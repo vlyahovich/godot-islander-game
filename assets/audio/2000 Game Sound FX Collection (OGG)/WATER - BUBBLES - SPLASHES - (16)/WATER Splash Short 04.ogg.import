@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/WATER Splash Short 04.ogg-7d60a211edf7733353b32993500f4707.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/WATER - BUBBLES - SPLASHES - (16)/WATER Splash Short 04.ogg"
+dest_files=[ "res://.import/WATER Splash Short 04.ogg-7d60a211edf7733353b32993500f4707.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

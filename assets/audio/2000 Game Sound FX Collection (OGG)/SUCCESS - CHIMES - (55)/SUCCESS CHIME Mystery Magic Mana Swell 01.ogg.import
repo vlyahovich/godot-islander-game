@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS CHIME Mystery Magic Mana Swell 01.ogg-92eaac69eeda6dfe022ff388b6d2b98b.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - CHIMES - (55)/SUCCESS CHIME Mystery Magic Mana Swell 01.ogg"
+dest_files=[ "res://.import/SUCCESS CHIME Mystery Magic Mana Swell 01.ogg-92eaac69eeda6dfe022ff388b6d2b98b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SQUEAK Rubbing 09.ogg-5a15674a4b82129618ae001f7a91c5de.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SQUEAKS - CREAKS - (28)/SQUEAK Rubbing 09.ogg"
+dest_files=[ "res://.import/SQUEAK Rubbing 09.ogg-5a15674a4b82129618ae001f7a91c5de.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

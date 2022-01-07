@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ALARM Alert Ringer Descend 01.ogg-39a77e0b67dde30f75be348c397b184e.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/ALARMS - BUZZERS - RINGERS - (44)/ALARM Alert Ringer Descend 01.ogg"
+dest_files=[ "res://.import/ALARM Alert Ringer Descend 01.ogg-39a77e0b67dde30f75be348c397b184e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

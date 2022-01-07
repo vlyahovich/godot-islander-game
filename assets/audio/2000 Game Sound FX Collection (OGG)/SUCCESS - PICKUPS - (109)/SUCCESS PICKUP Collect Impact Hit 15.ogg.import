@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS PICKUP Collect Impact Hit 15.ogg-a1fedd77060c10249f59a8854e6a85ee.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - PICKUPS - (109)/SUCCESS PICKUP Collect Impact Hit 15.ogg"
+dest_files=[ "res://.import/SUCCESS PICKUP Collect Impact Hit 15.ogg-a1fedd77060c10249f59a8854e6a85ee.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

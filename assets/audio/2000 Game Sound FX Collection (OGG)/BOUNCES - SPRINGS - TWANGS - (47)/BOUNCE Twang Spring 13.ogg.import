@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BOUNCE Twang Spring 13.ogg-a05d89a79171d971e81a289412e6b1bb.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/BOUNCES - SPRINGS - TWANGS - (47)/BOUNCE Twang Spring 13.ogg"
+dest_files=[ "res://.import/BOUNCE Twang Spring 13.ogg-a05d89a79171d971e81a289412e6b1bb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

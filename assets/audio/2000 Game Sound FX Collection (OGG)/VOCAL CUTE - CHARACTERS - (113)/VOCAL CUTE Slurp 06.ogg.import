@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL CUTE Slurp 06.ogg-93d24ff831b602e0369b3934e68639dc.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL CUTE - CHARACTERS - (113)/VOCAL CUTE Slurp 06.ogg"
+dest_files=[ "res://.import/VOCAL CUTE Slurp 06.ogg-93d24ff831b602e0369b3934e68639dc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

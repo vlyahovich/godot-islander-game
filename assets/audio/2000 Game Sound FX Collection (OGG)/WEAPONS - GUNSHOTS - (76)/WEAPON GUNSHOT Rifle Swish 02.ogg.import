@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/WEAPON GUNSHOT Rifle Swish 02.ogg-b45c2d2799eca3d33cfc6695a0b4274b.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/WEAPONS - GUNSHOTS - (76)/WEAPON GUNSHOT Rifle Swish 02.ogg"
+dest_files=[ "res://.import/WEAPON GUNSHOT Rifle Swish 02.ogg-b45c2d2799eca3d33cfc6695a0b4274b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

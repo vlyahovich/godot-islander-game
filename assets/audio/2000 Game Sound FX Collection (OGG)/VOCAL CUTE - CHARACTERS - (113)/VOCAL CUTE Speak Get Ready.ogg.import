@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL CUTE Speak Get Ready.ogg-6a361f962926c29dabdb3d67e478a21e.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL CUTE - CHARACTERS - (113)/VOCAL CUTE Speak Get Ready.ogg"
+dest_files=[ "res://.import/VOCAL CUTE Speak Get Ready.ogg-6a361f962926c29dabdb3d67e478a21e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

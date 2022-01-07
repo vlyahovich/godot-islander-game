@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS CHIME Mystery Magic Spell Sparkle 06.ogg-86b38ebc2f3a398468bd207a2e1e6232.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - CHIMES - (55)/SUCCESS CHIME Mystery Magic Spell Sparkle 06.ogg"
+dest_files=[ "res://.import/SUCCESS CHIME Mystery Magic Spell Sparkle 06.ogg-86b38ebc2f3a398468bd207a2e1e6232.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

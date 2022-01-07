@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL CUTE Call Excited WoAh 01.ogg-e38b21e59fe980369d112b784f4bcf9a.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL CUTE - CHARACTERS - (113)/VOCAL CUTE Call Excited WoAh 01.ogg"
+dest_files=[ "res://.import/VOCAL CUTE Call Excited WoAh 01.ogg-e38b21e59fe980369d112b784f4bcf9a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

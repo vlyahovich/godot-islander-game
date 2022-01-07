@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RETRO Jump Up Bounce Short 10.ogg-d95d20e7c8c8ff03b07ffa520a3aa33e.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/RETRO - ARCADE - (203)/RETRO Jump Up Bounce Short 10.ogg"
+dest_files=[ "res://.import/RETRO Jump Up Bounce Short 10.ogg-d95d20e7c8c8ff03b07ffa520a3aa33e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

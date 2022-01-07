@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SWIPE Whoosh Hit 01.ogg-5bff9fc669362ad0f5b02aadf387c602.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SWIPES - SLASHES - WHOOSHES - (58)/SWIPE Whoosh Hit 01.ogg"
+dest_files=[ "res://.import/SWIPE Whoosh Hit 01.ogg-5bff9fc669362ad0f5b02aadf387c602.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

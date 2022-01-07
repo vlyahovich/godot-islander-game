@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RETRO Climb Run Up Short 05.ogg-f4fe172fe3a3e6d11e24620b3ee060c3.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/RETRO - ARCADE - (203)/RETRO Climb Run Up Short 05.ogg"
+dest_files=[ "res://.import/RETRO Climb Run Up Short 05.ogg-f4fe172fe3a3e6d11e24620b3ee060c3.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

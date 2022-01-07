@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/COINS Collect Treasure Rattle 01.ogg-e57adc1449f0455ec987ac4465e26fa2.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/COINS - MONEY - TREASURE - (26)/COINS Collect Treasure Rattle 01.ogg"
+dest_files=[ "res://.import/COINS Collect Treasure Rattle 01.ogg-e57adc1449f0455ec987ac4465e26fa2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

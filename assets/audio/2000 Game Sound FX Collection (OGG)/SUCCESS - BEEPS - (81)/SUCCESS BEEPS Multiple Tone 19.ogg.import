@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SUCCESS BEEPS Multiple Tone 19.ogg-f3815c2e92d2d27247c9209b4a9a6dfe.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/SUCCESS - BEEPS - (81)/SUCCESS BEEPS Multiple Tone 19.ogg"
+dest_files=[ "res://.import/SUCCESS BEEPS Multiple Tone 19.ogg-f3815c2e92d2d27247c9209b4a9a6dfe.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

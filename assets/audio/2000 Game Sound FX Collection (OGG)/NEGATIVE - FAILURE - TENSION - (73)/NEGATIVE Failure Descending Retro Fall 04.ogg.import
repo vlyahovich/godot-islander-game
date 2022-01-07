@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/NEGATIVE Failure Descending Retro Fall 04.ogg-58e5c4d8366b2b2ee2993b232c1a8880.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/NEGATIVE - FAILURE - TENSION - (73)/NEGATIVE Failure Descending Retro Fall 04.ogg"
+dest_files=[ "res://.import/NEGATIVE Failure Descending Retro Fall 04.ogg-58e5c4d8366b2b2ee2993b232c1a8880.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

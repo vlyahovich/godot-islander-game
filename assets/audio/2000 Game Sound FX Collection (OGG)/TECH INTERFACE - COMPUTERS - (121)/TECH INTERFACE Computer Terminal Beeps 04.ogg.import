@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH INTERFACE Computer Terminal Beeps 04.ogg-ea147ec0271fd0f5be33c11fc18f0ab9.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH INTERFACE - COMPUTERS - (121)/TECH INTERFACE Computer Terminal Beeps 04.ogg"
+dest_files=[ "res://.import/TECH INTERFACE Computer Terminal Beeps 04.ogg-ea147ec0271fd0f5be33c11fc18f0ab9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

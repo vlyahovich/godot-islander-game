@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL EVIL Impact Hit OOOF 03.ogg-b4d710a6562ad56372b6a3245fbf273f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL EVIL - HITS - DEATHS - GROANS - (86)/VOCAL EVIL Impact Hit OOOF 03.ogg"
+dest_files=[ "res://.import/VOCAL EVIL Impact Hit OOOF 03.ogg-b4d710a6562ad56372b6a3245fbf273f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

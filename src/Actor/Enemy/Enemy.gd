@@ -41,8 +41,11 @@ func _on_Hurtbox_area_entered(area):
 		$Stats.set_health($Stats.health - area.damage)
 
 		knockback = (global_position - area.global_position).normalized() * knockback_strength
-		
-		$HitSound.play()
+
+		if $Stats.health == 0:
+			$DeathSound.play()
+		else:
+			$HitSound.play()
 
 	$Hurtbox.start_invincibility(invincibility_duration)
 

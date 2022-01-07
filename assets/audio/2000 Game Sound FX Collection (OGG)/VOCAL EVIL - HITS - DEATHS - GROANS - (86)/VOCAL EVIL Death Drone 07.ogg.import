@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL EVIL Death Drone 07.ogg-bebaa8e6c3174e4c7d0ba2018ec39854.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL EVIL - HITS - DEATHS - GROANS - (86)/VOCAL EVIL Death Drone 07.ogg"
+dest_files=[ "res://.import/VOCAL EVIL Death Drone 07.ogg-bebaa8e6c3174e4c7d0ba2018ec39854.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

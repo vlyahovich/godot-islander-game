@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TECH INTERFACE Slide Movement 07.ogg-463875cc987d4c64e2a9cf6e367e5ee8.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/TECH INTERFACE - COMPUTERS - (121)/TECH INTERFACE Slide Movement 07.ogg"
+dest_files=[ "res://.import/TECH INTERFACE Slide Movement 07.ogg-463875cc987d4c64e2a9cf6e367e5ee8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

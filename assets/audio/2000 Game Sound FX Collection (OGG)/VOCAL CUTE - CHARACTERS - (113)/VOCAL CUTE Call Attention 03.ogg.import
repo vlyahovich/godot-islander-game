@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL CUTE Call Attention 03.ogg-646f2ae8f6299af931651443f3108e99.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL CUTE - CHARACTERS - (113)/VOCAL CUTE Call Attention 03.ogg"
+dest_files=[ "res://.import/VOCAL CUTE Call Attention 03.ogg-646f2ae8f6299af931651443f3108e99.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

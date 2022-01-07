@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/POP Brust 13.ogg-c1609248c8ab40abaeee8cd330d2ee2f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/POPS - BURSTS - (26)/POP Brust 13.ogg"
+dest_files=[ "res://.import/POP Brust 13.ogg-c1609248c8ab40abaeee8cd330d2ee2f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

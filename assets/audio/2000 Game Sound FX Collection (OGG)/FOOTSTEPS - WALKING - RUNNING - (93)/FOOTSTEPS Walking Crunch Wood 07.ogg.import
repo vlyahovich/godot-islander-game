@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FOOTSTEPS Walking Crunch Wood 07.ogg-7a0ea49d9e4ec25524a020d2f41df049.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/FOOTSTEPS - WALKING - RUNNING - (93)/FOOTSTEPS Walking Crunch Wood 07.ogg"
+dest_files=[ "res://.import/FOOTSTEPS Walking Crunch Wood 07.ogg-7a0ea49d9e4ec25524a020d2f41df049.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

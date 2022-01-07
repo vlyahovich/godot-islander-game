@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/WEAPON GUNSHOT Bullet Hit 08.ogg-b5a1b27f942d74cd028045f33e83a25a.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/WEAPONS - GUNSHOTS - (76)/WEAPON GUNSHOT Bullet Hit 08.ogg"
+dest_files=[ "res://.import/WEAPON GUNSHOT Bullet Hit 08.ogg-b5a1b27f942d74cd028045f33e83a25a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

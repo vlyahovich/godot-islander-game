@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/NEGATIVE Tension Builder Hover 03.ogg-4c124f2c4676b4b7171d534d75d1d010.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/NEGATIVE - FAILURE - TENSION - (73)/NEGATIVE Tension Builder Hover 03.ogg"
+dest_files=[ "res://.import/NEGATIVE Tension Builder Hover 03.ogg-4c124f2c4676b4b7171d534d75d1d010.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

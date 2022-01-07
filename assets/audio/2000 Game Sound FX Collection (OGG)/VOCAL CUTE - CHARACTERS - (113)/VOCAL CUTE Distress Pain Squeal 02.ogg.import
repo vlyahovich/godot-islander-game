@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VOCAL CUTE Distress Pain Squeal 02.ogg-298decd8fecc2ec2a3baa4db8f4fe674.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/2000 Game Sound FX Collection (OGG)/VOCAL CUTE - CHARACTERS - (113)/VOCAL CUTE Distress Pain Squeal 02.ogg"
+dest_files=[ "res://.import/VOCAL CUTE Distress Pain Squeal 02.ogg-298decd8fecc2ec2a3baa4db8f4fe674.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
