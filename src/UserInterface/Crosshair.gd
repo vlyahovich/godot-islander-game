@@ -4,22 +4,24 @@ class_name Crosshair
 const crosshair_width = 30.0
 const crosshair_height = 30.0
 
-var default_extents = Vector2.ZERO
 var interaction_area = null
+var default_watcher_size = Vector2.ZERO
 
 signal interaction_reached(area)
 
 func _ready():
 	_reset_position()
-
-	default_extents = $Container/Interaction/CollisionShape2D.shape.extents
+	
+	default_watcher_size = Vector2(
+		$Container/PlayerWatcher/CollisionShape2D.shape.radius,
+		$Container/PlayerWatcher/CollisionShape2D.shape.height
+	)
 	
 func _input(_event):
 	if Input.is_action_just_pressed("ui_click_left"):
 		queue_show(get_global_mouse_position())
 
 func queue_show(position):
-	$Container/Interaction/CollisionShape2D.shape.extents = default_extents
 	$VisibilityTimer.start()
 
 	global_position = position
@@ -49,10 +51,6 @@ func _on_Interaction_area_entered(area):
 	var groups = area.get_groups()
 	
 	if "Player" in groups:
-		$Container/Interaction/CollisionShape2D.shape.extents = default_extents
-		emit_signal("interaction_reached", interaction_area)
-		queue_hide()
-		interaction_area = null
 		return
 
 	var collision_area = area.find_node("CollisionShape2D")
@@ -82,10 +80,8 @@ func _on_Interaction_area_entered(area):
 
 		interaction_area = area
 
-		$Container/Interaction/CollisionShape2D.shape.extents = Vector2(
-			$Container/TopL.position.distance_to($Container/TopR.position) / 2,
-			$Container/TopL.position.distance_to($Container/BottomL.position) / 2
-		)
+		$Container/PlayerWatcher/CollisionShape2D.shape.height = height * 1 / scale.y
+		$Container/PlayerWatcher/CollisionShape2D.shape.radius = radius * 1 / scale.x
 
 	global_position = collision_area.global_position
 
@@ -100,3 +96,15 @@ func _on_DebounceHideTimer_timeout():
 	_reset_position()
 
 	$AnimationPlayer.play("RESET")
+
+func _on_PlayerWatcher_area_entered(area):
+	if "Player" in area.get_groups():
+		if interaction_area:
+			emit_signal("interaction_reached", interaction_area)
+
+		$Container/PlayerWatcher/CollisionShape2D.shape.height = default_watcher_size.y
+		$Container/PlayerWatcher/CollisionShape2D.shape.radius = default_watcher_size.x
+
+		queue_hide()
+
+		interaction_area = null
