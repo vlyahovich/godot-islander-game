@@ -31,6 +31,9 @@ func queue_show(position):
 
 	$Container/Interaction/CollisionShape2D.disabled = true
 	$Container/Interaction/CollisionShape2D.disabled = false
+	
+	$Container/PlayerWatcher/CollisionShape2D.disabled = true
+	$Container/PlayerWatcher/CollisionShape2D.disabled = false
 
 	$AnimationPlayer.play("animate")
 	

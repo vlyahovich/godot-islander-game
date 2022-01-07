@@ -487,3 +487,5 @@ frame = 9
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
 anims/no_stamina = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
