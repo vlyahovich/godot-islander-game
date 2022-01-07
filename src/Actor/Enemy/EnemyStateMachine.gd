@@ -11,6 +11,6 @@ func _ready():
 		WANDER: $WanderState,
 		CHASE: $ChaseState
 	}
-
-func previous_state():
-	._change_state("previous")
+	
+func change_state(state):
+	.change_state(state)

@@ -14,6 +14,7 @@ onready var animatedSprite: AnimatedSprite = $AnimatedSprite
 onready var playerDetectionZone: Area2D = $PlayerDetectionZone
 onready var stats: Stats = $Stats
 onready var wanderController: EnemyWanderController = $WanderController
+onready var chaseController: EnemyChaseController = $ChaseController
 
 func _ready():
 	$EnemyStateMachine.set_active(true)
@@ -22,6 +23,8 @@ func _ready():
 	
 func seek_player():
 	if $PlayerDetectionZone.can_see_player():
+		chaseController.start_chasing()
+
 		$EnemyStateMachine.change_state($EnemyStateMachine.CHASE)
 
 func next_state():

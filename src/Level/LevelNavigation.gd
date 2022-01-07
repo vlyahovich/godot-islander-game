@@ -1,4 +1,5 @@
 extends Navigation2D
+class_name LevelNavigation
 
 var pressed = false
 var queued_path = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://assets/art/enemy/slimeball_.png" type="Texture" id=1]
 [ext_resource path="res://src/UserInterface/HealthBar.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://src/Actor/Enemy/Enemy.gd" type="Script" id=8]
 [ext_resource path="res://src/Actor/Stats.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Actor/Enemy/EnemyWanderController.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Actor/Enemy/EnemyChaseController.tscn" type="PackedScene" id=12]
 
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 1 )
@@ -183,8 +184,8 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=6]
-radius = 3.0
-height = 2.5
+radius = 2.0
+height = 1.5
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 5, 5 )
@@ -194,7 +195,7 @@ radius = 4.5
 height = 4.0
 
 [sub_resource type="CircleShape2D" id=28]
-radius = 63.0079
+radius = 60.0
 
 [node name="Slime" type="KinematicBody2D" groups=["Enemy"]]
 collision_layer = 16
@@ -208,6 +209,8 @@ max_health = 3.0
 START_STATE = NodePath("DefaultState")
 
 [node name="WanderController" parent="." instance=ExtResource( 10 )]
+
+[node name="ChaseController" parent="." instance=ExtResource( 12 )]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -4 )
@@ -235,7 +238,6 @@ position = Vector2( 0, -3.5 )
 shape = SubResource( 37 )
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 position = Vector2( 1, 0 )
