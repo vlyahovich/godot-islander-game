@@ -40,6 +40,9 @@ func _navigate_to_mouse():
 			queued_path = 1
 			
 func _input(_event):
+	if Globals.dialogicActive:
+		return
+
 	if Input.is_action_just_pressed("ui_click_left"):
 		_navigate_to_mouse()
 

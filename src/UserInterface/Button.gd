@@ -44,7 +44,7 @@ func _apply_style():
 	$Label.text = text
 	
 func _input(_event):
-	if !is_visible_in_tree():
+	if !is_visible_in_tree() or Globals.dialogicActive:
 		return
 
 	if Input.is_action_just_pressed("ui_click_left"):

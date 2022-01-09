@@ -60,6 +60,9 @@ func _get_resource_emitter():
 	return get_tree().current_scene.get_node_or_null("ResourceEmitter")
 
 func _input(_event):
+	if Globals.dialogicActive:
+		return
+
 	if Input.is_action_just_pressed("ui_click_right"):
 		if weapon != null:
 			weapon.hit(dir)

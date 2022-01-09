@@ -13,4 +13,4 @@ func _ready():
 	
 	$HUD.init(player, crosshair)
 
-	$LevelMusic.play()
+	#$LevelMusic.play()

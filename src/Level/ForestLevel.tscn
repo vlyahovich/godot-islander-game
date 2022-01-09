@@ -124,6 +124,9 @@ position = Vector2( -54, 104 )
 [node name="Nameplate" parent="YSort" instance=ExtResource( 20 )]
 position = Vector2( -25, 93 )
 
+[node name="Interactable" parent="YSort/Nameplate" index="2"]
+dialog_timeline = "nameplate_interaction_1"
+
 [node name="Fountain" parent="YSort" instance=ExtResource( 21 )]
 position = Vector2( 293, 113 )
 
@@ -182,3 +185,5 @@ wait_time = 0.25
 one_shot = true
 
 [editable path="PlayerCamera"]
+[editable path="YSort/Nameplate"]
+[editable path="YSort/Nameplate/Interactable"]

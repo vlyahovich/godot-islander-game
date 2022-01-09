@@ -18,6 +18,9 @@ func _ready():
 	)
 	
 func _input(_event):
+	if Globals.dialogicActive:
+		return
+
 	if Input.is_action_just_pressed("ui_click_left"):
 		queue_show(get_global_mouse_position())
 

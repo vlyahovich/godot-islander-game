@@ -314,13 +314,14 @@ frame = 23
 position = Vector2( 150, 91 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 33 )
-frame = 3
+frame = 1
 speed_scale = 1.2
 playing = true
 
 [node name="Fire" type="AnimatedSprite" parent="Welcome"]
 position = Vector2( 180, 109 )
 frames = SubResource( 42 )
+frame = 1
 playing = true
 
 [node name="CreditsButton" parent="Welcome" instance=ExtResource( 1 )]

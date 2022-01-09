@@ -5,7 +5,6 @@ const acceleration = 300
 
 func update(delta):
 	var enemy: Enemy = owner.get_parent()
-	var default_state: EnemyDefaultState = get_parent().get_node("DefaultState")
 
 	basic_movement(delta)
 

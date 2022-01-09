@@ -11,7 +11,6 @@ func exit():
 func update(delta):
 	var enemy = owner.get_parent()
 	var player = enemy.playerDetectionZone.player
-	var defaultState = get_parent().get_node("DefaultState");
 
 	basic_movement(delta)
 

@@ -26,10 +26,12 @@ func _interaction_reached(area):
 	
 func _health_changed(health):
 	_fill_bar($Health/Empty, stats.max_health, [4, 5, 6])
+	# warning-ignore:narrowing_conversion
 	_fill_bar($Health/Fill, ceil(health), [0, 1, 2])
 	
 func _stamina_changed(stamina):
 	_fill_bar($Stamina/Empty, stats.max_stamina, [11, 12, 13])
+	# warning-ignore:narrowing_conversion
 	_fill_bar($Stamina/Fill, ceil(stamina), [7, 8, 9])
 	
 func _animate_cell_opacity(cell: Node2D, to_opacity: Color):
