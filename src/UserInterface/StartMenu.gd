@@ -3,6 +3,9 @@ extends CanvasLayer
 export var skip_menu = false
 
 func _ready():
+	if GameSettings.mute_sound == true:
+			_on_SoundButtonOff_pressed()
+
 	if skip_menu:
 		get_tree().change_scene("res://src/Level/ForestLevel.tscn")
 	else:
@@ -12,9 +15,6 @@ func _ready():
 		$Credits.visible = false
 		$SoundButtonOff.visible = true
 		$SoundButtonOn.visible = false
-
-		if GameSettings.mute_sound == true:
-			_on_SoundButtonOff_pressed()
 
 		$MenuMusic.play()
 		$AnimationPlayer.play("pop")

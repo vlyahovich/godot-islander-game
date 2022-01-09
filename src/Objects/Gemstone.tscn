@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/art/resources/resources_basic.png" type="Texture" id=1]
+[ext_resource path="res://src/Objects/Gemstone.gd" type="Script" id=2]
+[ext_resource path="res://src/Shaders/ShiningNova.tres" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 3 )
+shader_param/center = Vector2( 0.5, 0.5 )
+shader_param/force = 0.8
+shader_param/strength = -0.4
+shader_param/speed = 0.08
+shader_param/time = 3.0
+shader_param/smoothness = 1.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "time"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:material:shader_param/time")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 2.0 ]
+}
+
+[node name="Gemstone" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+anims/time = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -4 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+hframes = 11
+vframes = 11
+frame = 29

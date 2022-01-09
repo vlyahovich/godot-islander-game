@@ -1,0 +1,47 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform vec2 center = vec2(0.5, 0.5);
+uniform float force = 1.1;
+uniform float strength = -0.4;
+uniform float speed = 0.125;
+uniform float time = 1.0;
+uniform float smoothness = 1;
+
+void fragment() {
+	float ratio = SCREEN_PIXEL_SIZE.x / SCREEN_PIXEL_SIZE.y;
+	vec2 scaledUV = (SCREEN_UV - vec2(0.5, 0.0)) / vec2(ratio, 1.0) + vec2(0.5, 0);
+	vec2 centerUV = SCREEN_UV - vec2(center.x, center.y);
+
+	float PI = 3.14159265359;
+	float dist = length(centerUV);
+    float angle = (atan(centerUV.y, centerUV.x) + PI) / (2.0 * PI);
+	
+	// texture lookup
+    vec3 textureDist;
+    textureDist = texture(SCREEN_TEXTURE, vec2(time * speed, angle)).xyz;
+
+    vec3 normal = texture(SCREEN_TEXTURE, SCREEN_UV).xyz;
+    
+    // manipulate distance
+    textureDist *= force;
+    textureDist += strength;
+    
+    // set RGB
+	vec3 color = vec3(0.0,0.0,0.0);
+    
+    if (dist < textureDist.x)
+        color.x += smoothstep(0.0, smoothness, textureDist.x - dist);
+
+    if (dist < textureDist.y)
+        color.y += smoothstep(0.0, smoothness, textureDist.y - dist);
+    
+    if (dist < textureDist.z)
+        color.z += smoothstep(0.0, smoothness, textureDist.z - dist);
+
+	COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);
+	
+	COLOR.rgb = color + normal;
+}"
