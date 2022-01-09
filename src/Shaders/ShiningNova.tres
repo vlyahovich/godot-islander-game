@@ -9,6 +9,7 @@ uniform float strength = -0.4;
 uniform float speed = 0.125;
 uniform float time = 1.0;
 uniform float smoothness = 1;
+uniform vec3 modulate = vec3(0.0, 0.0, 0.0);
 
 void fragment() {
 	float ratio = SCREEN_PIXEL_SIZE.x / SCREEN_PIXEL_SIZE.y;
@@ -33,13 +34,13 @@ void fragment() {
 	vec3 color = vec3(0.0,0.0,0.0);
     
     if (dist < textureDist.x)
-        color.x += smoothstep(0.0, smoothness, textureDist.x - dist);
+        color.x += smoothstep(0.0, smoothness, textureDist.x - dist + modulate.x);
 
     if (dist < textureDist.y)
-        color.y += smoothstep(0.0, smoothness, textureDist.y - dist);
+        color.y += smoothstep(0.0, smoothness, textureDist.y - dist + modulate.y);
     
     if (dist < textureDist.z)
-        color.z += smoothstep(0.0, smoothness, textureDist.z - dist);
+        color.z += smoothstep(0.0, smoothness, textureDist.z - dist + modulate.z);
 
 	COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);
 	
