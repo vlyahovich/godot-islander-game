@@ -328,13 +328,13 @@
 22/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 3, 37 )
+extents = Vector2( 3, 45 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 3, 37 )
+extents = Vector2( 3, 45 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 14, 37 )
+extents = Vector2( 14, 45 )
 
 [node name="VBridge" type="StaticBody2D"]
 collision_layer = 129
@@ -345,14 +345,22 @@ position = Vector2( -5, 0 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 2, 0, 65536, 3, 0, 65537, 4, 0, 65538, 5, 0, 131072, 6, 0, 131073, 7, 0, 131074, 8, 0, 196608, 9, 0, 196609, 10, 0, 196610, 11, 0, 262144, 20, 0, 262145, 21, 0, 262146, 22, 0 )
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 2, 0, 65536, 3, 0, 65537, 4, 0, 65538, 5, 0, 131072, 6, 0, 131073, 7, 0, 131074, 8, 0, 196608, 9, 0, 196609, 10, 0, 196610, 11, 0, 262144, 18, 0, 262145, 10, 0, 262146, 19, 0, 327680, 20, 0, 327681, 21, 0, 327682, 22, 0 )
+
+[node name="TileMapBroken" type="TileMap" parent="."]
+visible = false
+position = Vector2( -5, 0 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 2, 0, 65536, 12, 0, 65537, 13, 0, 65538, 14, 0, 262144, 15, 0, 262145, 16, 0, 262146, 17, 0, 327680, 20, 0, 327681, 21, 0, 327682, 22, 0 )
 
 [node name="LeftCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2( 3, 37 )
+position = Vector2( 3, 45 )
 shape = SubResource( 2 )
 
 [node name="RightCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2( 35, 37 )
+position = Vector2( 35, 45 )
 shape = SubResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -360,7 +368,7 @@ collision_layer = 129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 modulate = Color( 1, 0.352941, 0.47451, 0.917647 )
-position = Vector2( 19, 37 )
+position = Vector2( 19, 45 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
