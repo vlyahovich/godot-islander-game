@@ -12,7 +12,7 @@ func _update_ui():
 	var items = PlayerInventory.items
 	var counts = PlayerInventory.counts
 	var slot = 1
-	
+
 	for node in get_children():
 		var sprite = node.get_node("ResourceSprite")
 		var count = node.get_node("Count")

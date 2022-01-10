@@ -1,4 +1,18 @@
 extends StaticBody2D
 
-func _on_Interactable_interacted_dialog(area, output):
-	print(area, output)
+export(NodePath) var buildable = null
+
+func _on_Interactable_interacted_dialog(_area, output):
+	if output.size() and output[0] == "yes":
+		var buildable_node = get_node_or_null(buildable)
+
+		if buildable_node and buildable_node.has_method("build"):
+			if buildable_node.has_method("is_buildable"):
+				if buildable_node.is_buildable():
+					buildable_node.build()
+
+					queue_free()
+			else:
+				buildable_node.build()
+
+				queue_free()
