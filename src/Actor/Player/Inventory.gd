@@ -11,12 +11,15 @@ func _ready():
 	if resource_emitter:
 		resource_emitter.connect("resource_received", self, "_resource_received")
 
-func connect_emitter(emitter):
+func connect_emitter(emitter) -> void:
 	if emitter:
 		emitter.connect("resource_received", self, "_resource_received")
 
-func use_resources(list: Array, listCounts: Array):
+func use_resources(list: Array, listCounts: Array) -> bool:
 	var i = 0
+	
+	if !has_enough_resources(list, listCounts):
+		return false
 
 	for item in list:
 		var index = items.find(item)
@@ -28,9 +31,27 @@ func use_resources(list: Array, listCounts: Array):
 				items.remove(index)
 				counts.remove(index)
 
-	i += 1
+		i += 1
 
 	emit_signal("resources_updated")
+
+	return true
+	
+func has_enough_resources(list: Array, listCounts: Array) -> bool:
+	var i = 0
+	var enough = true
+
+	for item in list:
+		var index = items.find(item)
+		
+		if index == -1 or counts[index] < listCounts[i]:
+			enough = false
+
+			break
+
+		i += 1
+
+	return enough
 
 func _resource_received(meta):
 	var index = items.find(meta)

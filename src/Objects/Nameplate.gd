@@ -8,11 +8,7 @@ func _on_Interactable_interacted_dialog(_area, output):
 
 		if buildable_node and buildable_node.has_method("build"):
 			if buildable_node.has_method("is_buildable"):
-				if buildable_node.is_buildable():
-					buildable_node.build()
-
+				if buildable_node.is_buildable() and buildable_node.build():
 					queue_free()
-			else:
-				buildable_node.build()
-
+			elif buildable_node.build():
 				queue_free()

@@ -17,9 +17,12 @@ func is_buildable():
 	return broken == true
 
 func build():
-	PlayerInventory.use_resources([ResourceMap.WOOD, ResourceMap.STONE], [300, 300])
+	if PlayerInventory.use_resources([ResourceMap.WOOD, ResourceMap.STONE], [300, 300]):
+		set_broken(false)
 
-	set_broken(false)
+		return true
+
+	return false
 
 func _update_state():
 	if !is_inside_tree():
