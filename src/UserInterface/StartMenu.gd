@@ -4,7 +4,10 @@ export var skip_menu = false
 
 func _ready():
 	if GameSettings.mute_sound == true:
-			_on_SoundButtonOff_pressed()
+		_on_SoundButtonOff_pressed()
+	else:
+		$SoundButtonOff.visible = true
+		$SoundButtonOn.visible = false
 
 	if skip_menu:
 		get_tree().change_scene("res://src/Level/ForestLevel.tscn")
@@ -13,8 +16,6 @@ func _ready():
 
 		$Welcome.visible = true
 		$Credits.visible = false
-		$SoundButtonOff.visible = true
-		$SoundButtonOn.visible = false
 
 		$MenuMusic.play()
 		$AnimationPlayer.play("pop")
@@ -47,7 +48,9 @@ func _on_SoundButtonOff_pressed():
 
 	$SoundButtonOff.visible = false
 	$SoundButtonOn.visible = true
-	
+
+	GameSettings.mute_sound = true
+
 	var master_sound = AudioServer.get_bus_index("Master")
 	
 	AudioServer.set_bus_mute(master_sound, true)
@@ -59,7 +62,9 @@ func _on_SoundButtonOn_pressed():
 
 	$SoundButtonOff.visible = true
 	$SoundButtonOn.visible = false
-	
+
+	GameSettings.mute_sound = false
+
 	var master_sound = AudioServer.get_bus_index("Master")
 	
 	AudioServer.set_bus_mute(master_sound, false)

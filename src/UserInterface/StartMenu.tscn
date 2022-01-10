@@ -1,11 +1,14 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://src/UserInterface/Button.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/ui/Menu_icons_16x16.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/musicOff.png" type="Texture" id=2]
 [ext_resource path="res://src/UserInterface/ScreenFader.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/logo-420.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/information.png" type="Texture" id=5]
+[ext_resource path="res://assets/ui/musicOn.png" type="Texture" id=6]
 [ext_resource path="res://assets/art/player/mHero_ [elf].png" type="Texture" id=7]
 [ext_resource path="res://assets/art/forest/forestDecoration_0.png" type="Texture" id=8]
+[ext_resource path="res://assets/ui/return.png" type="Texture" id=9]
 [ext_resource path="res://assets/audio/confirm_style_2_001.ogg" type="AudioStream" id=11]
 [ext_resource path="res://src/UserInterface/StartMenu.gd" type="Script" id=14]
 [ext_resource path="res://src/Tile/AnimatedTileMap.gd" type="Script" id=17]
@@ -269,12 +272,16 @@ width = 25
 height = 25
 variant = 7
 
-[node name="Icon" type="Sprite" parent="SoundButtonOff"]
-position = Vector2( 15, 10 )
-texture = ExtResource( 2 )
-hframes = 4
-vframes = 10
-frame = 23
+[node name="TextureRect3" type="TextureRect" parent="SoundButtonOff"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 23.0
+margin_bottom = 23.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SoundButtonOn" parent="." instance=ExtResource( 1 )]
 margin_left = 280.0
@@ -285,12 +292,16 @@ width = 25
 height = 25
 variant = 7
 
-[node name="Icon" type="Sprite" parent="SoundButtonOn"]
-position = Vector2( 15, 10 )
+[node name="TextureRect2" type="TextureRect" parent="SoundButtonOn"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 23.0
+margin_bottom = 23.0
 texture = ExtResource( 2 )
-hframes = 4
-vframes = 10
-frame = 23
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Welcome" type="Node2D" parent="."]
 
@@ -304,7 +315,6 @@ playing = true
 [node name="Fire" type="AnimatedSprite" parent="Welcome"]
 position = Vector2( 180, 109 )
 frames = SubResource( 42 )
-frame = 2
 playing = true
 
 [node name="CreditsButton" parent="Welcome" instance=ExtResource( 1 )]
@@ -316,12 +326,16 @@ width = 25
 height = 25
 variant = 7
 
-[node name="Icon" type="Sprite" parent="Welcome/CreditsButton"]
-position = Vector2( 16, 10 )
-texture = ExtResource( 2 )
-hframes = 4
-vframes = 10
-frame = 3
+[node name="TextureRect2" type="TextureRect" parent="Welcome/CreditsButton"]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 23.0
+margin_bottom = 22.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PlayButton" parent="Welcome" instance=ExtResource( 1 )]
 margin_left = 124.0
@@ -372,12 +386,16 @@ width = 25
 height = 25
 variant = 7
 
-[node name="Icon" type="Sprite" parent="Credits/BackButton"]
-position = Vector2( 15, 10 )
-texture = ExtResource( 2 )
-hframes = 4
-vframes = 10
-frame = 27
+[node name="TextureRect2" type="TextureRect" parent="Credits/BackButton"]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 23.0
+margin_bottom = 22.0
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="FadeLayer" type="CanvasLayer" parent="."]
 layer = 3
