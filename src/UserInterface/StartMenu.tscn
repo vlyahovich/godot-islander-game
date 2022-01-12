@@ -315,6 +315,7 @@ playing = true
 [node name="Fire" type="AnimatedSprite" parent="Welcome"]
 position = Vector2( 180, 109 )
 frames = SubResource( 42 )
+frame = 3
 playing = true
 
 [node name="CreditsButton" parent="Welcome" instance=ExtResource( 1 )]

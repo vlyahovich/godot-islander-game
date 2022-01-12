@@ -22,7 +22,7 @@ func _on_Interactable_interacted(area):
 	self.open = !open
 	
 	if open:
-		area.notify_interaction_finished(0)
+		area.notify_interaction_finished(null, 0)
 
 		$OpenSound.play()
 

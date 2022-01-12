@@ -148,6 +148,10 @@ anims/repair = SubResource( 5 )
 wait_time = 5.0
 one_shot = true
 
+[node name="InteractionTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [node name="Stats" parent="." instance=ExtResource( 3 )]
 max_health = 3.0
 

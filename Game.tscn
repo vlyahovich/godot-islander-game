@@ -11,7 +11,6 @@ position = Vector2( 0, 1 )
 script = ExtResource( 2 )
 
 [node name="StartMenu" parent="." instance=ExtResource( 8 )]
-skip_menu = false
 
 [node name="DebugOverlay" parent="." instance=ExtResource( 3 )]
 

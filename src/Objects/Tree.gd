@@ -32,7 +32,13 @@ func _apply_variant():
 
 func _on_Interactable_interacted(area):
 	if $Interactable.active:
-		area.notify_interaction_finished(0.2)
+		area.notify_interaction_started(ResourceMap.WOOD, 0.2)
+
+		$InteractionTimer.start()
+
+		yield($InteractionTimer, "timeout")
+
+		area.notify_interaction_finished(ResourceMap.WOOD, 0.2)
 
 		$Stats.health -= 1
 

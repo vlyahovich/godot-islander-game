@@ -2,7 +2,13 @@ extends StaticBody2D
 
 func _on_Interactable_interacted(area):
 	if $Interactable.active:
-		area.notify_interaction_finished(0.5)
+		area.notify_interaction_started(ResourceMap.STONE, 0.5)
+
+		$InteractionTimer.start()
+
+		yield($InteractionTimer, "timeout")
+
+		area.notify_interaction_finished(ResourceMap.STONE, 0.5)
 
 		$Stats.health -= 1
 

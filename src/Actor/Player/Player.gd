@@ -12,6 +12,8 @@ var velocity: Vector2 = Vector2.ZERO
 var dir: Vector2 = Vector2.RIGHT
 var hit_dir: Vector2 = Vector2.ZERO
 var weapon = null
+var pickaxe = null
+var axe = null
 
 onready var aPlayer: AnimationPlayer = $AnimationPlayer
 onready var aTree: AnimationTree = $AnimationTree
@@ -19,6 +21,8 @@ onready var aTreeState: AnimationNodeStateMachinePlayback = aTree.get("parameter
 onready var dustEmitter: Node = $DustEmitter
 onready var stats: Stats = $PlayerStats
 onready var Weapon = preload("res://src/Objects/Weapons/Sword.tscn")
+onready var Pickaxe = preload("res://src/Objects/Tools/Pickaxe.tscn")
+onready var Axe = preload("res://src/Objects/Tools/Axe.tscn")
 
 func _ready():
 	DebugOverlay.add_stat("Player position", self, "position", false)
@@ -33,7 +37,12 @@ func _ready():
 	$StateMachine.set_active(true)
 
 	weapon = Weapon.instance()
+	pickaxe = Pickaxe.instance()
+	axe = Axe.instance()
+
 	add_child(weapon)
+	add_child(pickaxe)
+	add_child(axe)
 	
 func follow_path(target_path):
 	path = target_path
