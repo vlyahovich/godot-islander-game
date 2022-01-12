@@ -234,6 +234,7 @@ height = 18.0
 [node name="Sword" type="Node2D"]
 visible = false
 script = ExtResource( 2 )
+levelSprites = [ 0, 1, 2, 3, 4 ]
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.75, 0.75 )
@@ -241,7 +242,6 @@ texture = ExtResource( 3 )
 offset = Vector2( 0, -10 )
 hframes = 5
 vframes = 5
-frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 53 )

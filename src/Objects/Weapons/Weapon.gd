@@ -1,6 +1,14 @@
 extends Node2D
 
+export(Array) var levelSprites = []
+
+var level = 1 setget set_level
+var max_level = 5
+
 signal hit_ends
+
+func _ready():
+	set_level(level)
 
 func hit(dir):
 	var current = $AnimationPlayer.current_animation
@@ -22,6 +30,12 @@ func hit(dir):
 		position.y = -3
 		
 		$AnimationPlayer.play("hit_left")
+
+func set_level(value):
+	level = clamp(value, 1, max_level)
+	
+	$Sprite.frame = levelSprites[level - 1]
+	$Hitbox.damage = level
 
 func _on_hit_animation_end():
 	$Sprite.visible = false

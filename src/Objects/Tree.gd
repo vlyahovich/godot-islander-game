@@ -40,7 +40,7 @@ func _on_Interactable_interacted(area):
 
 		area.notify_interaction_finished(ResourceMap.WOOD, 0.2)
 
-		$Stats.health -= 1
+		$Stats.health -= area.damage_resource(ResourceMap.WOOD)
 
 func _on_GrowTimer_timeout():
 	$Stats.reset_health()
@@ -63,7 +63,7 @@ func _on_Stats_health_depleted():
 		$Sprite.modulate = Color(1, 1, 1, 0.2)
 
 func _on_Stats_health_chaged(value):
-	if value > 0:
+	if value > 0 and value != $Stats.max_health:
 		$HitSound.play()
 		$AnimationPlayer.play("break")
 

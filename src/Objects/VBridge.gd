@@ -20,6 +20,9 @@ func build() -> bool:
 	if PlayerInventory.use_resources([ResourceMap.WOOD, ResourceMap.STONE], [300, 300]):
 		set_broken(false)
 
+		$Area2D/CollisionShape2D.disabled = true
+		$Area2D/CollisionShape2D.disabled = false
+
 		return true
 
 	return false

@@ -1,7 +1,11 @@
 extends StaticBody2D
 
+var interaction_dir = Vector2.ZERO
+
 func _on_Interactable_interacted(area):
 	if $Interactable.active:
+		interaction_dir = (position - area.global_position).normalized()
+
 		area.notify_interaction_started(ResourceMap.STONE, 0.5)
 
 		$InteractionTimer.start()
@@ -10,7 +14,7 @@ func _on_Interactable_interacted(area):
 
 		area.notify_interaction_finished(ResourceMap.STONE, 0.5)
 
-		$Stats.health -= 1
+		$Stats.health -= area.damage_resource(ResourceMap.STONE)
 
 func _on_RepairTimer_timeout():
 	$Stats.reset_health()
@@ -33,10 +37,24 @@ func _on_Stats_health_depleted():
 		$Sprite.modulate = Color(1, 1, 1, 0.2)
 
 func _on_Stats_health_chaged(value):
-	if value > 0:
+	if value > 0 and value != $Stats.max_health:
 		$HitSound.play()
 		$AnimationPlayer.play("break")
 
 		yield($AnimationPlayer, "animation_finished")
 		
 		$AnimationPlayer.play("RESET")
+
+func _on_Stats_health_endured(value):
+	var pos = position.x
+	var dir = Vector2.LEFT if interaction_dir.x < 0 else Vector2.RIGHT
+
+	$EnduredSound.play()
+
+	$Tween.interpolate_property(self, "position:x", pos, pos + dir.x, 0.1)
+	$Tween.start()
+	
+	yield($Tween, "tween_completed")
+
+	$Tween.interpolate_property(self, "position:x", pos + dir.x, pos, 0.1)
+	$Tween.start()

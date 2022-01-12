@@ -154,6 +154,7 @@ tracks/3/keys = {
 [node name="Pickaxe" type="Node2D"]
 visible = false
 script = ExtResource( 1 )
+levelSprites = [ 5, 6, 7, 8, 9 ]
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.75, 0.75 )
@@ -161,7 +162,7 @@ texture = ExtResource( 2 )
 offset = Vector2( 0, -7 )
 hframes = 5
 vframes = 5
-frame = 6
+frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
