@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/art/weapons/weapons2_.png" type="Texture" id=1]
 [ext_resource path="res://assets/art/resources/resources_basic.png" type="Texture" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://src/UserInterface/Button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/ui/monogram-extended.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://assets/ui/crosshair030.png" type="Texture" id=11]
+[ext_resource path="res://assets/audio/error_006.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/audio/SUCCESS BEEPS Multi Echo Short 03.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/particles/star.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxEmpty" id=19]
 
@@ -92,6 +95,19 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 315, 95 ), Vector2( 319, 99 ) ]
 }
+
+[sub_resource type="ParticlesMaterial" id=26]
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_box_extents = Vector3( 2, 5, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 100, 0 )
+initial_velocity = 50.0
+angular_velocity = 100.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.4
 
 [node name="CraftingMenu" type="Node"]
 script = ExtResource( 6 )
@@ -464,7 +480,7 @@ position = Vector2( 20, 2 )
 texture = ExtResource( 4 )
 hframes = 4
 vframes = 28
-frame = 12
+frame = 32
 
 [node name="UpgradeButton" parent="CanvasLayer/PopupWindow" instance=ExtResource( 9 )]
 margin_left = 40.0
@@ -545,7 +561,27 @@ frame = 3
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/PopupWindow/Crosshair"]
 anims/animate = SubResource( 25 )
 
+[node name="Particles2D" type="Particles2D" parent="CanvasLayer/PopupWindow"]
+position = Vector2( 13, 20 )
+emitting = false
+amount = 30
+lifetime = 5.0
+one_shot = true
+speed_scale = 1.8
+explosiveness = 1.0
+visibility_rect = Rect2( -10, -12, 66, 21 )
+process_material = SubResource( 26 )
+texture = ExtResource( 14 )
+
 [node name="Tween" type="Tween" parent="CanvasLayer"]
+
+[node name="ErrorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -10.0
+
+[node name="UpgradeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -10.0
 
 [connection signal="button_down" from="CanvasLayer/PopupWindow/Slot1" to="." method="_on_Slot1_button_down"]
 [connection signal="button_up" from="CanvasLayer/PopupWindow/Slot1" to="." method="_on_Slot1_button_up"]

@@ -1,4 +1,5 @@
 extends Area2D
+class_name PlayerInteractionZone
 
 const axe_resources = [ResourceMap.WOOD]
 const pickaxe_resources = [ResourceMap.STONE]

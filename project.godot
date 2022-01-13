@@ -109,6 +109,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Actor/Player/PlayerHitState.gd"
 }, {
+"base": "Area2D",
+"class": "PlayerInteractionZone",
+"language": "GDScript",
+"path": "res://src/Actor/Player/InteractionZone.gd"
+}, {
 "base": "Node",
 "class": "PlayerTurnState",
 "language": "GDScript",
@@ -145,6 +150,7 @@ _global_script_class_icons={
 "PlayerDeathState": "",
 "PlayerDefaultState": "",
 "PlayerHitState": "",
+"PlayerInteractionZone": "",
 "PlayerTurnState": "",
 "ResourceEmitter": "",
 "Stats": ""

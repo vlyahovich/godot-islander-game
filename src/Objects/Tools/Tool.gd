@@ -5,6 +5,13 @@ export(Array) var levelSprites = []
 var level = 1 setget set_level
 var max_level = 5
 
+var upgradeCosts = [
+	[[ResourceMap.WOOD, 100], [ResourceMap.STONE, 100]],
+	[[ResourceMap.WOOD, 200], [ResourceMap.STONE, 200]],
+	[[ResourceMap.WOOD, 300], [ResourceMap.STONE, 300]],
+	[[ResourceMap.WOOD, 400], [ResourceMap.STONE, 400]],
+]
+
 signal hit_ends
 
 func _ready():

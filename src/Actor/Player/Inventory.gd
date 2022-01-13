@@ -1,7 +1,9 @@
 extends Node
 
-var items = []
-var counts = []
+const max_resources = 9999
+
+var items = [ResourceMap.WOOD, ResourceMap.STONE]
+var counts = [max_resources, max_resources]
 
 signal resources_updated()
 
@@ -25,7 +27,7 @@ func use_resources(list: Array, listCounts: Array) -> bool:
 		var index = items.find(item)
 
 		if index != -1:
-			counts[index] = clamp(counts[index] - listCounts[i], 0, 999)
+			counts[index] = clamp(counts[index] - listCounts[i], 0, max_resources)
 			
 			if counts[index] == 0:
 				items.remove(index)
@@ -36,7 +38,7 @@ func use_resources(list: Array, listCounts: Array) -> bool:
 	emit_signal("resources_updated")
 
 	return true
-	
+
 func has_enough_resources(list: Array, listCounts: Array) -> bool:
 	var i = 0
 	var enough = true
@@ -62,7 +64,7 @@ func _resource_received(meta):
 
 		_update_dialogic(meta, 1)
 	else:
-		counts[index] = clamp(counts[index] + 1, 0, 999)
+		counts[index] = clamp(counts[index] + 1, 0, max_resources)
 
 		_update_dialogic(meta, counts[index])
 
