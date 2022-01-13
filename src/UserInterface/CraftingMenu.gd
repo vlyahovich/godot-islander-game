@@ -57,6 +57,7 @@ func open_popup(origin: Vector2):
 		Tween.EASE_IN
 	)
 	$CanvasLayer/Tween.start()
+	$OpenSound.play()
 
 func open_popup_with_area(origin: Vector2, area: PlayerInteractionZone):
 	player_area = area
@@ -202,6 +203,8 @@ func _on_UpgradeButton_pressed():
 
 func _on_CloseButton_pressed():
 	close_popup()
+
+	$CloseSound.play()
 
 func _on_Slot1_pressed():
 	var pos = $CanvasLayer/PopupWindow/Slot1.rect_position

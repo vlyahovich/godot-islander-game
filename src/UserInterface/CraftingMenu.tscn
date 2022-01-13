@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/art/weapons/weapons2_.png" type="Texture" id=1]
 [ext_resource path="res://assets/art/resources/resources_basic.png" type="Texture" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://assets/audio/error_006.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/audio/SUCCESS BEEPS Multi Echo Short 03.wav" type="AudioStream" id=13]
 [ext_resource path="res://assets/particles/star.png" type="Texture" id=14]
+[ext_resource path="res://assets/audio/minimize_006.ogg" type="AudioStream" id=15]
+[ext_resource path="res://assets/audio/maximize_006.ogg" type="AudioStream" id=16]
 
 [sub_resource type="StyleBoxEmpty" id=19]
 
@@ -581,6 +583,14 @@ volume_db = -10.0
 
 [node name="UpgradeSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+volume_db = -10.0
+
+[node name="OpenSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -10.0
+
+[node name="CloseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
 volume_db = -10.0
 
 [connection signal="button_down" from="CanvasLayer/PopupWindow/Slot1" to="." method="_on_Slot1_button_down"]
