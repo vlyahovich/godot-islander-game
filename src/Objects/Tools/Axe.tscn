@@ -176,6 +176,7 @@ tracks/3/keys = {
 }
 
 [node name="Axe" type="Node2D"]
+visible = false
 script = ExtResource( 1 )
 levelSprites = [ 5, 6, 7, 8, 9 ]
 

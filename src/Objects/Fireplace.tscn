@@ -1,9 +1,18 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://assets/art/forest/forestDecoration_0.png" type="Texture" id=1]
 [ext_resource path="res://src/Objects/Fireplace.gd" type="Script" id=2]
 [ext_resource path="res://src/Collision/Interactable.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/audio/SUCCESS BEEPS Multi Echo Short 03.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/ui/Popup_Window_Dark_16x16.png" type="Texture" id=5]
+[ext_resource path="res://src/UserInterface/Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/ui/Status_icons_16x16.png" type="Texture" id=7]
+[ext_resource path="res://assets/ui/Heart_Drop_Star_16x16.png" type="Texture" id=8]
+[ext_resource path="res://assets/ui/Menu_icons_16x16.png" type="Texture" id=9]
+[ext_resource path="res://assets/art/weapons/weapons_.png" type="Texture" id=10]
+[ext_resource path="res://assets/art/weapons/weapons2_.png" type="Texture" id=11]
+[ext_resource path="res://assets/art/resources/resources_basic.png" type="Texture" id=12]
+[ext_resource path="res://assets/ui/monogram-extended.ttf" type="DynamicFontData" id=13]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -60,6 +69,34 @@ extents = Vector2( 6, 4 )
 radius = 6.0
 height = 8.0
 
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="DynamicFont" id=18]
+size = 8
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 6
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
 [node name="Fireplace" type="StaticBody2D"]
 script = ExtResource( 2 )
 
@@ -89,6 +126,414 @@ shape = SubResource( 12 )
 stream = ExtResource( 4 )
 volume_db = -10.0
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Overlay" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupWindow" type="Control" parent="CanvasLayer"]
+margin_right = 70.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 0, 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="NinePatchRect" parent="CanvasLayer/PopupWindow"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 96, 48, 48 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="NinePatchRect" parent="CanvasLayer/PopupWindow"]
+margin_left = 54.0
+margin_right = 70.0
+margin_bottom = 17.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 48, 96, 16, 16 )
+patch_margin_top = 8
+patch_margin_right = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot1" type="Button" parent="CanvasLayer/PopupWindow"]
+margin_top = 8.0
+margin_right = 70.0
+margin_bottom = 28.0
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/disabled = SubResource( 22 )
+custom_styles/normal = SubResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res1" type="Sprite" parent="CanvasLayer/PopupWindow/Slot1"]
+position = Vector2( 39, 9 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+hframes = 11
+vframes = 11
+
+[node name="Res2" type="Sprite" parent="CanvasLayer/PopupWindow/Slot1"]
+position = Vector2( 62, 10 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+hframes = 11
+vframes = 11
+frame = 45
+
+[node name="Res1Count" type="Label" parent="CanvasLayer/PopupWindow/Slot1"]
+margin_left = 22.0
+margin_top = 5.0
+margin_right = 32.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 10, 10 )
+custom_colors/font_color = Color( 0.509804, 0.509804, 0.509804, 1 )
+custom_fonts/font = SubResource( 18 )
+text = "100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res2Count" type="Label" parent="CanvasLayer/PopupWindow/Slot1"]
+margin_left = 46.0
+margin_top = 5.0
+margin_right = 56.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 10, 10 )
+custom_fonts/font = SubResource( 18 )
+text = "10"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot" type="NinePatchRect" parent="CanvasLayer/PopupWindow/Slot1"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 21.0
+margin_bottom = 18.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 48, 48, 48 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/PopupWindow/Slot1/Slot"]
+position = Vector2( 8, 13 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -10 )
+hframes = 5
+vframes = 5
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PopupWindow/Slot1/Slot"]
+margin_left = 10.0
+margin_top = 13.0
+margin_right = 20.0
+margin_bottom = 18.0
+color = Color( 0.25098, 0.286275, 0.45098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/PopupWindow/Slot1/Slot"]
+margin_left = 11.0
+margin_top = 12.0
+margin_right = 19.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 24 )
+text = "Lv.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="Button" parent="CanvasLayer/PopupWindow"]
+margin_top = 28.0
+margin_right = 70.0
+margin_bottom = 48.0
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/disabled = SubResource( 22 )
+custom_styles/normal = SubResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res1" type="Sprite" parent="CanvasLayer/PopupWindow/Slot2"]
+position = Vector2( 39, 9 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+hframes = 11
+vframes = 11
+
+[node name="Res2" type="Sprite" parent="CanvasLayer/PopupWindow/Slot2"]
+position = Vector2( 62, 10 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+hframes = 11
+vframes = 11
+frame = 45
+
+[node name="Res1Count" type="Label" parent="CanvasLayer/PopupWindow/Slot2"]
+margin_left = 22.0
+margin_top = 5.0
+margin_right = 32.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 10, 10 )
+custom_colors/font_color = Color( 0.509804, 0.509804, 0.509804, 1 )
+custom_fonts/font = SubResource( 18 )
+text = "100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res2Count" type="Label" parent="CanvasLayer/PopupWindow/Slot2"]
+margin_left = 46.0
+margin_top = 5.0
+margin_right = 56.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 10, 10 )
+custom_fonts/font = SubResource( 18 )
+text = "100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot" type="NinePatchRect" parent="CanvasLayer/PopupWindow/Slot2"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 21.0
+margin_bottom = 18.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 48, 48, 48 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/PopupWindow/Slot2/Slot"]
+position = Vector2( 8, 13 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+offset = Vector2( 0, -10 )
+hframes = 5
+vframes = 5
+frame = 5
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PopupWindow/Slot2/Slot"]
+margin_left = 10.0
+margin_top = 13.0
+margin_right = 20.0
+margin_bottom = 18.0
+color = Color( 0.25098, 0.286275, 0.45098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/PopupWindow/Slot2/Slot"]
+margin_left = 11.0
+margin_top = 12.0
+margin_right = 19.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 24 )
+text = "Lv.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot3" type="Button" parent="CanvasLayer/PopupWindow"]
+margin_top = 48.0
+margin_right = 70.0
+margin_bottom = 68.0
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/disabled = SubResource( 22 )
+custom_styles/normal = SubResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res1" type="Sprite" parent="CanvasLayer/PopupWindow/Slot3"]
+position = Vector2( 39, 9 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+hframes = 11
+vframes = 11
+
+[node name="Res2" type="Sprite" parent="CanvasLayer/PopupWindow/Slot3"]
+position = Vector2( 62, 10 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+hframes = 11
+vframes = 11
+frame = 45
+
+[node name="Res1Count" type="Label" parent="CanvasLayer/PopupWindow/Slot3"]
+margin_left = 22.0
+margin_top = 5.0
+margin_right = 32.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 10, 10 )
+custom_colors/font_color = Color( 0.509804, 0.509804, 0.509804, 1 )
+custom_fonts/font = SubResource( 18 )
+text = "100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res2Count" type="Label" parent="CanvasLayer/PopupWindow/Slot3"]
+margin_left = 46.0
+margin_top = 5.0
+margin_right = 56.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 10, 10 )
+custom_fonts/font = SubResource( 18 )
+text = "100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot" type="NinePatchRect" parent="CanvasLayer/PopupWindow/Slot3"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 21.0
+margin_bottom = 18.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 48, 48, 48 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/PopupWindow/Slot3/Slot"]
+position = Vector2( 8, 13 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -10 )
+hframes = 5
+vframes = 5
+frame = 5
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PopupWindow/Slot3/Slot"]
+margin_left = 10.0
+margin_top = 13.0
+margin_right = 20.0
+margin_bottom = 18.0
+color = Color( 0.25098, 0.286275, 0.45098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/PopupWindow/Slot3/Slot"]
+margin_left = 11.0
+margin_top = 12.0
+margin_right = 19.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 24 )
+text = "Lv.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestButton" parent="CanvasLayer/PopupWindow" instance=ExtResource( 6 )]
+margin_left = 5.0
+margin_top = 70.0
+margin_right = 30.0
+margin_bottom = 88.0
+width = 25
+height = 18
+variant = 4
+color = Color( 1, 1, 1, 1 )
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/PopupWindow/RestButton"]
+position = Vector2( 12, 4 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 8 )
+hframes = 11
+vframes = 15
+
+[node name="Sprite3" type="Sprite" parent="CanvasLayer/PopupWindow/RestButton"]
+position = Vector2( 20, 2 )
+texture = ExtResource( 7 )
+hframes = 4
+vframes = 28
+frame = 12
+
+[node name="UpgradeButton" parent="CanvasLayer/PopupWindow" instance=ExtResource( 6 )]
+margin_left = 40.0
+margin_top = 70.0
+margin_right = 65.0
+margin_bottom = 88.0
+width = 25
+height = 18
+variant = 6
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/PopupWindow/UpgradeButton"]
+position = Vector2( 16, 6 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 9 )
+hframes = 4
+vframes = 10
+frame = 6
+
+[node name="Sprite3" type="Sprite" parent="CanvasLayer/PopupWindow/UpgradeButton"]
+position = Vector2( 20, 2 )
+texture = ExtResource( 7 )
+hframes = 4
+vframes = 28
+frame = 16
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/PopupWindow"]
+margin_left = 56.0
+margin_right = 70.0
+margin_bottom = 14.0
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="CanvasLayer"]
+
 [connection signal="interacted" from="Interactable" to="." method="_on_Interactable_interacted"]
+[connection signal="pressed" from="CanvasLayer/PopupWindow/RestButton" to="." method="_on_RestButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/PopupWindow/CloseButton" to="." method="_on_CloseButton_pressed"]
 
 [editable path="Interactable"]
