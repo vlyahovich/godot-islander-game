@@ -1,9 +1,9 @@
 extends Node
 
-const max_resources = 9999
+const max_resources = 999
 
-var items = [ResourceMap.WOOD, ResourceMap.STONE]
-var counts = [max_resources, max_resources]
+var items = []
+var counts = []
 
 signal resources_updated()
 

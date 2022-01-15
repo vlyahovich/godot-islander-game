@@ -12,12 +12,13 @@ func _ready():
 	_apply_variant()
 	
 func set_variant(value):
-	if !ready:
-		return
-
 	variant = value
 
-	_apply_variant()
+	if ready:
+		_apply_variant()
+
+func prep_variant(value):
+	variant = value
 
 func _apply_variant():
 	var variant_clamped = clamp(variant, 0, variants_map.size() - 1)

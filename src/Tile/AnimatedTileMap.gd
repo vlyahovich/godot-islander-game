@@ -1,9 +1,10 @@
 extends TileMap
 
+export(int) var frame_count = 4
+export(int) var frame_shift = 7
+export(float) var frame_time = 0.25
+
 var frame = 0
-export var frame_count = 4
-export var frame_shift = 7
-export var frame_time = 0.25
 
 func _ready():
 	# we make a copy here because we do not want to affect other tilemaps
@@ -29,11 +30,10 @@ func _next_frame():
 	
 	for v2 in get_used_cells():
 		var cell_id = get_cell(v2.x, v2.y)
-		
+
 		if !cells.has(cell_id):
 			cells.push_back(cell_id)
-	
-	
+
 	if frame == 0:
 		for cell in cells:
 			var region = tile_set.tile_get_region(cell)
