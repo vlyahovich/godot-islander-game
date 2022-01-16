@@ -5,16 +5,24 @@ export(int) var height = 100
 export(int) var cell_size = 16
 export(int) var spawn_area_size = 8
 export(float) var water_clamp = 0.1
-export(float) var objects_clamp = 0.16
+export(float) var fences_clamp = 0.1
+export(float) var objects_clamp = 0.2
 export(NodePath) var container_path = null
 
 var TreeObj = preload("res://src/Objects/Tree.tscn")
 var GrassObj = preload("res://src/Objects/Grass.tscn")
 var ShroomObj = preload("res://src/Objects/Shroom.tscn")
+var StoneObj = preload("res://src/Objects/SmallStone.tscn")
+var BigStoneObj = preload("res://src/Objects/BigStone.tscn")
+var FireplaceObj = preload("res://src/Objects/Fireplace.tscn")
+var ChestObj = preload("res://src/Objects/Chest.tscn")
 
 var spawn_area = Rect2(Vector2.ZERO, Vector2.ZERO)
 var open_simplex_noise = null
 var container = null
+
+onready var water_tile = $ForestWaterTileMap.tile_set.find_tile_by_name("water_auto")
+onready var fence_tile = $ForestLandTileMap.tile_set.find_tile_by_name("fences_auto")
 
 func _ready():
 	container = get_node(container_path)
@@ -35,8 +43,6 @@ func _ready():
 	_generate_world()
 
 func _generate_world():
-	var water_tile = $ForestWaterTileMap.tile_set.find_tile_by_name("water_auto")
-
 	for x in width:
 		for y in height:
 			var cell_xy = Vector2(x - width / 2, y - height / 2)
@@ -49,9 +55,16 @@ func _generate_world():
 					water_tile
 				)
 
+			if _has_fence(noise_sample, cell_xy):
+				$ForestLandTileMap.set_cellv(
+					cell_xy,
+					fence_tile
+				)
+
 			if env_object:
 				_place_object(env_object, noise_sample, cell_xy)
 
+	$ForestLandTileMap.update_bitmask_region()
 	$ForestWaterTileMap.update_bitmask_region()
 
 func _has_water(noise_sample, cell_xy):
@@ -59,6 +72,34 @@ func _has_water(noise_sample, cell_xy):
 		return false
 
 	if noise_sample < water_clamp:
+		return true
+
+func _has_fence(noise_sample, cell_xy):
+	var tm = $ForestLandTileMap
+	var tmw = $ForestWaterTileMap
+
+	if noise_sample > water_clamp and noise_sample < 0.15:
+		var diag1 = tm.get_cell(cell_xy.x - 1, cell_xy.y - 1) == fence_tile
+		var diag2 = tm.get_cell(cell_xy.x + 1, cell_xy.y + 1) == fence_tile
+		var diag3 = tm.get_cell(cell_xy.x - 1, cell_xy.y + 1) == fence_tile
+		var diag4 = tm.get_cell(cell_xy.x + 1, cell_xy.y - 1) == fence_tile
+		var diagonals = [diag1, diag2, diag3, diag4]
+		
+		var water1 = tmw.get_cell(cell_xy.x - 1, cell_xy.y - 1) == water_tile
+		var water2 = tmw.get_cell(cell_xy.x - 1, cell_xy.y) == water_tile
+		var water3 = tmw.get_cell(cell_xy.x - 1, cell_xy.y + 1) == water_tile
+		var water4 = tmw.get_cell(cell_xy.x + 1, cell_xy.y - 1) == water_tile
+		var water5 = tmw.get_cell(cell_xy.x + 1, cell_xy.y) == water_tile
+		var water6 = tmw.get_cell(cell_xy.x + 1, cell_xy.y + 1) == water_tile
+		var water7 = tmw.get_cell(cell_xy.x, cell_xy.y - 1) == water_tile
+		var water8 = tmw.get_cell(cell_xy.x, cell_xy.y + 1) == water_tile
+		var water = [water1, water2, water3, water4, water5, water6, water7, water8]
+
+		if water.count(true) == 0:
+			return false
+		if diagonals.count(true) > 1:
+			return false
+
 		return true
 
 func _get_object(noise_sample, cell_xy):
@@ -88,81 +129,17 @@ func _place_object(env_object, noise_sample, cell_xy):
 			obj = ShroomObj.instance()
 		types.TREE:
 			obj = TreeObj.instance()
+		types.STONE:
+			obj = StoneObj.instance()
+		types.BIG_STONE:
+			obj = BigStoneObj.instance()
+		types.FIREPLACE:
+			obj = FireplaceObj.instance()
+		types.CHEST:
+			obj = ChestObj.instance()
 
 	if obj:
 		obj.position = obj_position
-		obj.variant = env_object.variance
+		obj.set('variant', env_object.variance)
 
 		container.add_child(obj)
-
-#func _place_objects(noise_sample, cell_xy):
-#	if noise_sample > objects_clamp:
-#		var obj_position = (cell_xy * cell_size) + Vector2(
-#			cell_size / 2,
-#			cell_size / 2
-#		)
-#		var grass = _get_grass()
-#		var shroom = _get_shroom()
-#		var tree = _get_tree()
-#
-#		if grass != -1:
-#			var obj = GrassObj.instance()
-#
-#			obj.position = obj_position
-#			obj.variant = grass
-#
-#			container.add_child(obj)
-#		elif shroom != -1:
-#			var obj = ShroomObj.instance()
-#
-#			obj.position = obj_position
-#			obj.variant = shroom
-#
-#			container.add_child(obj)
-#		elif tree != -1:
-#			var obj = TreeObj.instance()
-#
-#			obj.position = obj_position
-#			obj.variant = tree
-#
-#			container.add_child(obj)
-
-#func _get_grass():
-#	var chance = randi() % 100
-#
-#	if chance < 20:
-#		var num = randi() % 4
-#
-#		return num
-#
-#	return -1
-#
-#func _get_stump():
-#	var chance = randi() % 100
-#
-#	if chance < 20:
-#		var num = randi() % 4
-#
-#		return 4 + num
-#
-#	return -1
-#
-#func _get_shroom():
-#	var chance = randi() % 100
-#
-#	if chance < 10:
-#		var num = randi() % 8
-#
-#		return num
-#
-#	return -1
-#
-#func _get_tree():
-#	var chance = randi() % 100
-#
-#	if chance < 10:
-#		var num = randi() % 3
-#
-#		return num
-#
-#	return -1

@@ -3,6 +3,7 @@ extends TileMap
 export(int) var frame_count = 4
 export(int) var frame_shift = 7
 export(float) var frame_time = 0.25
+export(Array) var cells = [0]
 
 var frame = 0
 
@@ -25,14 +26,6 @@ func _ready():
 
 func _next_frame():
 	frame = (frame + 1) % frame_count
-	
-	var cells = []
-	
-	for v2 in get_used_cells():
-		var cell_id = get_cell(v2.x, v2.y)
-
-		if !cells.has(cell_id):
-			cells.push_back(cell_id)
 
 	if frame == 0:
 		for cell in cells:

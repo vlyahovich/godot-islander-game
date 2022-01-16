@@ -244,13 +244,13 @@ format = 1
 [node name="ForestWaterTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
+collision_layer = 0
 format = 1
 script = ExtResource( 2 )
 
 [node name="ForestObjectsTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
-cell_tile_origin = 1
 format = 1
 
 [node name="Distribution" type="Node" parent="."]

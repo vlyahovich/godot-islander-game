@@ -20,14 +20,15 @@ func set_open(value):
 
 func _on_Interactable_interacted(area):
 	self.open = !open
-	
+
 	if open:
 		area.notify_interaction_finished(null, 0)
 
 		$OpenSound.play()
-
-		Finder.get_resource_emitter().emit_count(self, 100, ResourceMap.WOOD)
-		Finder.get_resource_emitter().emit_count(self, 100, ResourceMap.STONE)
+		
+		if !empty:
+			Finder.get_resource_emitter().emit_count(self, 10, ResourceMap.WOOD)
+			Finder.get_resource_emitter().emit_count(self, 10, ResourceMap.STONE)
 
 		empty = true
 	else:
